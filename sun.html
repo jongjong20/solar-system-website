@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太阳 - 太阳系中心</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/planet-css/sun.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <style>
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- banner -->
+
+    <div class="video-banner">
+        <video autoplay muted loop playsinline>
+            <source src="/textures/sun/02-1.mp4" type="video/mp4">
+            <source src="/textures/sun/02-1.webm" type="video/webm">
+            <img src="/textures/2k_sun.jpg" alt="太阳视频加载失败时显示的图片">
+        </video>
+        
+        <div class="video-overlay">
+            <h1>太阳</h1>
+            <p>太阳系中心</p>
+        </div>
+    </div>
+    <a href="../solarSystem.html" class="back-button">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+    
+    <div class="container">
+
+        <div class="content-section">
+            <h2>太阳概述</h2>
+            <p>太阳（Sun），太阳系的中心天体，占太阳系总体质量的99.86%。太阳系中的八大行星、小行星、流星、彗星、外海王星天体以及星际尘埃等，都围绕着太阳公转，而太阳则围绕着银河系的中心公转。</p>
+            <p>太阳是位于太阳系中心的恒星，它几乎是热等离子体与磁场交织着的一个理想球体。太阳直径为1392950（1.392×10⁶）千米，相当于地球直径的109倍；体积大约是地球的130万倍；其质量大约是2×10³⁰千克（地球的330000倍）。从化学组成来看，现在太阳质量的大约四分之三是氢，剩下的几乎都是氦，包括氧、碳、氖、铁和其他的重元素质量少于2%，采用核聚变的方式向太空释放光和热。</p>
+            <p>太阳目前正在穿越银河系内部边缘猎户臂的本地泡区中的本星际云。在距离地球17光年的距离内有50颗最邻近的恒星系（与太阳距离最近的恒星是称作比邻星的红矮星，大约4.2光年）。</p>
+            <p>太阳是一颗黄矮星，光谱为G2V，黄矮星的寿命大致为100亿年，目前太阳大约45.7亿岁。在大约50至60亿年之后，太阳内部的氢元素几乎会全部消耗尽，太阳的核心将发生坍缩，导致温度上升，这一过程将一直持续到太阳开始把氦元素聚变成碳元素。虽然氦聚变产生能量的效率比氢聚变少，但温度也更高，因此太阳的外层将膨胀，并且把一部分外层大气释放到太空中。当转向新元素的过程结束时，太阳的质量将稍微下降，外层将延伸到地球至火星目前运行的轨道间（这时由于太阳质量的下降，这两颗行星将会离太阳更远）。</p>
+
+        </div>
+        <div class="content-section">
+            <h2>演化历史</h2>
+            <div class="theory-section">
+                <h3>形成</h3>
+                <p>太阳大约于46亿年前，由一个主要由氢和氦组成的巨大分子云的一部分坍塌而形成；这个分子云可能还孕育了许多其它恒星。这个年龄是使用恒星演化的电脑模型和核宇宙编年学估计的。
+                    这一结果与最古老的太阳系物质的辐射定年一致，即45.67亿年前。对古代陨石的研究揭示了稳定的短半衰期同位素子核的痕迹，如铁-60，这些子核只在爆炸的短寿命恒星中形成。这表明在太阳形成的位置附近一定发生过一颗或多颗超新星的爆炸。
+                    来自附近超新星的冲击波会通过压缩分子云中的物质并导致某些区域在自身引力下坍塌，从而触发太阳的形成。当分子云的一个碎片坍塌时，由于角动量守恒，它会开始旋转，并随着压力的增加而升温。
+                    大部分质量集中在中心，而其余的则扁平成一个圆盘，成为行星和太阳系的其它天体。因为它从周围的圆盘中积累了更多的物质，云层核心的重力和压力产生了大量热量，最终引发了核聚变。</p>
+            </div>
+            <div class="theory-section">
+            
+                <h3>主序带</h3>
+                <div class="flex"><p>太阳正处于主序阶段的一半，在此期间，其核心的核聚变反应将氢聚变为氦。每秒钟，超过400万吨的物质在太阳核心内转化为能量，产生中微子和太阳辐射。按照这个速度，到目前为止，太阳已经将大约100倍地球质量转化为能量，约占太阳总质量的0.03%。在太阳成为红巨星阶段之前，太阳作为主序星总共将花费大约100亿至110亿年的时间。
+                    根据2022年欧洲空间局的盖亚观测任务，在80亿年大关时，太阳将处于温度最高点。右图：类太阳恒星的演化。显示一颗太阳质量恒星在赫-罗图上，从离开主序带到后渐近巨星分支阶段的轨迹。</p>
+                <img src="/textures/sun/01.jpg" alt="主序带" class="sun-image expandable-img">
+                </div>
+                <p>太阳的核心逐渐变得更热，表面越来越热，半径越来越大，也越来越亮：自其主序生命开始以来，它的半径扩大了15%，表面温度从5,620 K（5,350°C；9,660 °F）上升到5,772 K（5,499 °C；9,930 °F),
+                    导致光度从0.677太阳光度上升到现在的1.0太阳光度，增加了48%。这是因为核心中的氦原子的平均分子量高于熔化的氢原子，从而导致较低的热压力。因此，核心正在收缩，使太阳的外层向中心靠近，释放出引力势能。根据维里定理，释放的引力能有一半用于加热，
+                    这导致核聚变发生的速率逐渐增加，从而亮度增加。随着核反应区密度增加，这个过程也加快了。现时，它的亮度每1亿年新增约1%。从现在起，至少需要10亿年的时间才能耗尽地球上的液态水 。在那之后，地球将不再能够支持复杂的多细胞生命，地球上仅存的多细胞生物最后将遭受彻底灭绝。</p>
+
+                <!-- <span class="image-caption">图：类太阳恒星演化示意图</span> -->
+            </div>
+            <div class="theory-section">
+                <h3>核心氢元素耗尽后</h3>
+                <p>太阳没有足够的质量演化成为超新星。相对的，当它在大约50亿年后耗尽核心中的氢时，核心的氢聚变将停止，并且没有什么可以阻止核心收缩。引力势能的释放将导致太阳的光度增加，结束主序带阶段，并导致太阳在未来十亿年内膨胀：首先变成次巨星，
+                    然后变成红巨星。引力收缩引起的加热也将导致核心外的壳层中的氢聚变。那里保留着未聚变的氢，有助于增加光度，最终将达到目前亮度的1000倍以上。当太阳进入其红巨星分支（RGB）阶段时，它将吞没水星和金星（可能），
+                    达到大约 0.75 AU（1.10 × 108 km。太阳将在红巨星阶段度过大约十亿年，并失去大约三分之一的质量。</p>
+                <p>在红巨星阶段之后，太阳还剩下大约1.2亿年的活跃生命，但会发生很多事情。首先，核心（充满简并氦）在氦闪中猛烈点燃；据估计，6%的核心 —— 本身是太阳质量的40%——将通过3氦过程在几分钟内转化为碳。然后太阳缩小到目前大小的1/10左右，增加光度到目前的50倍，而温度比现在低一点。
+                    然后它将到达红群聚或水平分支，但太阳金属量的恒星不会沿着水平分支向蓝色演变（参见赫罗图）。相反的，由于其持续在核心中的氦反应，太阳在大约1亿年内适度变大，变亮。</p>
+                <p>当氦耗尽时，太阳将重复核心中的氢耗尽时所遵循的膨胀。然而，这一次，这一切都发生得更快，太阳变得更大更亮，如果之前没有吞噬金星，这次也会席卷金星。
+                    这是渐近巨星分支阶段，太阳交替聚变壳层中的氢或更深壳中的氦。在早期渐近巨星分支上大约2,000万年后，太阳变得越来越不稳定，质量迅速损失，每10万年左右会有几百年因为热脉冲导致大小和光度增加。热脉冲每次都变得更大，后来的脉冲将光度推到目前水准的5,000倍，半径增大超过1 AU（1.50× 108 km）。</p>
+                <p>根据2008年的模型，由于太阳成为红巨星的质量损失，地球的轨道最多会从最初的扩大1.5 AU（2.20 × 108 km）。然而，由于潮汐力，地球的轨道稍后将开始缩小，因此在红巨星分支的尖端阶段，地球将遭受水星和金星同样的命运，在数百万年后被太阳吞没。质量损失的速度和时间因模型而异。在红巨星分支上具有较高质量损失的模型中，在渐近巨星分支的顶端产生质量更小，亮度较低的恒星，可能光度只有2,000倍，半径不到200倍。
+                    对太阳来说，在它完全失去外壳并开始形成行星状星云之前，预测有四次热脉冲。到这个持续大约50万年的阶段结束时， 太阳将只有目前质量的一半左右。
+                    渐近巨星分支的后期演化甚至更快。随着温度的升高，光度保持大致恒定，当暴露的核心到达30,000 K（29,700 °C；53,500 °F）时，太阳质量的一半被电离成行星状星云，核心就像在某种蓝色的环中一样。最后的裸核，一颗白矮星，温度将超过100,000 K（100,000 °C；180,000 °F），估计包含太阳目前质量的54.05%。行星状星云将在大约1万年后消散，但白矮星将存活数万亿年，然后逐渐变成目前无法被观测到黑矮星。</p>
+                
+            </div>
+
+        </div>
+
+        <div class="content-section">
+            <h2>太阳所处位置</h2>
+            <p>太阳只是宇宙中一颗十分普通的恒星，但它却是太阳系的中心天体。太阳系中，包含我们的地球在内的八大行星、一些矮行星、彗星和其它无数的太阳系小天体，都在太阳的强大引力作用下环绕太阳运行。太阳系的疆域庞大，仅以冥王星为例，其运行轨道距离太阳就将近40个天文单位，也就是60亿千米之遥远，而实际上太阳系的范围还要数十倍于此。</p>
+            <p>但是这样一个庞大的太阳系，在银河系中却仅仅是沧海一粟。银河系拥有至少1000亿颗以上的恒星，直径约10万光年。太阳位于<span>银道面之北的猎户座旋臂</span>上，距离银河系中心约30000光年，在银道面以北约26光年，它一方面绕着银心以每秒250公里的速度旋转，周期大概是2.5亿年，另一方面又相对于周围恒星以每秒19.7公里的速度朝着织女星附近方向运动。太阳也在自转，其周期在日面赤道带约25天；两极区约为35天。</p>
+            <p>太阳正在穿越<span>银河系内部边缘猎户臂的本地泡区中的本星际云</span>。在距离地球17光年的距离内有50颗最邻近的恒星系（距离最近的一颗恒星是红矮星，被称为比邻星，距太阳大约4.2光年），太阳的质量在这些恒星中排在第四。太阳在距离银河中心24000至26000光年的距离上绕着银河公转，从银河北极鸟瞰，太阳沿顺时针轨道运行，大约2亿2500万至2亿5000万年绕行一周。由于银河系在宇宙微波背景辐射（CMB）中以550公里/秒的速度朝向长蛇座的方向运动，这两个速度合成之后，太阳相对于CMB的速度是370公里/秒，朝向巨爵座或狮子座的方向运动。</p>
+            
+        </div>
+        
+        <!-- 基本参数 -->
+        <div class="content-section">
+            <h2>基本参数</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="sunSizeChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sunPeriodChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sunMagnitudeChart"></canvas>
+                </div>
+            </div>
+            <div class="charts-containers">
+                <canvas id="sunCompositionChart"></canvas>
+            </div>
+            <div class="charts-containers">
+                <canvas id="sunTemperatureChart"></canvas>
+            </div>
+            <div class="theory-section">
+                <h3>温度</h3>
+                <h4>核心</h4>
+                <p>核心是太阳内唯一能经由核聚变产生大量能量的区域，温度高达1570万K。99%的能量产生在太阳半径的24%以内，而在30%半径处，核聚变反应几乎完全停止。</p>
+                
+                <h4>光球层</h4>
+                <p>光球层上最显著的现象就是太阳黑子，所谓太阳黑子，只指太阳光球层上的温度相对较低的区域，其温度约为4500K，而光球其余部分的温度约为5777K。</p>
+                <h4>色球层</h4>
+                <p>色球厚度约2000千米，太阳的温度分布从核心向外直到光球层，都是逐渐下降的，但到了色球层，却又反常上升，到接近顶端的温度大约在20000K。</p>
+                <h4>日冕层</h4>
+                <p>日冕是太阳大气的最外层，它由高温、低密度的等离子体所组成，日冕的温度高达百万度。</p>
+            </div>
+            <div class="theory-section">
+                <h4>其他参数</h4>
+                <div class="data-visualization">
+                    <div class="data-card basic-card">
+                        <h3>质量</h3>
+                        <div class="data-value">1.989 × 10³⁰ kg</div>
+                        
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>光谱型</h3>
+                        <div class="data-value">G2V</div>
+                        
+                    </div>
+                    <div class="data-card physics-card">
+                        <h3>表面温度</h3>
+                        <div class="data-value">5,778 K</div>
+                        
+                    </div>
+                    <div class="data-card physics-card">
+                        <h3>有效温度</h3>
+                        <div class="data-value">5,770 K</div>
+                        
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>椭率</h3>
+                        <div class="data-value">9×10-6</div>
+                        
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>平均密度</h3>
+                        <div class="data-value">1.409克/立方厘米</div>
+                        
+                    </div>
+                    <div class="data-card orbital-card">
+                        <h3>表面重力加速度</h3>
+                        <div class="data-value">27,400厘米/平方秒</div>
+                        
+                    </div>
+                    <div class="data-card orbital-card">
+                        <h3>逃逸速度</h3>
+                        <div class="data-value">617.7千米/秒</div>
+                        
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>发光度（LS）</h3>
+                        <div class="data-value">大约3.827×10²⁶Js⁻¹</div>
+                        
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>太阳常数</h3>
+                        <div class="data-value">1361 W/m²</div>
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>总辐射功率</h3>
+                        <div class="data-value">3.86×10²⁶瓦特</div>
+                    </div>
+                    <div class="data-card basic-card">
+                        <h3>太阳寿命</h3>
+                        <div class="data-value">约100亿年</div>
+                    </div>
+    
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="content-section">
+            <h2>结构组成</h2>
+            <p>根据太阳活动的相对强弱，太阳可分为宁静太阳和活动太阳两大类。宁静太阳是一个理论上假定宁静的球对称热气体球，其性质只随半径而变，而且在任一球层中都是均匀的，其目的在于研究太阳的总体结构和一般性质。在这种假定下，按照由里往外的顺序，太阳是由核心、辐射区、对流层、光球层、色球层、日冕层构成。光球层之下称为太阳内部；光球层之上称为太阳大气。</p>
+            <!-- 太阳磁场 -->
+            <div class="theory-section">
+                <h3>磁场</h3>
+                <p>太阳表面有一个变化的恒星磁场。它的极场是1—2高斯（0.0001—0.0002特斯拉），而在太阳上被称为太阳黑子的特征中，极场通常是3,000高斯（0.3特斯拉），在日珥中则是10—100高斯（0.001—0.01特斯拉）。磁场随时间和位置的变化而变化。准周期的11年太阳周期是太阳黑子数量和大小增减的最显著变化</p>
+                <div class="flex">
+                    <p><a href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3%E7%A3%81%E5%9C%BA/683184?fromModule=lemma_inlink#4">太阳磁场</a>远远超出了太阳本身。导电的太阳风等离子体将太阳磁场带入太空，形成所谓的行星际磁场。在一种被称为理想磁流体动力学的近似中，等离子体粒子只沿着磁力线移动。结果是，向外流动的太阳风将行星际磁场向外拉伸，迫使其形成大致径向的结构。对于在太阳磁赤道两侧具有相反半球极性的简单偶极太阳磁场，在太阳风中形成薄的电流片。太阳圈电流片延伸到太阳系外，影响到星际物质中的等离子体。</p>
+                    <img src="/textures/sun/02.webp" alt="" class="sun-image expandable-img">
+                </div>
+
+                <p>太阳是磁力活跃的恒星，它支撑一个强大、年复一年在变化的磁场，并且大约每11年环绕着太阳极大期反转它的方向太阳磁场会导致很多影响，称为太阳活动，包括在太阳表面的太阳黑子、太阳耀斑、和携带着物质穿越太阳系且不断变化的太阳风。太阳活动对地球的影响包括在高纬度的极光，和扰乱无线电通讯和电力。太阳活动被认为在太阳系的形成和演化扮演了很重要的角色，太阳因为高温的缘故，所有的物质都是气体和等离子体，这使得太阳的转速可能在赤道（大约25天）较快，而不是高纬度（在两极约为35天）太阳因纬度不同的较差自转造成它的磁场线随着时间而纠缠在一起，造成磁场圈从太阳表面喷发出来，并触发太阳形成系距性的太阳黑子和日珥（参见磁重联）。随着太阳每11年反转它本身的磁场，这种纠缠创造了太阳发电机和11年的太阳磁场活动太阳周期。</p>
+                <p>太阳磁场朝太阳本体外更远处延伸，磁化的太阳风等离子体携带着太阳的磁场进入太空，形成所谓的行星际磁场由于等离子体只能沿着磁场线移动，离开太阳的行星际磁场起初是沿着径向伸展的。因位在太阳赤道上方和下方离开太阳的磁场具有不同的极性，因此在太阳的赤道平面存在着一层薄薄的电流层，称为太阳圈电流片。太阳的自转使得远距离的磁场和电流片旋转成像是阿基米德螺旋结构，称为派克螺旋。行星际磁场的强度远比太阳的偶极性磁场强大。太阳50-400μT的磁偶极（在光球）随着距离的三次方衰减，在地球的距离上只有0.1nT。然而依据太空船的观测，在地球附近的行星际磁场是这个数值的100倍，大约是5nT。</p>
+            </div>
+
+            <div class="theory-section">
+                <h3>内部</h3>
+                <span><strong>核反应区</strong></span>
+                <p>从中心到0.25太阳半径是太阳发射巨大能量的真正源头，也称为核反应区。在这里，太阳核心处温度高达1500万度，压力相当于3000亿个大气压，随时都在进行着四个氢核聚变成一个氦核的热核反应。根据原子核物理学和爱因斯坦的质能转换关系式E=mc²，每秒钟有质量为6亿吨的氢经过热核聚变反应为5.96亿吨的氦，并释放出相当于400万吨氢的能量，正是这巨大的能源带给了我们光和热，但这损失的质量与太阳的总质量相比，却是不值一提的。根据对太阳内部氢含量的估计，太阳至少还有50亿年的正常寿命。</p>
+                <p>核反应区中的核聚变率处于自校正平衡：稍高的核聚变率会导致堆芯升温更多，膨胀会稍微抵消外层的重量，从而降低密度，进而降低核聚变率，并校正摄动；而稍低的速率将导致核心稍微冷却和收缩，从而增加密度并增加核聚变速率，并再次使其恢复到现时的速率</p>
+                <span><strong>辐射区</strong></span>
+                <div class="flex">
+                    <p>0.25太阳半径～0.86太阳半径是太阳辐射区，它包含了各种电磁辐射和粒子流。辐射从内部向外部传递过程是多次被物质吸收而又再次发射的过程。从核反应区到太阳表面的行程中，能量依次以X射线、远紫外线、紫外线，最后是可见光的形式向外辐射。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/03.webp" alt="太阳大气层结构示意图" class="sun-image expandable-img">
+                        <figcaption>太阳大气层结构</figcaption>
+                    </figure>
+                </div>
+                <span><strong>差旋层</strong></span>
+                <p>辐射层和对流层被一个过渡的差旋层分隔开。在此区域中，辐射区的均匀旋转与对流区的差异旋转之间的急剧状态变化导致两者之间产生大的剪切力，产生连续的水平层相互滑过的现象。目前猜想这一层中的磁发电机会产生太阳的磁场。</p>
+                <span><strong>对流层</strong></span>
+                <p>对流层是辐射区的外侧区域，其厚度约有十几万千米，由于这里的温度、压力和密度梯度都很大，太阳气体呈对流的不稳定状态。使物质的径向对流运动强烈，热的物质向外运动，冷的物质沉入内部，太阳内部能量就是靠物质的这种对流，由内部向外部传输。</p>
+                <p>对流层中，太阳的等离子体已经不够稠密或不够热，不再能经由传导作用有效的将内部的热向外传送；换言之，它已经不够透明了。结果是，热柱携带热物质前往表面（光球）产生了热对流。一旦这些物质在表面变冷，它会向下切入对流带的底部，再从辐射带的顶部获得更多的热量在可见的太阳表面，此处温度已经降至5700K，而且密度也只有0.2公克/立方米（大约是海平面密度的六千分之一）。</p>
+                <div class="flex">
+                    <p>在对流带的热柱对太阳表面观测是非常重要的，比如米粒组织和超米粒组织。在对流带的湍流会在太阳内部的外围部分造成“小尺度”的发电机，这会在太阳表面的各处产生磁南极和磁北极。太阳的热柱是瑞利-贝纳德对流，形状大致为棱镜六边形。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/04.webp" alt="太阳大气层结构示意图" class="sun-image expandable-img">
+                        <figcaption>太阳大气层结构</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="theory-section">
+                <h3>大气层</h3>
+                <div class="flex">
+                    <p>太阳光球以上的部分统称为太阳大气层，跨过整个电磁频谱，从无线电、可见光到伽马射线，都可以观察它们。太阳的大气层由四部分组成：光球（正常情况下可见）、色球、过渡区、日冕和太阳圈。在日全食期间，光球被阻挡，使得日冕可见。太阳圈可能是太阳大气层最稀薄的外缘，并且延伸到冥王星轨道之外与星际物质交界，交界处称为日鞘，并且在那儿形成剪切的激波前缘。色球、过渡区和日冕的温度都比太阳表面高，原因还没有获得证实，但证据指向阿尔文波可能携带了足够的能量将日冕加热。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/05.webp" alt="太阳大气层结构示意图" class="sun-image expandable-img">
+                        <figcaption>太阳大气</figcaption>
+                    </figure>
+                </div>
+                <span><strong>光球层</strong></span>
+                <p>对流层上面的太阳大气，称为太阳光球。光球是一层不透明的气体薄层，厚度约500千米。它确定了太阳非常清晰的边界，几乎所有的可见光都是从这一层发射出来的。</p>
+                <span><strong>色球层</strong></span>
+                <p>色球位于光球之上。厚度约2000千米。太阳的温度分布从核心向外直到光球层，都是逐渐下降的，但到了色球层，却又反常上升，到色球顶部时已达几万度。由于色球层发出的可见光总量不及光球的1%，因此人们平常看不到它。只有在发生日全食时，即食既之前几秒种或者生光以后几秒钟，当光球所发射的明亮光线被月影完全遮掩的短暂时间内，在日面边缘呈现出狭窄的玫瑰红色的发光圈层，这就是色球层。平时，科学家们要通过单色光（波长为6563埃）色球望远镜才能观测到太阳色球层。</p>
+                <span><strong>日冕层</strong></span>
+                <div class="flex">
+                    <p>日冕是太阳大气的最外层，由高温、低密度的等离子体所组成。亮度微弱，在白光中的总亮度比太阳圆面亮度的百分之一还低，约相当于满月的亮度，因此只有在日全食时才能展现其光彩，平时观测则要使用专门的日冕仪。日冕的温度高达百万度，其大小和形状与太阳活动有关，在太阳活动极大年时，日冕接近圆形；在太阳宁静年则呈椭圆形。自古以来，观测日冕的传统方法都是等待一次罕见的日全食——在黑暗的天空背景上，月面把明亮的太阳光球面遮掩住，而在日面周围呈现出青白色的光区，就是人们期待观测的太阳最外层大气——日冕。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/06.webp" alt="太阳大气层结构示意图" class="sun-image expandable-img">
+                        <figcaption>2010年在不同黑子上方看见的日冕构造</figcaption>
+                    </figure>
+                </div>
+                  
+            </div>
+
+            <div class="theory-section">
+                <h3>太阳圈</h3>
+                <span><strong>定义</strong></span>
+                <p>太阳圈也称为日球，是太阳风吹入星际物质（由银河系渗入的氢和氦）的空间中造成的气泡。虽然来自星际空间的中性原子也可以渗入这个气泡，但实际上在太阳圈中主要的物质都是来自太阳本身的。在最初的一百亿英里的半径内，太阳风以每小时百万公里的速度移动。 当他开始与星际物质碰撞时与在停止之前，他的速度已经降至亚音速。太阳风的速度降为亚音速之处称为终端激波；与星际物质达到平衡之处称为太阳层顶（heliopause）；星际物质，以相反的方向运动，与太阳圈碰撞使得速度降至亚音速之处，会产生弓形激波 。</p>
+                <span><strong>人类探测</strong></span>
+                <p>精确的日鞘形状和距离迄今仍不能决定，行星际太空船，像先驱者10号、先驱者11号、旅行者1号和旅行者2号都朝向太阳系的边缘前进，最终都将穿越日球层顶。</p>
+                <p></p>
+                <div class="flex">
+                    <p>在2005年5月，旅行者1号被宣布已经在2004年12月，在85天文单位的距离上越过终端激波进入日鞘。在相对方向上的旅行者2号，在2006年5月当她距离太阳只有76天文单位时，因为侦测到返回的微粒，也被认为越过了终端激波。这暗示太阳圈的形状也许是不规则的，在太阳的北半球向外凸起，而南半球被向内挤压。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/08.webp" alt="太阳圈-日鞘" class="sun-image expandable-img">
+                        <figcaption>旅行者2号正处于日鞘</figcaption>
+                    </figure>
+                </div> 
+            </div>
+                
+            <div class="theory-section">
+                <h3>太阳光</h3>
+                <span><strong>定义</strong></span>
+                <p>太阳光，广义的定义是来自太阳所有频谱的电磁辐射。在地球，阳光显而易见是当太阳在地平线之上，经过地球大气层过滤照射到地球表面的太阳辐射，则称为日光。</p>
+                <p>当太阳辐射没有被云遮蔽，直接照射时通常被称为阳光，是明亮的光线和辐射热的组合。世界气象组织定义“日照时间”是指一个地区直接接收到的阳光辐照度在每平方米120瓦特以上。</p>
+                <p>阳光照射的时间可以使用阳光录影机、全天空辐射计或日射强度计来记录。阳光需要8.3分钟才能从太阳抵达地球。</p>
+                <div class="flex">
+                    
+                    <p>直接照射的阳光亮度效能约有每瓦特93流明的辐射通量，其中包括红外线、可见光和紫外线。明亮的阳光对地球表面上提供的照度大约是每平方米100,000流明或100,000勒克司。阳光是光合作用的关键因素，对于地球上的生命至关重要。</p>
+                    <figure class="expandable">
+                        <img src="/textures/sun/09.jpg" alt="太阳圈-日鞘" class="sun-image expandable-img">
+                        <figcaption>太阳光</figcaption>
+                    </figure>
+                </div>
+                <span><strong>阳光强度</strong></span>
+                <p>太阳系内不同天体接收到的阳光强度与太阳距离的平方成反比，下面的表粗略的比较了太阳系内每个行星接收到的强度：</p>
+                <div class="table-strong">
+                    <table>
+                        <tr>
+                            <th>行星</th>
+                            <th>近日点-远日点 距离（AU）</th>
+                            <th>太阳辐射 最大值和最小值（W/m²）</th>
+                        </tr>
+                        <tr>
+                            <td>水星</td>
+                            <td>0.3075 – 0.4667</td>
+                            <td>14,446 – 6,272</td>
+                        </tr>
+                        <tr>
+                            <td>金星</td>
+                            <td>0.7184 – 0.7282</td>
+                            <td>2,647 – 2,576</td>
+                        </tr>
+                        <tr>
+                            <td>地球</td>
+                            <td>0.9833 – 1.017</td>
+                            <td>1,413 – 1,321</td>
+                        </tr>
+                        <tr>
+                            <td>火星</td>
+                            <td>1.382 – 1.666</td>
+                            <td>715 – 492</td>
+                        </tr>
+                        <tr>
+                            <td>木星</td>
+                            <td>4.950 – 5.458</td>
+                            <td>55.8 – 45.9</td>
+                        </tr>
+                        <tr>
+                            <td>土星</td>
+                            <td>9.048 – 10.12</td>
+                            <td>16.7 – 13.4</td>
+                        </tr>
+                        <tr>
+                            <td>天王星</td>
+                            <td>18.38 – 20.08</td>
+                            <td>4.04 – 3.39</td>
+                        </tr>
+                        <tr>
+                            <td>海王星</td>
+                            <td>29.77 – 30.44</td>
+                            <td>1.54 – 1.47</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="content-section">
+            <h2>太阳活动</h2>
+            <p>太阳活动是太阳大气层里一切活动现象的总称。主要有太阳黑子、光斑、谱斑、耀斑、日珥和日冕瞬变事件等。由太阳大气中的电磁过程引起。时烈时弱，平均以11年为周期。处于活动剧烈期的太阳（称为“扰动太阳”)辐射出大量紫外线、x射线、粒子流和强射电波，因而往往引起地球上极光、磁暴和电离层扰动等现象。</p>
+
+            <div class="theory-section">
+                <h3>黑子</h3>
+                <span><strong>黑子介绍</strong></span>
+                
+                <div class="flex">
+                    <div class="text">
+                        <p>太阳黑子是在太阳的光球层上发生的一种太阳活动，是太阳活动中最基本、最明显的。一般认为，太阳黑子实际上是太阳表面一种炽热气体的巨大漩涡，温度大约为3000-4500℃。因为其温度比太阳的光球层表面温度要低1000到2000摄氏度，所以看上去像一些深暗色的斑点。一个发展完全的黑子由较暗的核和周围较亮的部分构成，中间凹陷大约500千米。一个小黑子大约有1000千米，而一个大黑子则可达20万千米。太阳黑子的形成与太阳磁场有密切的关系。但是他到底是如何形成的，天文学家对这个问题还没有找到确切的答案。不过科学家推测，极有可能是强烈的磁场改变了某片区域的物质结构，从而使太阳内部的光和热不能有效地到达表面，形成了这样的“低温区”。也就是太阳上一颗颗的“小黑痣”。</p>
+                        <p>太阳黑子很少单独活动，通常是成群出现。黑子的活动周期为11年，活跃时会对地球的磁场产生影响，当太阳上有大群黑子出现的时候，会出现磁暴现象使指南针乱抖动，不能正确地指示方向；平时很善于识别方向的信鸽会迷路；无线电通讯也会受到严重阻碍，甚至会突然中断一段时间，这些反常现象将会对飞机、轮船和人造卫星的安全航行、还有电视传真等等方面造成严重威胁。</p>
+                    </div>
+                   
+                    <figure class="expandable">
+                        <img src="/textures/sun/11.webp" alt="太阳黑子（近照）与地球" class="sun-image expandable-img">
+                        <figcaption>太阳黑子（近照）与地球</figcaption>
+                    </figure>
+                </div>
+                <span><strong>黑子成因</strong></span>
+                <div class="flex">
+                    <div class="text">
+                        <p>1.强烈的局部磁场活动:太阳黑子区域拥有非常强的磁场（比周围区域强数千倍）。这些磁场会抑制太阳内部热对流的上升运动，使能量难以上传至光球层表面。</p>
+                        <p>2.温度较低（但仍非常热:因为对流受阻，热量传输效率降低，导致这些区域的温度比周围低（黑子温度约为 4000K，而正常太阳表面约 5800K）。虽然仍非常热，但相对较冷，所以从地球看显得“发暗”。</p>
+                        <p>3. 太阳磁周期驱动:太阳黑子的数量和活动周期呈现约 11年一个周期的变化，称为“太阳活动周期”或“太阳磁周期”。这是由太阳磁场方向周期性反转导致的。</p>
+                    </div>
+                    <figure class="expandable">
+                        <img src="/textures/sun/12.png" alt="太阳黑子" class="sun-image expandable-img">
+                        <figcaption>太阳黑子成因</figcaption>
+                    </figure>
+                </div>
+                <span><strong>观测特征</strong></span>
+                
+                <div class="flex">
+                    <figure class="expandable">
+                        <img src="/textures/sun/13.webp" alt="太阳黑子的蝴蝶舞步" class="sun-image expandable-img">
+                        <figcaption>太阳黑子的蝴蝶舞步</figcaption>
+                    </figure>
+                    <div class="text">
+                        <h4>黑子的蝴蝶舞步</h4>
+                        <p>英国天文爱好者卡林顿通过1853年——1861年间的日常黑子观测，首次发现黑子在日面上的纬度位置随时间向赤道方向迁移；德国天文学家古斯塔夫·施波雷尔通过对卡林顿观测数据的进一步分析得到太阳黑子在日面位置上的迁移呈现蝴蝶图样的分布。</p>
+                        <p>在太阳活动周开始时，南北半球黑子群的平均纬度在30°附近，随着时间推移，黑子出现的纬度逐渐向太阳赤道转移，在极大年附近为15°左右，在活动周结束时，黑子群的平均纬度约为8°；同时，在每一活动周的末尾，新的黑子群又开始在高纬出现，形成前一周黑子在低纬和新一周黑子在高纬同时存在的情形，这样的情形大约维持一年左右。如果把日面纬度作为纵坐标，以时间作为横坐标，将黑子画在图上，我们就得到一串翩翩起舞的美丽的蝴蝶形图样。</p>
+                        
+                    </div>
+                    
+                </div>
+                <div class="flex">
+                    <figure class="expandable">
+                        <img src="/textures/sun/14.webp" alt="太阳黑子的蝴蝶舞步" class="sun-image expandable-img">
+                        <figcaption>太阳黑子的亮墙结构</figcaption>
+                    </figure>
+                    <div class="text">
+                        <h4>黑子的亮墙结构</h4>
+                        <p>中国科学院国家天文台与云南天文台研究人员，共同综合利用云南抚仙湖一米新真空太阳望远镜（NVST）、美国太阳动力学天文台（SDO）及太阳界面层成像光谱仪（IRIS）的数据，首次发现了黑子亮桥上的垂直振荡亮结构，并将其命名为“亮墙（light wall）”。</p>
+                        <p>亮墙是太阳黑子中间或边缘出现的明亮结构，通常横跨暗部，连接到黑子的半影或外缘。在亮桥结构的上方存在着垂直振荡的亮结构，像是扎根在亮桥上的一堵墙，所以形象的将其命名为亮墙。亮墙的整体都要比周围区域明亮，尤其是墙顶的亮度更高，在SDO的多个极紫外波段可见。亮墙的平均高度为3.6兆米。亮墙的顶部上下运动，形成连续的振荡，平均振幅和平均振荡速度分别为0.9兆米和15.4千米/秒。通过对亮墙的高度变化进行小波分析，发现亮墙的主振荡周期为3.9分钟。</p>
+
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="theory-section">
+                <h3>耀斑</h3>
+                <p>太阳耀斑是太阳活动的重要表现，是太阳上最剧烈的活动现象之一，是太阳表面局部区域突然和大规模的能量释放过程，引起局部区域瞬时加热，向外发射各种电磁辐射，并伴随粒子辐射突然增强，所辐射出的光的波长横跨整个电磁波谱。</p>
+                <span><strong>耀斑成因</strong></span>
+                <div class="flex">
+                    <div class="text">
+                        <p>1.磁能积累：在太阳黑子活跃区，磁场高度扭曲和缠绕。</p>
+                        <p>2.磁场重联：当磁场线突然重组（类似断裂再接），释放出巨大的能量。</p>
+                        <p>3.能量释放：以光、紫外线、X射线、γ射线等形式爆发，产生耀斑。</p>
+                    </div>
+                   
+                    <figure class="expandable">
+                        <img src="/textures/sun/16.webp" alt="太阳耀斑" class="sun-image expandable-img">
+                        <img src="/textures/sun/15.webp" alt="太阳耀斑" class="sun-image expandable-img">
+                        <figcaption>太阳耀斑</figcaption>
+                    </figure>
+                </div>
+                
+                <span><strong>耀斑分类</strong></span>
+                <div class="flare-accordion">
+                    <div class="flare-card">
+                      <input type="checkbox" id="flare1" />
+                      <label class="flare-header" for="flare1">
+                        🌈 光学耀斑 <span>Optical Solar Flare</span>
+                      </label>
+                      <div class="flare-content">
+                        <p>太阳爆发时光学波段亮度突然增强，波长在3900~7000埃之间。在氢的Hα线和电离钙的H、K线最为突出，是地面望远镜观测耀斑的重要方式。</p>
+                        <!-- 分级标准 -->
+                        <details class="flare-grade">
+                            <summary>📊 分级标准</summary>
+                            <table>
+                            <thead>
+                                <tr><th>级别</th><th>耀斑面积<br>(10⁻⁶太阳半球)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>S</td><td>1</td></tr>
+                                <tr><td>1</td><td>100～250</td></tr>
+                                <tr><td>2</td><td>250～600</td></tr>
+                                <tr><td>3</td><td>600～1200</td></tr>
+                                <tr><td>4</td><td>>1200</td></tr>
+                            </tbody>
+                            </table>
+                        </details>
+                      </div>
+                    </div>
+                  
+                    <div class="flare-card">
+                      <input type="checkbox" id="flare2" />
+                      <label class="flare-header" for="flare2">
+                        ⚡ X射线耀斑 <span>X-ray Flare</span>
+                      </label>
+                      <div class="flare-content">
+                        <p>X射线通量突然增强，波长在0.01~100埃之间。在极紫外波段表现明显，是通过空间卫星监测耀斑的主要方式。</p>
+                        <!-- 分级标准 -->
+                        <details class="flare-grade">
+                            <summary>📊 分级标准</summary>
+                            <table>
+                            <thead>
+                                <tr><th>级别</th><th>峰值流量 (W/m²)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>A</td><td>10⁻⁷</td></tr>
+                                <tr><td>B</td><td>10⁻⁷ ～ 10⁻⁶</td></tr>
+                                <tr><td>C</td><td>10⁻⁶ ～ 10⁻⁵</td></tr>
+                                <tr><td>M</td><td>10⁻⁵ ～ 10⁻⁴</td></tr>
+                                <tr><td>X</td><td>>10⁻⁴</td></tr>
+                            </tbody>
+                            </table>
+                        </details>
+                      </div>
+                    </div>
+                  
+                    <div class="flare-card">
+                      <input type="checkbox" id="flare3" />
+                      <label class="flare-header" for="flare3">
+                        ☄️ 质子耀斑 <span>Solar Proton Flare</span>
+                      </label>
+                      <div class="flare-content">
+                        <p>在耀斑发射的粒子事件中，当地球同步轨道探测到的质子能量大于10兆电子伏的通量超过10pfu时，表明这种事件中有很强的质子流，即发生质子事件，与之相对应的源耀斑称为质子耀斑。在日地空间行星际磁场的引导下，日面东半球发射的质子一般到不了地球附近，因此质子耀斑主要发生在日面西半球。质子耀斑大多为M级及以上级别的耀斑，发生后1小时~2小时内能够在地球轨道附近观测到其引发的质子事件。</p>
+                      </div>
+                    </div>
+                  
+                    <div class="flare-card">
+                      <input type="checkbox" id="flare4" />
+                      <label class="flare-header" for="flare4">
+                        🌟 白光耀斑 <span>White Light Flare</span>
+                      </label>
+                      <div class="flare-content">
+                        <p>白光耀斑是太阳耀斑中极为罕见的一种，由于能在白光范围内观测到而得名。太阳耀斑一般通过白光是不能观测到的，只有通过Hα线和电离钙的H、K线才能观测到。但有时在Hα线所看到的亮区中的一些更小的区域，通过白光也能看到突然增亮现象，持续时间大约几分钟，这就是白光耀斑。1859年卡林顿首次观测的太阳耀斑就是白光耀斑。</p>
+                      </div>
+                    </div>
+                </div>
+                <!-- 警报级别  -->
+                
+                <div class="alert-levels">
+                    <h5 class="section-title">🌞 太阳耀斑警报级别</h5>
+                    
+                    <div class="alert-card red">
+                      <div class="alert-header">
+                        <span class="level">🔴 红色警报</span>
+                        <span class="range">射线流量 ≥ 10<sup>-3</sup> W/m²</span>
+                      </div>
+                      <div class="alert-detail">
+                        通信：向阳面大部分地区的短波无线电通信中断1~2小时，信号消失；
+                        低频导航信号中断1~2小时，对向阳面卫星导航产生小的干扰。
+                      </div>
+                    </div>
+                  
+                    <div class="alert-card orange">
+                      <div class="alert-header">
+                        <span class="level">🟠 橙色警报</span>
+                        <span class="range">10<sup>-3</sup> > 射线流量 ≥ 10<sup>-4</sup> W/m²</span>
+                      </div>
+                      <div class="alert-detail">
+                        通信：短波无线电通信大面积受到影响，向阳面信号损失约1小时；
+                        低频无线电导航信号强度衰减约1小时。
+                      </div>
+                    </div>
+                  
+                    <div class="alert-card yellow">
+                      <div class="alert-header">
+                        <span class="level">🟡 黄色警报</span>
+                        <span class="range">10<sup>-4</sup> > 射线流量 ≥ 10<sup>-5</sup> W/m²</span>
+                      </div>
+                      <div class="alert-detail">
+                        通信：向阳面短波信号强度衰减较小，低频导航信号强度短时衰减。
+                      </div>
+                    </div>
+                  </div>
+                <!-- 观测历史 -->
+                
+                  <div class="horizontal-timeline" id="timeline">
+                    <h5 class="section-title">🌞 耀斑观测大致历史记录</h5>
+                    <div class="timeline-scroll">
+                      <!-- 单个时间节点 -->
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">1859年9月</div>
+                        <div class="event">卡林顿首次观测太阳耀斑，地球发生极强磁暴。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">1942年2月27、28日</div>
+                        <div class="event">英国一雷达站遭干扰，在这时间正好发生了大耀斑。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">1956年9月23日</div>
+                        <div class="event">一些亚洲天文台观测到大耀斑,引起宇宙线增强，随后发生了电离层异常。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">1989年3月13日</div>
+                        <div class="event">加拿大发生因耀斑导致的大规模停电。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2003年11月4日</div>
+                        <div class="event">爆发X28级耀斑，"万圣节风暴"震撼全球。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2017年9月3日</div>
+                        <div class="event">太阳黑子群AR2673在5天内爆发10多次大耀斑，9月4日并伴有日冕物质抛射。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2022年3月29日</div>
+                        <div class="event">17连次耀斑爆发，11次C级小耀斑，6次M级中等耀斑，并伴随产生了日冕物质抛射。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2022年4月20日中午12点03分</div>
+                        <div class="event">爆发X级耀斑，强度级别达到X2.2级，持续17分钟。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2023年12月15日01时03分</div>
+                        <div class="event">太阳活动区13514爆发了一次强度为X2.8级的大耀斑。此次耀斑活动为自2017年9月10日X8.2级耀斑以来的最强爆发，造成强无线电信号吸收事件，短波无线电通讯以及导航低频信号传输受阻约一小时。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年1月1日05时55分</div>
+                        <div class="event">太阳爆发了一个强耀斑（X5.0级），本次爆发位置不正对地球，不会造成大的地球空间环境效应。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年2月23日6时34分</div>
+                        <div class="event">太阳爆发了第25太阳活动周迄今强度最大的耀斑：X6.3级大耀斑，这一耀斑强度也打破了自2017年以来的耀斑爆发纪录。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年3月29日4时56分</div>
+                        <div class="event">太阳活动区13615爆发耀斑活动，峰值强度达到X1.1级。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年5月3日-11日</div>
+                        <div class="event">短短9天时间里，太阳上共爆发了11个X级耀斑和60余个M级耀斑，爆发强度和频次历史罕见。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年5月15日00时51分</div>
+                        <div class="event">太阳活动区13664爆发耀斑活动，耀斑的峰值强度为X8.7级，达到大耀斑等级。此次爆发还刷新了当前第25太阳活动周的最强耀斑纪录。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年9月14日23时29分</div>
+                        <div class="event">太阳活动区13825爆发了一次明显的耀斑，其峰值强度为X4.5级，达到大耀斑等级，耀斑发生时，中国正处在夜间，因此没有给中国电离层天气造成影响。</div>
+                      </div>
+                      <div class="timeline-node" onclick="toggleEvent(this)">
+                        <div class="year">2024年10月8日08时至10月10日08时</div>
+                        <div class="event">太阳先后发生五次明显爆发活动，其中以10月8日03时12分左右，太阳活动区13842爆发的X2.1级耀斑，以及10月9日09时56分活动区13848爆发的X1.8级耀斑最强，均达到了大耀斑等级。</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+            </div>
+            <!-- 太阳光斑 -->
+            <div class="theory-section">
+                <h3>光斑</h3>
+                
+                <div class="flex">
+                    <div class="text">
+                        <p>光斑，是一种太阳光球层边缘的活动现象，指在太阳光球层边缘出现的明亮斑点。边缘上有黑子处就有光斑，但是没有黑子的地方有时也会出现光斑，与黑子有关的光斑，呈纤维状，宽5000~10000km，长约50000km;寿命比黑子长，一般约长3倍.与黑子无关的光斑，略呈圆形，面积较小，直径约2300km，平均寿命约0.5h，光斑温度比光球高，只是由于光斑不处于辐射平衡，底部温度要稍低一些，上层则高一些.上层的平均温度比周围高约100K，亮度大10%左右.光斑与黑子同样具有11a活动周期.光斑向外延伸到色球层，便成为谱斑。</p>
+                    </div>
+                   
+                    <figure class="expandable">
+                        <img src="/textures/sun/17.webp" alt="太阳光斑" class="sun-image expandable-img">
+                        
+                        <figcaption>太阳光斑</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- 米粒组织 -->
+            <div class="theory-section">
+                <h3>米粒组织</h3>
+                <div class="flex">
+                    <figure class="expandable">
+                        <img src="/textures/sun/18.webp" alt="米粒组织" class="sun-image expandable-img">
+                        <figcaption>米粒组织</figcaption>
+                    </figure>
+                    <div class="text">
+                        <p>米粒组织是太阳光球层上的一种日面结构。呈多角形小颗粒形状，得用天文望远镜才能观测到。米粒组织的温度比米粒间区域的温度约高300℃，因此，显得比较明亮易见。虽说它们是小颗粒，实际的直径也有1000公里～2000公里。</p>
+                        <p>明亮的米粒组织很可能是从对流层上升到光球的热气团，不随时间变化且均匀分布，且呈现激烈的起伏运动。米粒组织上升到一定的高度时很快就会变冷，并马上沿着上升热气流之间的空隙处下降；寿命也非常短暂来去匆匆，从产生到消失，几乎比地球大气层中的云消烟散还要快平均寿命只有几分钟，此外，发现的超米粒组织，其尺度达3万公里左右，寿命约为20小时。</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 太阳风 -->
+            <div class="theory-section">
+                <h3>太阳风</h3>
+                <div class="flex">
+                    <div class="text">
+                        <p>太阳风，是指从太阳上层大气射出的超声速等离子体带电粒子流。在不是太阳的情况下，这种带电粒子流也常称为“恒星风”。太阳风是一种连续存在，来自太阳并以200-800km/s的速度运动的高速带电粒子流。这种物质虽然与地球上的空气不同，不是由气体的分子组成，而是由更简单的比原子还小一个层次的基本粒子——质子和电子等组成，但它们流动时所产生的效应与空气流动十分相似，所以称它为太阳风。2012年3月，5年来最强的一次太阳风暴在7日上午喷发，无线通讯受到影响。</p>
+                        <p>太阳风（solar wind）的密度与地球上风密度相比是非常稀薄而微不足道的。一般情况下，在地球附近的行星际空间中，每立方厘米有几个到几十个粒子，而地球上风的密度则为每立方厘米有2687亿亿个分子。然而太阳风虽十分稀薄，但它刮起来的猛烈劲，远远胜过地球上的风。在地球上，12级台风的风速是每秒32.5米以上，而太阳风的风速，在地球附近却经常保持在每秒350～450千米 [1]，是地球风速的上万倍，最猛烈时可达每秒800千米以上。</p>
+
+                    </div>
+                    <figure class="expandable">
+                        <img src="/textures/sun/19.webp" alt="太阳风" class="sun-image expandable-img">
+                        <figcaption>太阳风</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- 冕洞 -->
+            <div class="theory-section">
+                <h3>冕洞</h3>
+                <div class="flex">
+                    <div class="text">
+                        <p>冕洞的分布区域可达太阳表面多数地区，尤其是在太阳的两极地区，科学家已经发现冕洞内部存在磁场线的闭合和开放，如果磁场线突然打开或者闭合，那么太阳表面就会出现较大范围的冕洞覆盖现象，其分布区域远大于两极地区，冕洞形成时可携带大量的炙热等离子体，磁场线开放的区域可以看到冕洞的一些细节上变化，比如冕洞周围出现类似浪花状的结构等。事实上，冕洞分布在日冕物质中密度较低的空间，而且温度极高，可达到数百万度。</p>
+                        
+
+                    </div>
+                    
+                    <figure class="expandable">
+                        <img src="/textures/sun/20.webp" alt="冕洞" class="sun-image expandable-img">
+                        <figcaption>极区冕洞</figcaption>
+                    </figure>
+                </div>
+                
+            </div>
+            <!-- 探测历史 -->
+            <div class="theory-section">
+                <h3>探测历史</h3>
+                <table class="mission-table">
+                    <thead>
+                        <tr>
+                            <th>时间（年）</th>
+                            <th>探测器名称</th>
+                            <th>国家</th>
+                            <th>成就</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1960-1968</td>
+                            <td>先驱者5-9号</td>
+                            <td>美国</td>
+                            <td>绕太阳运行，研究太阳风、耀斑</td>
+                        </tr>
+                        <tr>
+                            <td>1974-1976</td>
+                            <td>太阳神1-2号</td>
+                            <td>美德合作</td>
+                            <td>近距离高速掠过太阳表面，测量太阳风与磁场</td>
+                        </tr>
+                        <tr>
+                            <td>1980</td>
+                            <td>太阳极大使者</td>
+                            <td>美国</td>
+                            <td>收集了耀斑、太阳黑子和日珥发出的X射线。伽马射线、紫外辐射的资料。</td>
+                        </tr>
+                        <tr>
+                            <td>1990</td>
+                            <td>尤利西斯</td>
+                            <td>美欧合作</td>
+                            <td>在太阳极区上方的太阳风以及太阳磁场</td>
+                        </tr>
+                        <tr>
+                            <td>1991</td>
+                            <td>阳光</td>
+                            <td>日英美合作</td>
+                            <td>测量了太阳耀斑发出的X射线和伽马射线以及耀斑爆发前的状况</td>
+                        </tr>
+                        <tr>
+                            <td>1995</td>
+                            <td>SOHO</td>
+                            <td>美欧合作</td>
+                            <td>研究太阳内部结构和表面发生的事件</td>
+                        </tr>
+                        <tr>
+                            <td>1998</td>
+                            <td>TRACE</td>
+                            <td>美国</td>
+                            <td>了解太阳磁场与日冕加热之间的联系</td>
+                        </tr>
+                        <tr>
+                            <td>2006</td>
+                            <td>STEREO</td>
+                            <td>美国</td>
+                            <td>全方位提供太阳爆发和太阳风的星系</td>
+                        </tr>
+                        <tr>
+                            <td>2010</td>
+                            <td>SDO</td>
+                            <td>美国</td>
+                            <td>预测太阳活动对地球的影响</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>Parker Solar Probe</td>
+                            <td>美国</td>
+                            <td>探索太阳运行机制</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>羲和号</td>
+                            <td>中国</td>
+                            <td>2021年10月14日18时51分，中国在太原卫星发射中心采用长征二号丁运载火箭，成功发射首颗太阳探测科学技术试验卫星“羲和号”，实现中国太阳探测零的突破。</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>风云三号E星</td>
+                            <td>中国</td>
+                            <td>空间日冕探测</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>空间新技术试验卫星</td>
+                            <td>中国</td>
+                            <td>太阳过渡区的探测</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>夸父一号，先进天基太阳天文台</td>
+                            <td>中国</td>
+                            <td>太阳磁场、耀斑爆发和日冕物质抛射的探测</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div> 
+            <div class="theory-section">
+                <h3>其他信息</h3>
+                <div class="flex">
+                    <figure class="expandable">
+                        <img src="/textures/sun/21.webp" alt="太阳探测器" class="sun-image expandable-img">
+                        <figcaption>扫描成像</figcaption>
+                    </figure>
+                    <div class="text">
+                        <p>2022年8月30日，中国首颗太阳探测科学技术试验卫星“羲和号”在国际上首次实现了对太阳Hα（氢阿尔法）波段的光谱扫描成像，记录了太阳活动在光球层和色球层的响应过程，通过一次扫描，可获取376个波长位置的太阳图像，不同波长对应了光球和色球不同层次的太阳大气。根据这些谱线的精细结构，可反演出高精度的全日面色球和光球多普勒速度场，发生在太阳大气中的活动可被详细记录到，进而研究太阳活动的物理过程。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 放大预览容器 -->
+        <div id="img-overlay" style="display:none;">
+            <img id="overlay-img" src="" alt="放大图像">
+        </div>
+          
+    </div>
+    
+    <footer class="footer">
+        <p>© 2025 太阳系探索科普网站 | 本页面内容基于公开天文数据整理</p>
+    </footer>
+    <script>
+        
+        function createChart(ctxId, chartConfig, chartName) {
+            const ctx = document.getElementById(ctxId);
+            if (!ctx) {
+                console.error(`[错误] 找不到 canvas 元素：${ctxId}`);
+                return;
+            }
+            try {
+                console.log(`[开始绘制] ${chartName} (${ctxId})`);
+                new Chart(ctx.getContext('2d'), chartConfig);
+                console.log(`[成功] ${chartName} 绘制完成！`);
+            } catch (error) {
+                console.error(`[失败] 绘制 ${chartName} 时出错:`, error);
+            }
+        }
+
+        // 太阳尺寸图
+        createChart('sunSizeChart', {
+            type: 'bar',
+            data: {
+                labels: ['日地平均距离', '日地最远距离', '日地最近距离', '半径', '表面面积', '体积'],
+                datasets: [{
+                    label: 'km',
+                    data: [149597870, 152097701, 147098290, 696340, 6.0877e12, 1.4122e18],
+                    backgroundColor: [
+                        'rgba(255, 115, 0, 0.6)',
+                        'rgba(255, 115, 0, 0.6)',
+                        'rgba(255, 115, 0, 0.6)',
+                        'rgba(255, 165, 0, 0.6)',
+                        'rgba(255, 215, 0, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 115, 0, 1)',
+                        'rgba(255, 165, 0, 1)',
+                        'rgba(255, 215, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: '距离/大小 (km)'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '太阳的距离与大小参数',
+                        color: '#ff7300'
+                    }
+                }
+            }
+        }, '太阳尺寸图');
+
+        // 太阳周期图
+        createChart('sunPeriodChart', {
+            type: 'bar',
+            data: {
+                labels: ['公转周期', '自转周期', '自转会合周期', '太阳活动周期'],
+                datasets: [{
+                    label: '周期（天）',
+                    data: [365.256, 25.38, 27.2753, 11 * 365.256],
+                    backgroundColor: [
+                        'rgba(255, 115, 0, 0.6)',
+                        'rgba(255, 165, 0, 0.6)',
+                        'rgba(255, 215, 0, 0.6)',
+                        'rgba(255, 235, 0, 0.6)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: '周期（天）'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '太阳的周期参数',
+                        color: '#ff7300'
+                    }
+                }
+            }
+        }, '太阳周期图');
+
+        // 太阳星等图
+        createChart('sunMagnitudeChart', {
+            type: 'bar',
+            data: {
+                labels: ['视星等', '绝对星等', '热星等', '绝对热星等'],
+                datasets: [{
+                    label: '星等',
+                    data: [-26.74, 4.83, 4.75, 4.68],
+                    backgroundColor: [
+                        'rgba(255, 115, 0, 0.6)',
+                        'rgba(255, 215, 0, 0.6)',
+                        'rgba(255, 235, 0, 0.6)',
+                        'rgba(255, 165, 0, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 115, 0, 1)',
+                        'rgba(255, 165, 0, 1)',
+                        'rgba(255, 215, 0, 1)',
+                        'rgba(255, 235, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: '星等'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '太阳的星等参数',
+                        color: '#ff7300'
+                    }
+                }
+            }
+        }, '太阳星等图');
+
+        // 太阳成分饼图
+        createChart('sunCompositionChart', {
+            type: 'pie',
+            data: {
+                labels: ['氢', '氦', '氧', '碳', '铁', '氖', '氮', '硅', '镁', '硫'],
+                datasets: [{
+                    data: [73.46, 24.85, 0.77, 0.29, 0.16, 0.12, 0.09, 0.07, 0.05, 0.04],
+                    backgroundColor: [
+                        'rgba(255, 100, 0, 0.8)',
+                        'rgba(255, 200, 50, 0.7)',
+                        'rgba(255, 150, 0, 0.6)',
+                        'rgba(255, 180, 40, 0.6)',
+                        'rgba(220, 80, 20, 0.7)',
+                        'rgba(120, 40, 0, 0.5)',
+                        'rgba(255, 220, 100, 0.5)',
+                        'rgba(255, 60, 0, 0.7)',
+                        'rgba(255, 120, 80, 0.6)',
+                        'rgba(255, 240, 180, 0.4)'
+                    ],
+                    borderWidth: 0.8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '太阳的化学组成（质量百分比）',
+                        color: '#ff7300'
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        }, '太阳成分饼图');
+
+        // 太阳温度图
+        createChart('sunTemperatureChart', {
+            type: 'line',
+            data: {
+                labels: ['核心', '辐射层', '对流层', '光球层', '色球层', '日冕'],
+                datasets: [{
+                    label: '温度 (K)',
+                    data: [15000000, 7000000, 2000000, 5778, 8000, 1000000],
+                    borderColor: 'rgba(255, 115, 0, 1)',
+                    backgroundColor: 'rgba(255, 115, 0, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: '温度 (K)（对数刻度）'
+                        }
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '太阳各层温度分布',
+                        color: '#ff7300'
+                    }
+                }
+            }
+        }, '太阳温度图');
+
+
+        // 在 <script> 标签内添加
+        document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.video-banner video');
+        
+        // 点击视频暂停/播放
+        video.addEventListener('click', () => {
+            if (video.paused) video.play();
+            else video.pause();
+        });
+        
+        // 移动端触摸事件
+        video.addEventListener('touchend', () => {
+            if (video.paused) video.play();
+            else video.pause();
+        });
+        });
+
+        // const timeline = document.querySelector('.timeline-scroll');
+        // const clone = timeline.cloneNode(true);
+        // timeline.parentNode.appendChild(clone);
+        function toggleEvent(el) {
+        // 关闭其他节点
+        document.querySelectorAll('.timeline-node').forEach(node => {
+            if (node !== el) {
+            node.classList.remove('active');
+            }
+        });
+
+        // 切换当前点击项
+        el.classList.toggle('active');
+        }
+
+        // 获取 放大图片的DOM 元素
+        const imgs = document.querySelectorAll('.expandable-img');
+        const overlay = document.getElementById('img-overlay');
+        const overlayImg = document.getElementById('overlay-img');
+
+        imgs.forEach(img => {
+            img.addEventListener('click', () => {
+            overlayImg.src = img.src;
+            overlay.style.display = 'flex';
+            overlayImg.style.transform = 'scale(1)';
+            });
+        });
+
+        overlay.addEventListener('click', () => {
+            overlay.style.display = 'none';
+        });
+
+        // 缩放功能
+        overlay.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const currentScale = parseFloat(overlayImg.style.transform.replace(/[^0-9.]/g, '')) || 1;
+            let newScale = currentScale + (e.deltaY < 0 ? 0.1 : -0.1);
+            newScale = Math.max(0.5, Math.min(3, newScale)); // 限制缩放范围
+            overlayImg.style.transform = `scale(${newScale})`;
+        });
+    </script>
+</body>
+</html> 

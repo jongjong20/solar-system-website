@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火星 - 太阳系行星</title>
+    <link rel="stylesheet" href="../css/planet-css/mars.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/public/assets/images/mars.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/banner.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <div class="video-banner">
+        <video id="myVideo" autoplay muted loop playsinline>
+        <source src="/textures/mars/01.mp4" type="video/mp4">
+        <source src="/textures/mars/01.mp4" type="video/webm">
+        </video>
+        <div class="video-overlay">
+            <h1>火星</h1>
+            <p></p>
+        </div>
+    </div>
+
+    <a href="../solarSystem.html" class="back-button">
+        <button class="button">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 40">
+                        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+    <a href="../public/plantIndex.html" class="back-buttons">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>火星</h2>
+            <div class="theory-section">
+                <p>火星（拉丁语：Mars；天文符号：♂），是离太阳第四近的行星，也是太阳系中仅次于水星的第二小的行星，为太阳系里四颗类地行星之一，已被数十艘无人太空船探索。其大气以二氧化碳为主（95%二氧化碳），既稀薄又寒冷。火星呈现为橘红色，其地表广泛的分布着氧化铁。火星南半球是古老、充满陨石坑的高地，北半球则是较年轻的平原。</p>
+                <p>火星有两个天然卫星：火卫一和火卫二，形状不规则，可能是其捕获的小行星。根据探测到的证据，火星两极有冰冠覆盖，亦观察到季节性的水汽及类似地下水涌出的现象，而过往的火星亦可能被大面积的海洋、湖泊及河流覆盖。而研究发现，火星目前仍有液态水存在。</p>
+                <p>由于火星位于太阳系的宜居带，同时有更多证据证明火星曾拥有类似地球的环境，与及丰富的资源，故此火星成为各国研究的重点，其中美国及中国已有载人登陆火星的计划，未来将在火星建立基地。</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>基本信息</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="atmosphereChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="data-cards-container">
+                <div class="data-card orbit-card">
+                    <h3>轨道参数</h3>
+                    <div class="data-value">远日点: 2.492 3×10<sup>8</sup> km</div>
+                    <div class="data-value">近日点: 2.066 2×10<sup>8</sup> km</div>
+                    <div class="data-value">半长轴: 2.279 366×10<sup>8</sup> km</div>
+                    <div class="data-value">离心率: 0.093 412 33</div>
+                    <div class="data-value">轨道周期: 686.98地球日 1.88年</div>
+                    <div class="data-value">会合周期: 779.94 日 2.135 年</div>
+                    <div class="data-value">平均轨道速度: 24.13 km/s</div>
+                    <div class="data-value">轨道倾角: 1.850 61<sup>。</sup></div>
+                    <div class="data-value">平均轨道速度: 24.13 km/s</div>
+                </div>
+
+                <div class="data-card physical-card">
+                    <h3>物理特征</h3>
+                    <div class="data-value">赤道半径: 3396.2 km</div>
+                    <div class="data-value">平均半径: 3389.5 km</div>
+                    <div class="data-value">极半径: 3376.2 km</div>
+                    <div class="data-value">表面积: 1.441×10<sup>8</sup>km<sup>2</sup></div>
+                    <div class="data-value">体积: 1.631 8×10<sup>11</sup>km<sup>3</sup></div>
+                    <div class="data-value">质量: 6.418 5×10<sup>23</sup>kg</div>
+                    <div class="data-value">平均密度: 3.9335 g/cm<sup>3</sup></div>
+                    <div class="data-value">表面重力: 3.693 m/s<sup>2</sup></div>
+                </div>
+
+                <div class="data-card atmosphere-card">
+                    <h3>大气特征</h3>
+                    <div class="data-value">表面气压: 6.36 hPa（平均气压）</div>
+                    <div class="data-value">氮气: 2.70%</div>
+                    <div class="data-value">氧气: 0.13%</div>
+                    <div class="data-value">氩气: 1.60%</div>
+                    <div class="data-value">二氧化碳: 95.32%</div>
+                    <div class="data-value">水蒸气: 210ppm</div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="content-section">
+            <h2>物理性质</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                <img src="/textures/mars/01.jpg" class="mw-file-element">
+                <figcaption>火星的直径约为地球的一半</figcaption>
+            </figure>
+            <p>以直径、质量、表面重力来说，火星约介于地球和月球中间：火星直径约为地球的一半、月球的两倍，质量约为地球的九分之一、月球的九倍，表面重力约为地球的38%、月球的2.4倍。火星体积约为地球的15%，质量约为11%，表面积略小于地球陆地面积，密度则比其他三颗类地行星还要小很多。2012年8月，加利福尼亚大学洛杉矶分校的教授尹安在分析了100张来自火星勘测轨道飞行器的卫星图片后发现，火星有类似地球主要板块划分的构造特点。</p>
+            <p>长期观测火星发现，南半球地势比北半球高，北极盆地显示有过大撞击，推论约45亿年前遭冥王星大小天体撞击之后，不但形成火卫一和火卫二，亦逼使内核热能散溢出上地幔、内部搅拌逐渐停止，无法以发电机原理持续对流生成磁场。由于火星比地球小，相对表面积与体积成反比而较大，因此火星核心也冷却得比地球的快，地质活动趋缓，磁场和板块运动消逝，太阳风带走大气变薄导致气压偏低，而造成液态水在低温就会沸腾、无法稳定存在。</p>
+            <div class="theory-section">
+                <h3>内部结构</h3>
+                <p>火星的内部情况只是依靠它的表面情况资料和有关的大量数据来推断的。一般认为它的核心是半径为1700千米的高密度物质组成；外包一层熔岩，它比地球的地幔更稠些；最外层是一层薄薄的外壳。相对于其他固态行星而言，火星的密度较低，这表明，火星核中的铁（镁和硫化铁）可能含带较多的硫。如同水星和月球，火星也缺乏活跃的板块运动；没有迹象表明火星发生过能造成像地球般如此多褶皱山系的地壳平移活动。由于没有横向的移动，在地壳下的巨热地带相对于地面处于静止状态。再加之地面的轻微应力，造成了Tharis凸起和巨大的火山。但是，人们却未发现火山有过活动的迹象。虽然，火星可能曾发生过很多火山运动，可它看来从未有过任何板块运动。</p>
+                <p>火星是太阳系由内往外数的第四颗行星，直径约是地球的一半，体积为15%，质量为11%，表面积相当于地球陆地面积，密度则比其他三颗类地行星（水星、金星、地球）还要小很多。以半径、质量和表面重力说，火星约介于地球和月球中间；火星直径约为月球的两倍、地球一半；质量约为月球九倍、地球的1/9，表面重力约为月球的2.5倍、地球的2/5。火星自转轴倾角、自转周期与地球相近，公转周期则为两倍左右。其橘红色外表是因为地表被赤铁矿（氧化铁）覆盖，英文里前缀areo-即为火星，火星曾经被认为是太阳系中最有可能存在地外生命的行星。</p>
+                <p>火星基本上是沙漠行星，地表沙丘、砾石遍布，没有稳定的液态水体，以二氧化碳为主的大气既稀薄又寒冷，沙尘悬浮其中，每年常有尘暴发生。与地球相比，地质活动不活跃，而另一个独特的地形特征是南北半球的明显差别：南方是古老、充满陨石坑的高地，北方则是较年轻的平原。火星两极皆有主要以水和冰组成的极冠，而且上面覆盖的干冰会随季节消长。</p>
+            </div>
+        </div>
+        <!-- 地理特征 -->
+        <div class="content-section">
+            <h2>地理特征</h2>
+            
+            <div class="theory-section">
+                <h3>地质</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/mars/02.jpg" class="mw-file-element">
+                    <figcaption>古瑟夫撞击坑充满沙石的地表</figcaption>
+                    <img src="/textures/mars/03.jpg" class="mw-file-element">
+                    <figcaption>Endurance撞击坑中的沙丘</figcaption>
+                </figure>
+                <p>火星基本上是沙漠行星，地表沙丘、砾石遍布，没有稳定的液态水体。二氧化碳为主的大气既稀薄又寒冷，沙尘悬浮其中，每年常有尘暴发生。与地球相比，地质活动不活跃。</p>
+                <p>火星地表地貌大部分于远古较活跃的时期形成，充满撞击坑，有密布的陨石坑、火山与峡谷。奥林帕斯山是太阳系最高的山，水手号峡谷是太阳系最大的峡谷。另一个独特的特征是南北半球的明显差别：南方是古老、充满陨石坑的高地，北方则是较年轻的平原，两极皆有主要以水冰组成的极冠，而上覆的干冰会随季节消长。</p>
+                <p>基于撞击坑密度的撞击坑计数法可判别出其地表年龄：撞击坑大而密集处较老，反之则年轻，进而将地质年代分为四个阶段：前诺亚纪、诺亚纪、赫斯珀利亚纪和亚马逊纪。前诺亚纪没有留下实质地表，此时地形南北差异形成，有全球性磁层；诺亚纪有大量陨石撞击，火山活动旺盛，可能有温暖潮湿的大气、河川和海洋，侵蚀旺盛，但到末期这些活动已减弱很多；赫斯珀利亚纪，火山活动仍然继续；亚马逊纪则是大气稀薄干燥，以冰为主要活动，如极冠、冰冻层、冰河，并有周期性变迁，沟壑也是这时期形成，火山活动趋缓并集中在塔尔西斯与埃律西昂。</p>
+                <p>现今火星风成地形遍布，如吹蚀、磨蚀等风蚀作用，和沙尘遇地形阻碍而填积、侵积等风积作用。前者形成如广泛分布于梅杜莎槽沟层的风蚀脊[20]，后者则如大瑟提斯高原上撞击坑下风处的沙尘堆积，和撞击坑中常见的沙丘。</p>
+            </div>
+            <div class="theory-section">
+                <h3>地形</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/mars/04.png" class="mw-file-element">
+                    <figcaption>基于MOLA的火星地形图，可以看见其地表南半球主要为高地（深色），北半球主要为低地（浅色）</figcaption>
+                    <img src="/textures/mars/06.jpg" class="mw-file-element">
+                    <figcaption>火星地形图（来自NASA戈达德太空飞行中心），火星全球勘测者激光测高仪绘制，由Maria Zuber和David Smith领导。上为北。</figcaption>
+                    
+                </figure>
+                <p>火星和地球一样拥有多样的地形，有高山、平原和峡谷。南北半球的地形有着强烈的对比：北方是被熔岩填平的低原，南方则是充满撞击坑的古老高地，而两者之间以明显的斜坡分隔；火山地形穿插其中，众多峡谷分布各地，南北极有以水冰与干冰组成的极冠，而风成沙丘广布整个星球。随着卫星拍摄的照片越来越多，更发现很多的地形景观。</p>
+                <p>20世纪早期，地面以无线电波测量火星地形。1976年海盗号进行的地形测量，发现了峡谷和南北半球的巨大差异，而衍生出北方平原本是海洋的假说。火星全球勘测者自1999年起以激光进行更精确的地形测量，得出目前使用的全球地形图，以火星大地水准面（Areoid）为基准，最高点在奥林帕斯山，高21,229米；最低点在希腊平原，低于基准8,200米。[21]现在很多探测器，如火星勘察卫星、火星快车号和火星探测漫游者会运用航照图的地形判别方法，以视差法来测量区域地形，并制成高分辨率立体照片。此外，火星的经度坐标采用东经0至360度，而非地球的东西经各180度。</p>
+                
+                <span>火山</span>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/mars/05.png" class="mw-file-element">
+                    <figcaption>奥林帕斯山为太阳系行星中已知最高的山</figcaption>
+                </figure>
+                <p>塔尔西斯高原拥有许多座大型火山，其中包括一座盾状火山——奥林帕斯山。它的宽度超过600千米，高度超过21千米，其高度达到了茂纳凯亚火山的两倍，与灶神星雷亚希尔维亚盆地的中央山丘高度相当，是太阳系中最高的山峰之一。</p>
+                <span>陨石坑</span>
+                <p>人类已在火星上发现了超过4.3万个直径大于5公里的陨石坑。其中，最大的陨石坑是希腊平原，宽约2300公里，深约7公里，是一个清晰的反照率特征。同时，火星还有其它大型陨石坑，如阿耳古瑞平原（宽约1800公里）及伊希斯平原（宽约1500公里）。火星陨石坑的形态表明，在陨石撞击后，其地面曾经变得湿润。</p>
+                <span>板块边界</span>
+                <p>火星上的水手谷长约4000公里（与欧洲相当），深度约7公里。它的形成可能是由于塔尔西斯高原的扩大而导致的地壳塌陷。在2012年，科学家提出水手谷并不是一个地堑，而是一个已漂移了150公里的板块的边界。</p>
+                <span>洞穴</span>
+                <p>来自火星奥德赛号上热辐射成像系统（THEMIS）的影像显示阿尔西亚山北坡有七个可能的深洞，照片中光线无法抵达底部，推测底部可能更深、更宽，可能免受微陨星、紫外线、太阳闪焰和其他高能粒子的侵害，可能是未来寻找液态水或生命痕迹的可行地点。但后来火星勘察卫星的更高分辨率HiRISE影像部分推翻了之前猜测，认为只是光线角度造成深不见底的样子。</p>
+                
+            </div>
+            <!-- 大气 -->
+            <div class="theory-section">
+                <h3>大气</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/mars/07.jpg" class="mw-file-element">
+                    <figcaption>沙尘暴发生前（左）和正发生沙尘暴（右）的火星</figcaption>
+                    
+                </figure>
+                <p>火星大气层相对较薄，平均地表气压只有6百帕，约为地球表面气压的0.6%，相当于地球表面算起35公里高的气压，如此低的气压使声音传播的距离只有在地球上的1.5%。随着季节的变化，火星气压变化可达20%。火星大气层按高度可分为低层大气、中层大气、上层大气和外气层。其中低层大气由于气悬微尘与地表的热，这部分相对温暖；中层大气存在有高速气流；上层大气（或热气层）温度很高，大气分子也不再像下层那样分布均匀；外气层高度在200公里以上，大气渐渐过渡到太空，无明显外层边界。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <img src="/textures/mars/08.jpg" class="mw-file-element">
+                    <figcaption>由太空所见的火星稀薄且充满尘埃的红色大气层。左下方是阿尔及尔平原</figcaption>
+                </figure>
+                <p>火星大气成分为95%的二氧化碳，3%的氮气，1.6%氩气，很少的氧气、水汽等，亦充满着很多吸收蓝光的悬浮尘埃，使天空成黄褐色。2003年火星大冲时地面望远镜在大气中发现了甲烷；2004年3月，火星奥德赛号确认了这一发现。由于甲烷易被紫外线分解，存在甲烷表示现在或者最近几百年内在火星上存在制造甲烷的来源，火山作用、地质作用、彗星或小行星撞击甚至生物来源如甲烷古菌等都有可能。2013年9月19日，根据从好奇号得到的进一步测量数据，NASA科学家报告，并没有侦测到大气甲烷（atmospheric methan）存在迹象，因此总结甲烷微生物活性概率很低，可能不存在生命。但是，很多微生物并不会排出任何甲烷，仍旧可能在火星发现这些不会排出任何甲烷的微生物。</p>
+                <p>火星大气环流主要为单胞环流，由赤道相对热空气上升，漂至极区下沉，再沿地面回到赤道。另外，在火星的北半球，极冠的二氧化碳升华进入大气，使气压升高；而南半球由于二氧化碳凝华，气压下降。由于进出大气的二氧化碳量高达25%，造成南北压力差，空气便倾向由高压的夏半球流向低压的冬半球，形成另一依季节而变向的环流。因此火星的天气系统一般为全球性的，例如尘暴。</p>
+                <!-- 天气和气候 -->
+                <div class="theory-section">
+                    <h3>天气和气候</h3>
+                    <p>由于火星的自转轴倾角与地球的相当，火星的气候是在太阳系中与地球最相似的，但一个季节的时间比地球的要长。火星离太阳较远，表面接收到的阳光仅有地球的43%，且大气层较薄，无法存储过多热量，因此火星表面的温差较大（-110 °C～35 °C）。</p>
+                    <p>火星天气重复次数较高，比地球的容易预测。如果一个气象事件在一年的特定时间中发生，可提供的资料（相当稀疏）指出，那个事件很可能在下一年几乎同一个位置再发生一次，误差最多一个星期。</p>
+                    <p>2008年9月29日，凤凰号拍下了降雪事件，是在接近凤凰号登陆地点附近海姆达尔撞击坑之上，为高4.5公里的幡状云降雪。这次降雪在到达火星表面时就已蒸发。火星上的风速要超过地球100倍。</p>
+                </div>
+            </div>
+            <!-- 水文 -->
+            <div class="theory-section">
+                <h3>水文</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <img src="/textures/mars/09.jpg" class="mw-file-element">
+                    <figcaption>相隔六年即发现新的冲蚀沟沉积物</figcaption>
+                </figure>
+                <p>火星地表遍布着流水的遗迹，有些是洪水刻画而成，有些则是降雨或地下水流动而形成，但多半年代久远。冲蚀沟则是另一类规模较小的地形，但形成年代十分年轻，常分布于撞击坑壁，型态多样。关于其成因有两派说法，一派认为是由流动的水造成，另一方则认为是凹处累积的干冰促使了松软物质滑动。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/mars/10.jpg" class="mw-file-element">
+                    <figcaption>北极初夏的冰盖（1999年）</figcaption>
+                    <img src="/textures/mars/11.jpg" class="mw-file-element">
+                    <figcaption>南极仲夏的冰盖（2000年）</figcaption>
+                    
+                </figure>
+                <p>火星南北极有明显的极冠，曾被认为是由干冰组成，但实际上绝大部分为水冰，只有表面一层为干冰。这层干冰在北极约1米厚，在南极则约8米厚，是冬季时凝华而成，到夏季则再度升华进入大气，不过南极的干冰并不会完全升华。[49]夏季仍存在的部分称为永久极冠，而整体构造称做极地层状沉积（Polar Layered Deposits），和地球南极洲与格陵兰冰层一样为一层层的沉积构造。北极冠宽达1,100公里，厚达2公里，体积82.1万立方公里[50]；南极冠宽达1,400公里，最厚达3.7公里，体积约1.6百万立方公里。[51]两极冰冠皆有独特的螺旋状凹谷，推论主要是由光照与夏季接近升华点的温度使沟槽两侧水冰发生差异融解和凝结而逐渐形成的。</p>
+                <p>2011年由火星勘察卫星的浅地层雷达发现南极冠有部分原本认为是水冰的地层其实是干冰，所含二氧化碳量相当于大气含量的80%，这比以往认为的要多很多。根据此的模拟结果，十万年一周期的气候变迁中借由干冰升华、凝结，大气总质量的变化幅度会达数倍。[54][55]由这些干冰沉积上方地表的下陷与裂隙判断，干冰正在慢慢升华。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <img src="/textures/mars/12.jpg" class="mw-file-element">
+                    <figcaption>一处疑似冰河的地形</figcaption>
+                </figure>
+                <p>自海盗号即发现，火星北半球中纬度有几处峡谷底含有条纹流动状的地表特征，但不确定是富含冰的山崩、含冰土的流动或是尘砾覆盖的冰河。但根据更新任务的资料与比对地球的相关地形，支持这些是冰河，且推测是自转轴倾角较大时的气候状态下所累积的。</p>
+                <p>由火星奥德赛号X射线光谱仪的中子侦测器得知，自极区延伸至纬度约60°的地方表层一米的土壤含冰量超过60%[58][59]，推测有更大量的水冻在厚厚的地下冰层（cryosphere）。</p>
+                <p>另外一个关于火星上曾存在液态水的证据，就是发现特定矿物，如赤铁矿和针铁矿，而这两者都需在有水环境才能形成。</p>
+                <p>了八粒白色的物体，当时研究人员揣测这些物体不是盐（在火星有发现盐矿）就是冰，而四天后这些白粒就凭空消失，因此这些白粒一定升华了，盐不会有这种现象。2008年7月31日，美国航空航天局科学家宣布，凤凰号火星探测器在火星上加热土壤样本时鉴别出有水蒸气产生，从而最终确认火星上有水存在。</p>
+                <p>2013年9月26日，美国航空航天局科学家报告，火星探测车好奇号发现火星土壤含有丰富水分，重量约占1.5%～3%，显示火星有足够的水资源供给未来移民使用。</p>
+                <p>2015年9月28日，美国航空航天局宣布，在火星上发现液态的盐水。根据火星勘测轨道飞行器配备的光谱仪获得的数据，研究人员在火星的斜坡上发现了水合矿物。这些暗色条纹表明火星地表随时间变化有流水存在。在较温暖的季节，这些线条的颜色变得更深，表明水流在斜坡上出现，在较冷的季节，这些地表特征变浅。在火星的部分地区，最高温度可以达到摄氏零下23度，此时深色线条最明显。</p>
+                <p>2018年7月25日，据意大利媒体报道，该国科学家在火星上首度发现一个地下液态水湖。该研究称，“火星地下及电离层高级探测雷达”在火星南极冰层下1.5千米处发现一个大型液态水湖，里面含有盐。湖的直径约为20千米，温度至少为零下10度。</p>
+            </div>
+        </div>
+        <!-- 运动规律 -->
+        <div class="content-section">
+            <h2>运动规律</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                <img src="/textures/mars/13.png" class="mw-file-element">
+                <figcaption>火星与地球的轨道与季节长度比较</figcaption>
+            </figure>
+            <p>火星与太阳平均距离为1.52AU，公转周期为1.88地球年，687地球日，或668.6火星日。火星公转轨道和地球的一样，受太阳系其他天体影响而不断变动。轨道离心率有两个变化周期，分别是9.6万年和210万年，于0.002至0.12间变化；而地球的是10万年和约40万年，于接近0至0.07间变化（见米兰科维奇循环）。</p>
+            <p>1火星日平均为24小时39分35.244秒，或1.027地球日。火星目前自转轴倾角为25.19度，和地球的相近。不同于地球的稳定处于22.1和24.5度间，由于火星没有如月球般的巨大卫星来维持自转轴，其自转轴倾角可在13度至40度间变化，其变化周期为一千多万年。由于没有大卫星的潮汐作用，火星自转周期变化小，不像地球的会被慢慢拉长。</p>
+            <p>火星自转轴有明显倾斜，日照的年变化形成明显的四季变化，而一季的长度约为地球的两倍。由于火星轨道离心率大，为0.093（地球只有0.017），使各季节长度不一致，又因远日点接近北半球夏至，北半球春夏比秋冬各长约40天。虽然火星没有地球般受海洋影响的复杂气候，但仍有以下特殊之处：火星轨道离心率比地球大，造成日射量在一年当中变化更大，位于近日点时，南半球处夏季，比北半球远日点夏季所造成的升温更强；随季节交替，二氧化碳和水汽会升华和凝结而在两极冠间迁移，驱动大气环流；地表反照率特征，因颜色深浅和沙、岩性质差异而造成的容积热容不同，可影响大气环流；易发生的尘暴会将沙尘粒子卷入高空，沙尘粒子吸收日光与再辐射会使高层大气增温，但遮蔽天空的沙尘会使地表降温；自转轴倾角和轨道离心率的长期变化则造成了气候的长期变迁。火星表面的平均温度比地球低30度以上。</p>
+            <p>目前，火星与地球最短距离正慢慢减小。当地球与火星之间的距离最小时，称为火星冲日。火星相邻两次冲日的时间间隔约为779天。当地球、太阳和火星连成一线时，在火星上便可看到地球凌日，在太阳的位置可看到地球的黑点通过，同理还有水星凌日，在地球上则不会看到火星凌日。</p>
+
+        </div>
+        <!-- 卫星 -->
+        <div class="content-section">
+            <h2>卫星</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                <img src="/textures/mars/14.jpg" class="mw-file-element">
+                <figcaption>火卫一（左）和火卫二（右）大小比较（合成图）</figcaption>
+            </figure>
+            <p>火星有两个天然卫星——火卫一与火卫二，最长直径各为27公里和16公里，形状不规则并充满撞击坑，以近圆形的轨道于接近火星赤道面处公转。它们虽然很小，但由于接近火星，使火卫一从火星上看约有满月直径的二分之一至三分之一大，而火卫一的视星等可达-7，火卫二可达-5，白天可能可见。和月球一样，这两颗卫星都被火星潮汐锁定。火卫一的公转周期比火星自转更快，所以在火星上来看是西升东落的，且仅需约4个小时；而火卫二的公转周期只比火星自转慢一些，东升西落要花约2.4个火星日。因为火卫一离火星很近，火星的潮汐力会慢慢但稳定地减小它的轨道半径，预计再过约760万年，火卫一将因轨道低于3620公里（火星的洛希极限）而被瓦解。另一方面，火卫二因为离火星足够远，所以它的轨道反而正在慢慢地被向外推进。</p>
+            
+        </div>
+
+        <section class="content-section">
+            <h2>探测历史</h2>
+            <div class="mission-table-container">
+                <table class="mission-table">
+                    <thead>
+                        <tr>
+                            <th>任务名称</th>
+                            <th>发射时间</th>
+                            <th>国家/机构</th>
+                            <th>主要成就</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>火星1号</td>
+                            <td>1962年11月1日</td>
+                            <td>苏联</td>
+                            <td>进入了前往火星的轨道</td>
+                        </tr>
+                        <tr>
+                            <td>水手9号</td>
+                            <td>1971年</td>
+                            <td>美国（NASA）</td>
+                            <td>第一个环绕火星的探测船</td>
+                        </tr>
+                        <tr>
+                            <td>火星3号</td>
+                            <td>1971年</td>
+                            <td>苏联</td>
+                            <td>第一个成功登陆火星的探测器</td>
+                        </tr>
+                        <tr>
+                            <td>海盗1号和2号轨道卫星</td>
+                            <td>1975年</td>
+                            <td>美国（NASA）</td>
+                            <td>传送了第一张火星地景的彩色照片<br>制了全面的火星地图</td>
+                        </tr>
+                        <tr>
+                            <td>弗伯斯1号、2号</td>
+                            <td>1988年</td>
+                            <td>苏联</td>
+                            <td>弗伯斯1号于抵达前失去联系<br>弗伯斯2号虽然成功拍摄了火星和火卫一</td>
+                        </tr>
+                        <tr>
+                            <td>火星全球勘测者</td>
+                            <td>1996年11月</td>
+                            <td>美国（NASA）</td>
+                            <td>完成了地图绘制的任务</td>
+                        </tr>
+                        <tr>
+                            <td>火星探路者、旅居者号</td>
+                            <td>1997年7月</td>
+                            <td>美国（NASA）</td>
+                            <td>登陆在阿瑞斯峡谷<br>旅居者号成为第一个在火星上成功运作的火星车</td>
+                        </tr>
+                        <tr>
+                            <td>2001火星奥德赛号</td>
+                            <td>2001年</td>
+                            <td>美国（NASA）</td>
+                            <td>证明有大量的水分子存在火星近地表</td>
+                        </tr>
+                        <tr>
+                            <td>精神号、机会号</td>
+                            <td>2003年</td>
+                            <td>美国（NASA）</td>
+                            <td>两地过去有水的确实证据</td>
+                        </tr>
+                        <tr>
+                            <td>火星快车号</td>
+                            <td>2003年</td>
+                            <td>欧洲空间局</td>
+                            <td>于其大气中侦测到甲烷以及发现极光</td>
+                        </tr>
+                        <tr>
+                            <td>罗塞塔号</td>
+                            <td>2007年2月25日</td>
+                            <td>美国（NASA）</td>
+                            <td>近距离飞掠火星并拍照，拍到火星的高空云系</td>
+                        </tr>
+                        <tr>
+                            <td>凤凰号</td>
+                            <td>2007年8月</td>
+                            <td>美国（NASA）</td>
+                            <td>发现了地表有白色物质为水冰</td>
+                        </tr>
+                        <tr>
+                            <td>希望号、天问一号、毅力号</td>
+                            <td>2020年7月下旬</td>
+                            <td>阿联酋、中国、NASA</td>
+                            <td>毅力号首次实现飞行器在其他星球的受控飞行<br>天问一号着陆器和祝融号火星车在火星乌托邦平原南部预选着陆区成功着陆</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- 放大预览容器 -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 太阳系行星探索. All rights reserved.</p>
+    </footer>
+    <script>
+        const video = document.getElementById('myVideo');
+        // 监听视频播放结束事件
+        video.addEventListener('ended', function () {
+            // 将播放时间设置回22秒
+            this.currentTime = 22;
+            this.play();
+        });
+
+        // 初始播放设置
+        video.currentTime = 22;
+        video.play();
+        // 监听视频播放时间，到达88秒时暂停并重新播放
+        video.addEventListener('timeupdate', function () {
+            if (this.currentTime >= 88) {
+                this.pause();
+                this.currentTime = 22;
+                this.play();
+            }
+        });
+
+        // 温度图表
+        const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(tempCtx, {
+            type: 'bar',
+            data: {
+                labels: ['最低温度', '平均温度', '最高温度'],
+                datasets: [{
+                    label: '火星表面温度 (°C)',
+                    data: [-143, -63, 35],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '火星表面温度分布'
+                    }
+                }
+            }
+        });
+
+        // 大气成分图表
+        const atmCtx = document.getElementById('atmosphereChart').getContext('2d');
+        new Chart(atmCtx, {
+            type: 'pie',
+            data: {
+                labels: ['二氧化碳', '氮气', '氩气', '氧气', '其他气体'],
+                datasets: [{
+                    data: [95.32, 2.7, 1.6, 0.13, 0.25],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '火星大气成分'
+                    }
+                }
+            }
+        });
+
+        // 获取 放大图片的DOM 元素
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        let currentScale = 1;
+
+        // 显示放大图片 - 修改后的代码
+        document.querySelectorAll(".expandable img.mw-file-element").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.add("active");
+                modalImg.src = img.src;
+                currentScale = 1;
+                modalImg.style.transform = `scale(${currentScale})`;
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        });
+
+        modal.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            
+            const delta = Math.sign(e.deltaY);
+            const step = 0.1;
+
+            // 缩放限制
+            if (delta < 0) {
+            currentScale += step; // 放大
+            } else {
+            currentScale = Math.max(0.2, currentScale - step); 
+            }
+
+            modalImg.style.transform = `scale(${currentScale})`;
+        }, { passive: false }); // 注意要设置 passive: false 才能阻止默认滚动
+    </script>
+</body>
+</html> 

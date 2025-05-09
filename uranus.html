@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天王星 - 太阳系行星</title>
+    <link rel="stylesheet" href="../css/planet-css/uranus.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/public/assets/images/uranus.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/banner.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <div class="video-banner">
+        <video id="myVideo" autoplay muted loop playsinline>
+        <source src="/textures/uranus/01.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <h1>天王星</h1>
+            <p>太阳系的第七颗行星</p>
+        </div>
+    </div>
+    <a href="../solarSystem.html" class="back-button">
+        <button class="button">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 40">
+                        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+    <a href="../public/plantIndex.html" class="back-buttons">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>天王星概述</h2>
+            <p>天王星（英文：Uranus，天文符号：⛢，占星符号：♅），为太阳系八大行星之一，是太阳系由内向外的第七颗行星（18.37~20.08天文单位），是一颗在太阳系中离太阳第七近的青色行星，其体积在太阳系中排名第三（比海王星大），质量排名第四（小于海王星），几乎横躺着围绕太阳公转。封面图为旅行者2号飞掠天王星最近时拍摄的照片。</p>
+            <p>天王星是第一颗使用望远镜发现的行星。威廉·赫歇尔在1781年3月13日于自宅庭院中发现了这颗行星。天王星和海王星的内部和大气构成和更巨大的气态巨行星（木星、土星）不同，天文学家设立了冰巨星分类来定义它们。天王星拥有27颗已知天然卫星，其中有5颗规模较大，另外还有13条较为暗弱的行星环。</p>
+            <p>天王星大气的主要成分是氢、氦、甲烷和氘。据推测，其内部可能含有丰富的重元素。地幔由甲烷和氨的冰组成，可能含有水。内核由冰和岩石组成。天王星是太阳系内大气层最冷的行星，最低温度为49K（-224℃）。</p>
+            
+        </div>
+
+        <div class="content-section">
+            <h2>基本信息</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="atmosphereChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="data-cards-container">
+                <div class="data-card orbit-card">
+                    <h3>轨道参数</h3>
+                    <div class="data-value">远日点: 816520800km</div>
+                    <div class="data-value">近日点: 740573600 km</div>
+                    <div class="data-value">半长轴: 778547200 km</div>
+                    <div class="data-value">离心率: 0.048775</div>
+                    <div class="data-value">轨道周期: 11.8618 年</div>
+                    <div class="data-value">会合周期: 398.88 日</div>
+                    <div class="data-value">平均轨道速度: 13.07 公里/秒</div>
+                    <div class="data-value">轨道倾角: 1.305° 对黄道</div>
+                </div>
+
+                <div class="data-card physical-card">
+                    <h3>物理特征</h3>
+                    <div class="data-value">赤道半径: 71492 公里</div>
+                    <div class="data-value">平均半径: 69911km</div>
+                    <div class="data-value">极半径: 66854 km</div>
+                    <div class="data-value">表面积: 6.1419×10<sup>10</sup>km<sup>2</sup></div>
+                    <div class="data-value">体积: 1.4313×10<sup>15</sup>km<sup>3</sup></div>
+                    <div class="data-value">质量: 1.8981×10<sup>27</sup>kg</div>
+                    <div class="data-value">平均密度: 1.326 g/cm<sup>3</sup></div>
+                    <div class="data-value">表面重力: 24.79 m/s<sup>2</sup></div>
+                </div>
+
+                <div class="data-card atmosphere-card">
+                    <h3>大气特征</h3>
+                    <div class="data-value">表面气压: 	20–200 kPa</div>
+                    <div class="data-value">大气标高: 	27 km</div>
+                    <div class="data-value">氢: 89.8±2.0%</div>
+                    <div class="data-value">氦: 10.2±2.0%</div>
+                    <div class="data-value">甲烷: ≈ 0.3%</div>
+                    <div class="data-value">氨: ≈ 0.026%</div>
+                    <div class="data-value">氘化氢: 0.0006%</div>
+                    <div class="data-value">水: 0.0004%</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section">
+            <h2>行星特征</h2>
+            <div class="theory-section">
+                <p>天王星是太阳系中第七颗行星，是第一颗通过望远镜发现的行星。它的自转轴与公转轨道面几乎垂直，这种独特的倾斜使得它的季节变化非常极端。</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>探测历史</h2>
+            <div class="mission-table-container">
+                <table class="mission-table">
+                    <thead>
+                        <tr>
+                            <th>任务名称</th>
+                            <th>发射时间</th>
+                            <th>主要成就</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>旅行者2号</td>
+                            <td>1977年</td>
+                            <td>唯一一次近距离探测天王星</td>
+                        </tr>
+                        <tr>
+                            <td>哈勃望远镜</td>
+                            <td>1990年</td>
+                            <td>持续观测天王星大气变化</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 太阳系行星探索. All rights reserved.</p>
+    </footer>
+    <script>
+        // 大气成分图表
+        const atmCtx = document.getElementById('atmosphereChart').getContext('2d');
+        new Chart(atmCtx, {
+            type: 'pie',
+            data: {
+                labels: ['氢气', '氦气', '甲烷', '氨气', '氘化氢', '乙烷', '水'],
+                datasets: [{
+                    data: [89.8, 10.2, 0.3, 0.026, 0.003, 0.0006, 0.0004],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '木星大气成分'
+                    }
+                }
+            }
+        });
+        // 温度图表
+        const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(tempCtx, {
+            type: 'bar',
+            data: {
+                labels: ['最低温度', '平均温度', '最高温度'],
+                datasets: [{
+                    label: '木星表面温度 (°C/k)',
+                    data: [-108.15, -63, 122],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '木星表面温度分布'
+                    }
+                }
+            }
+        });
+
+        const video = document.getElementById('myVideo');
+        // 监听视频播放结束事件
+        video.addEventListener('ended', function () {
+            // 将播放时间设置回0秒
+            this.currentTime = 45;
+            this.play();
+        });
+
+        // 初始播放设置
+        video.currentTime = 45;
+        video.play();
+        // 监听视频播放时间，到达88秒时暂停并重新播放
+        video.addEventListener('timeupdate', function () {
+            if (this.currentTime >= 90) {
+                this.pause();
+                this.currentTime = 45;
+                this.play();
+            }
+        });
+
+        // 获取 放大图片的DOM 元素
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        let currentScale = 1;
+
+        // 显示放大图片 - 修改后的代码
+        document.querySelectorAll(".expandable img.mw-file-element").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.add("active");
+                modalImg.src = img.src;
+                currentScale = 1;
+                modalImg.style.transform = `scale(${currentScale})`;
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        });
+
+        modal.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            
+            const delta = Math.sign(e.deltaY);
+            const step = 0.1;
+
+            // 缩放限制
+            if (delta < 0) {
+            currentScale += step; // 放大
+            } else {
+            currentScale = Math.max(0.2, currentScale - step); 
+            }
+
+            modalImg.style.transform = `scale(${currentScale})`;
+        }, { passive: false }); // 注意要设置 passive: false 才能阻止默认滚动
+    </script>
+</body>
+</html> 

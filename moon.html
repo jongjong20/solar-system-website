@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>月球 - 地球的天然卫星</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/planet-css/moon.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style> 
+
+    </style>
+</head>
+<body>
+    <!-- banner -->
+    <div class="video-banner">
+        <video autoplay muted loop playsinline>
+        <source src="/textures/moon/video01.mp4" type="video/mp4">
+        <source src="/textures/moon/video1.mp4" type="video/webm">
+        <img src="/textures/2k_moon.jpg" alt="月球表面">
+        </video>
+        <div class="video-overlay">
+            <h1>探索月球的奥秘</h1>
+            <p><a href="/plant-html/earth.html">地球</a>唯一的天然卫星 · 人类太空探索的第一站</p>
+        </div>
+    </div>
+
+    <a href="../solarSystem.html" class="back-button">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+    
+    
+
+    <div class="container">
+        <div class="content-section">
+            <h2>月球</h2>
+            <div class="swiper moonSwiper-a">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/36.jpg" alt=""></div>
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/37.jpg" alt=""></div>
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/38.jpg" alt=""></div>
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/42.jpg" alt=""></div>
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/41.jpg" alt=""></div>
+                <div class="swiper-slide swiper-moonSlide-a"><img src="/textures/moon/40.jpg" alt=""></div>
+                
+                
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>基础数据</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="moonDistanceChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="moonSizeChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="moonPhysicalChart"></canvas>
+                </div>
+            </div>
+            <div class="data-visualization">
+                <div class="data-card">
+                    <h3>平均轨道半径</h3>
+                    <div class="data-value">384,403 km</div>
+                    <p>月球绕地球运行的平均距离</p>
+                </div>
+                <div class="data-card">
+                    <h3>近地点距离</h3>
+                    <div class="data-value">363,300 km</div>
+                    <p>月球最接近地球时的距离</p>
+                </div>
+                <div class="data-card">
+                    <h3>远地点距离</h3>
+                    <div class="data-value">405,696 km</div>
+                    <p>月球最远离地球时的距离</p>
+                </div>
+                <div class="data-card">
+                    <h3>平均月地距离</h3>
+                    <div class="data-value">384,400 km</div>
+                    <p>月球最远离地球时的距离</p>
+                </div>
+                <div class="data-card">
+                    <h3>赤道直径</h3>
+                    <div class="data-value">3476.2 km</div>
+                    <p>月球最远离地球时的距离</p>
+                </div>
+                <div class="data-card">
+                    <h3>两极直径</h3>
+                    <div class="data-value">3472 km</div>
+                    <p>月球最远离地球时的距离</p>
+                </div>
+
+
+                <div class="data-card">
+                    <h3>平均公转周期</h3>
+                    <div class="data-value">27.32天</div>
+                    <p>月球绕地球一周的时间</p>
+                </div>
+                <div class="data-card">
+                    <h3>自转周期</h3>
+                    <div class="data-value">27.32天</div>
+                    <p>与公转周期相同（同步自转）</p>
+                </div>
+                <div class="data-card">
+                    <h3>平均公转速度</h3>
+                    <div class="data-value">1.023 km/s</div>
+                    <p>月球绕地球运行的平均速度</p>
+                </div>
+                <div class="data-card">
+                    <h3>赤道重力加速度</h3>
+                    <div class="data-value">1.622 m/s²</div>
+                    <p>月球表面的重力加速度</p>
+                </div>
+                <div class="data-card">
+                    <h3>逃逸速度</h3>
+                    <div class="data-value">2.4 km/s</div>
+                    <p>月球表面物体逃脱月球引力的最小速度</p>
+                </div>
+                <div class="data-card">
+                    <h3>自转速度</h3>
+                    <div class="data-value">4.6267 km/s</div>
+                    <p>月球自转的平均速度</p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>月相周期</h2>
+            <div class="chart-containers">
+                <canvas id="moonPhaseChart"></canvas>
+            </div>
+            <h4>月球绕地球公转一周约27.3天，称为恒星月。由于地球也在绕太阳公转，月相变化周期（朔望月）约为29.5天。</h4>
+        </div>
+
+        <div class="content-section">
+            <h2>月球诞生理论</h2>
+            <div class="theory-section">
+                <h3>碰撞说</h3>
+                <p>这一假设认为，太阳系演化早期，在太阳系空间曾形成大量的"星子"，先形成了一个相当于地球质量0.14倍的天体星子，星子通过互相碰撞、吸积而长合并形成一个原始地球。这两个天体在各自演化过程中，分别形成了以铁为主的金属核和由硅酸盐构成的幔和壳。由于这两个天体相距不远，因此相遇的机会就很大。</p>
+                <div class="flex-layout"> 
+                    <div class="text-content">
+                        <p>一次偶然的机会，那个小的天体以每秒5千米左右的速度撞向地球。剧烈的碰撞不仅改变了地球的运动状态，使地球的自转轴倾斜，而且还使那个小的天体被撞击破裂，硅酸盐壳和幔受热蒸发，膨胀的气体以极大的速度携带大量粉碎了的尘埃飞离地球。这些飞离地球的物质，主要由碰撞体的幔组成。受到巨大撞击的地球，绝大部分也是地幔和地壳物质受热蒸发，膨胀的气体以极大的速度携带大量粉碎了的尘埃飞离地球。在撞击体破裂时与幔分离的金属核，因受膨胀飞离的气体所阻而减速，大约在4小时内被吸积到地球上。飞离地球的气体和尘埃，并没有完全脱离地球的引力控制，通过相互吸积而结合起来，形成几乎熔融的月球，或者是先形成一个环，在逐渐吸积形成一个部分熔融的大月球。这个版本被普遍认可。</p>
+                    </div>
+                    
+                    <figure class="image-content">
+                        <img src="/textures/moon/01.webp" alt="月球诞生理论" class="">
+                        <figcaption>碰撞说</figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="theory-section">
+                <h3>俘获说</h3>
+                <p>这一假设认为，月球本来只是太阳系中的一颗月球大小的小行星，有一次，因为运行到地球附近，被地球的引力所俘获，从此再也没有离开过地球。还有一种接近俘获说的观点认为，地球不断把进入自己轨道的物质吸积到一起，久而久之，吸积的东西越来越多，最终形成了月球。但也有人指出，像月球这样大的星球，地球恐怕没有那么大的力量能将它俘获。</p>
+            </div>
+            <div class="theory-section">
+                <h3>同源说</h3>
+                <p>这一假设认为，地球和月球都是太阳系中弥漫的星云物质，几乎在同一个太阳星云的区域经过旋转和吸积，同时形成大小不同的天体。在吸积过程中，地球比月球相应要快一点，成为"哥哥"。这一假设也受到了客观事实的挑战。通过对"阿波罗"飞船从月球上带回来的岩石样本进行化验分析，地球和月球的平均化学成分差别很大，人们发现月球的岩石也要比地球的岩石古老得多。</p>
+            </div>
+            <div class="theory-section">
+                <h3>分裂说</h3>
+                <p>这是最早解释月球起源的一种假设。早在1898年，著名生物学家达尔文的儿子乔治·达尔文就在《太阳系中的潮汐和类似效应》一文中指出，月球本来是地球的一部分，后来由于地球转速太快，把地球上一部分物质抛了出去，这些物质脱离地球后形成了月球，而遗留在地球上的大坑，就是太平洋。</p>
+                <p>这一观点很快就受到了一些人的反对。他们认为，以地球的自转速度是无法将那样大的一块东西抛出去的。再说，如果月球是地球抛出去的，那么二者的物质成分就应该是一致的。可是通过对"阿波罗12号"飞船从月球上带回来的岩石样本进行化验分析，发现二者相差非常远。月球表面岩石的年龄极其古老，全月球表面岩石的年龄介于30亿～42亿年之间，地球表面最古老的岩石年龄，只限于个别地区出露的38亿年的古老变质岩，而太平洋洋底岩石的年龄极其年轻，完全与"分裂说"的理论相违背。</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>结构特征</h2>
+            <div class="theory-section">
+                <h3>大气环境</h3>
+                <p>由于月球上没有大气，再加上月面物质的热容量和导热率又很低，因而月球表面昼夜的温差很大。白天，月球表面在阳光垂直照射的地方温度高达127℃；夜晚，其表面温度可降低到-183℃。用射电观测可以测定月面土壤中的温度，这种测量表明，月面土壤中较深处的温度很少变化，这正是由于月面物质导热率低造成的。</p>
+            </div>
+            <div class="theory-section">
+                <h3>分层结构</h3>
+                <p>从月震波的传播了解到月球也有壳、幔、核等分层结构。最外层的月壳平均厚度约为60～64.7公里。月壳下面到1000公里深度是月幔，它占了月球的大部分体积。月幔下面是月核，月核的温度约为1000～1500℃，所以很可能是熔融状态的据推测大概是由Fe-Ni-S和榴辉岩物质构成。</p>
+                <p>月幔下面是月核，月核的温度约为1000～1500℃，所以很可能是熔融状态的据推测大概是由Fe-Ni-S和榴辉岩物质构成。</p>
+            </div>
+
+            <div class="theory-section">
+                <h3>地月关系</h3>
+                <h4>月球与地球形成引力平衡系统，共同围绕地表下约1600千米处的质心旋转。月球对地球的影响深远：</h4>
+                <ul>
+                    <li class="uil uil-code-branch"><strong>潮汐作用</strong>：月球引力拉动地球海水，形成潮汐，帮助早期水生生物向陆地过渡。</li>
+                    <li class="uil uil-cloud-sun-tear"><strong>稳定气候</strong>：月球减缓地球自转，使昼夜温差减小，四季更替更稳定，为生命演化创造条件。</li>
+                    <li class="uil uil-lock"><strong>潮汐锁定</strong>：月球自转与公转周期相同，始终以同一面朝向地球，这是引力长期作用的结果，太阳系多数卫星均如此。</li>
+                    <li class="uil uil-star"><strong>地震触发</strong>：研究表明，月球引力可能通过潮汐压力影响地壳活动，尤其在断层积蓄能量时，潮汐变化可能成为地震的"最后一根稻草"。</li>
+                </ul>
+                <!-- <h4>月球不仅是地球的卫星，更是塑造地球环境的关键因素，其引力效应贯穿地质与生命演化史。</h4> -->
+            </div>
+    
+            <div class="theory-section">
+                <h3>月食现象</h3>
+                <h4>月食是月球进入地球阴影时发生的天文现象，分为：</h4>
+                <p>月全食：当太阳、地球和月球在空间中精确对齐时，月球和太阳阴影的内部（称为本影）会覆盖整个月球，就会发生月全食。月全食是三种类型中最壮观的。
+                    有趣的是，从地球上看到的月球在月全食期间并不完全消失，而是变成深红色。这是因为尽管地球阻挡所有直射阳光，但一小部分光线会被地球大气层折射并到达月球表面。地球大气层散射蓝光，但会让红光通过。由于独特的红色，月全食通常被称为血月。
+                    最近一次月全食发生于<span style="color: #00FFFF;">2025年3月14日</span>。</p>
+                <p>月偏食：当太阳、地球和月球没有完全对齐时，即月球只有部分进入地球的本影时，就会发生月偏食。
+                    在这种类型的月食期间，只有一部分月球变得暗而微红
+                    最近一次月偏食发生于<span style="color: #00FFFF;">2024年9月17日至18日</span>。</p>
+                <p>半影月食：此时月球只是掠过地球的半影区，即地球阴影的外部，造成月面的光度轻微减弱的现象。这是最难注意到的月食类型，对于眼光敏锐的观察者来说，月球看起来只会比平时稍微暗一点。
+                    最近一次半影月食发生于<span style="color: #00FFFF;">2024年3月25日</span>。</p>
+                <div class="image-gallery">
+                    <img src="/textures/moon/02.webp" alt="月全食" >
+                    <img src="/textures/moon/03.webp" alt="月偏食" >
+                    <img src="/textures/moon/04.webp" alt="半影月食">
+                    <img src="/textures/moon/39.jpg">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section">
+            <h2>地形地貌</h2>
+            <figure class="image-matain">
+                <img src="/textures/moon/30.webp" alt="月球表面" class="moon-image">
+                <figcaption>月球地质全图</figcaption>
+            </figure> 
+            <p><strong>月球表面有阴暗的部分和明亮的区域，亮区是高地，暗区是平原或盆地等低陷地带，分别被称为月陆和月海。早期的天文学家在观察月球时，以为发暗的地区都有海水覆盖，因此把它们称为"海"。
+                著名的有云海、湿海、静海等。而明亮的部分是山脉，那里层峦叠嶂，山脉纵横，到处都是星罗棋布的环形山，即撞击坑，这是一种环形隆起的低洼形。月球上直径大于1000米的撞击坑多达33000多个。位于南极附近的贝利撞击坑直径295公里，可以把整个海南岛装进去。最深的是牛顿撞击坑，深达8788米。除了撞击坑，月面上也有普通的山脉。高山和深谷叠现，别有一番风光。</strong></p>
+                <p><strong>月球背面的结构和正面差异较大。月海所占面积较少，而撞击坑则较多。地形凹凸不平，起伏悬殊最长和最短的月球半径都位于背面，有的地方比月球平均半径长4公里，有的地方则短5公里（如范德格拉夫洼地）。背面未发现"质量瘤"。背面的月壳比正面厚，最厚处达150公里，而正面月壳厚度只有60公里左右。</strong></p>
+            <div class="theory-section">
+                <h3>撞击坑</h3>
+                <p>撞击坑这个名字是伽利略·伽利雷起的。是月面的显著特征，几乎布满了整个月面。最大的撞击坑是南极附近的贝利环形山，直径295千米，比海南岛还大一点。小的环形山甚至可能是一个几十厘米的坑洞。直径不小于1000米的大约有33000个。占月面比表面积的7%～10%。</p>
+                <ul>
+                    <li class="uil uil-mountains"><span><strong>环形山：由陨石撞击形成的圆形凹陷</strong></span>
+                        <p>环形山（crater），希腊文的意思是"盘子"。"环形山"通常指碗状凹坑结构的坑。月球表面布满大大小小圆形凹坑，称为"月坑"，大多数月坑的周围环绕着高出月面的环形山。月球背面的环形山更多。</p>
+                        <p>环形山的中间有一个陷落的深坑，四周围有高耸直立的岩石，环形山的高度一般在7～8公里之间。环形山大小不一，直径相差悬殊，小的环形山直径不足10公里，有的仅一个足球场大小；大的环形山直径超过100公里。最大的环形山是月球南极附近的贝利环形山，直径达295公里，比我国的浙江省小一点。直径大于1000米的月坑总数达到了3300个以上。其中大的直径超过100公里，占月面的7-10%。</p>
+                        <h5>以中国人名命名的有十四座万户环形山，祖冲之环形山，毕昇环形山，蔡伦环形山，张钰哲环形山，石申环形山，张衡环形山，郭守敬环形山正面高平子环形山，沈括环形山，刘徽环形山，宋应星环形山，裴秀环形山，徐光启环形山</h5>
+                        <div class="image-gallery">
+                            <img src="/textures/moon/07.webp" alt="环形山" >
+                            <img src="/textures/moon/08.webp" alt="环形山" >
+                            <img src="/textures/moon/09.webp" alt="环形山">
+                        </div>
+                    </li>
+                    <li class="uil uil-map-marker">
+                        <span><strong>其他景物</strong></span>
+                        <p>嫦娥三号着陆地命名为广寒宫附近三个撞击坑分别命名为"紫微"、"天市"、"太微"。</p>
+                        <p>嫦娥四号着陆地命名为天河基地，周围呈三角形排列的三个环形坑，分别命名为织女、河鼓和天津；着陆点所在冯·卡门坑内的中央峰命名为泰山。</p>
+                        <p>嫦娥五号着陆地命名为天船基地，山峰命名为华山，衡山。</p>
+                    </li>
+                    <li class="uil uil-map-marker">
+                        <span><strong>撞击坑的成因："撞击说"与"火山说"</strong></span>
+                        <p>"撞击说"是指月球因被其他小行星撞击而有现今人类所看到的撞击坑。</p>
+                        <p>"火山说"是指月球上本有许多火山，最后火山爆发而形成了火山喷发口。</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- 月海 -->
+             <div class="theory-section">
+                <h3>月海</h3>
+                <p>所谓的月海，是指月球月面上比较低洼的平原，用肉眼遥望月球有些黑暗色斑块，这些大面积的阴暗区就叫作月海。月海是月球表面的主要地理单元，总面积上约占全月面的25%。迄今已知的月海有22个，月球上主要的二十几个月海：蛇海
+                    南海、知海、危海、莫斯科海、丰富海、冷海、洪堡海、湿海、神酒海、巧海、雨海、岛海、界海、云海、东方海、澄海、史密斯海、泡沫海、静海
+                    浪海、汽海。绝大多数月海分布在面向地球月球的正面，正面月海约占半球面积的一半；月球背面只有东海、
+                    莫斯科海和智海共3个，而且面积很小，占半球面积的2.5%。月海虽叫作"海"，但徒有虚名，实际上它滴水不含，只不过是较平坦的比周围低洼的大平原，它的表层覆盖类似地球玄武岩那样的岩石，即月海玄武岩。</p>
+                <ul>
+                    <li class="uil uil-map-marker"><span><strong>月海与类月海</strong></span>
+                        <p>肉眼所见月面上的阴暗部分实际上是月面上的广阔平原。由于历史上的原因，这个名不副实的名称保留到了。 已确定的月海有22个，此外还有些地形称为"月海"或"类月海"的。公认的22 个绝大多数分布在月球正面，背面有3个，4个在边缘地区。
+                            在正面的月海面积略大于 50%，其中最大的"风暴洋" 面积约五百万平方公里，差不多九个法国的面积总和。大多数月海大致呈圆形，椭圆形，且四周多为一些山脉封闭住，但也有一些海是连成一片的。</p>
+                            <div class="moon-sea-card">
+                                <h4 class="moon-sea-card__title">月海区域</h4>
+                                <div class="moon-gallery">
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/20危海.webp" alt="危海" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>危海</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/21蛇海.webp" alt="蛇海" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>蛇海</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/22云海.webp" alt="云海" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>云海</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/24东方海.webp" alt="东方海" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>东方海</p>
+                                    </div>
+                                  </div>
+                                  <!-- 更多图片项 -->
+                                </div>
+                            </div>
+                    </li>
+                    <li class="uil uil-map-marker"><span><strong>月湖月湾月沼</strong></span>
+                        <p>除了"海"以外，还有被称为湖的"月湖"；被称为湾的"月湾"；被称为沼的"月沼"。如：五个地形与之类似的"湖"梦湖、死湖、夏湖、秋湖、春湖，但有的湖比海还大，比如梦湖面积4.7万平方千米，比汽海等还大得 多。月海伸向陆地的部分称为"湾"和"沼"，都分布在正面。
+                            湾有五个：露湾、暑湾、中央湾、虹湾、眉月湾；沼有凋沼、疫沼、梦沼三个，其实沼和湾没什么区别。月海的地势一般较低，类似地球上的盆地，月海比月球平均水准面低1-2千米， 个别最低的海如雨海的东南部甚至比周围低6000米。月面的返照率（一种量度反射太阳光本领的物理量）也比较低，因而看起来显得较黑。</p>
+                            <div class="moon-sea-card">
+                                <h4 class="moon-sea-card__title">月湖区域</h4>
+                                <div class="moon-gallery">
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/12夏湖.webp" alt="夏湖" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>夏湖</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/13柔湖.webp" alt="柔湖" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>柔湖</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/14恨湖.webp" alt="恨湖" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>恨湖</p>
+                                    </div>
+                                  </div>
+                                  <!-- 更多图片项 -->
+                                </div>
+                            </div>
+                            <div class="moon-sea-card">
+                                <h4 class="moon-sea-card__title">月湾区域</h4>
+                                <div class="moon-gallery">
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/15暑湾.webp" alt="暑湾" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>暑湾</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/16肯考迪娅湾.webp" alt="肯考迪娅湾" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>肯考迪娅湾</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/17费徳湾.webp" alt="费徳湾" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>费徳湾</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/11.webp" alt="中央湾" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>中央湾</p>
+                                    </div>
+                                  </div>
+                                  <!-- 更多图片项 -->
+                                </div>
+                            </div>
+                            <div class="moon-sea-card">
+                                <h4 class="moon-sea-card__title">月沼区域</h4>
+                                <div class="moon-gallery">
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/18凋沼.webp" alt="凋沼" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>凋沼</p>
+                                    </div>
+                                  </div>
+                                  <div class="moon-gallery__item">
+                                    <img src="/textures/moon/19疫沼.webp" alt="疫沼" class="moon-gallery__image">
+                                    <div class="moon-gallery__caption">
+                                      <p>疫沼</p>
+                                    </div>
+                                  </div>
+                            
+                                  <!-- 更多图片项 -->
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+             </div>
+             <div class="theory-section">
+                <h3>月陆和山脉</h3>
+                <p>月面上高于月海的地区称为月陆，一般比月海水准面高2～3千米，由于它返照率高，因而看来比较明亮。在月球正面，月陆的面积大致与月海相等但在月球背面，月陆的面积要比月海大得多。从同位素测定知道月陆比月海古老得多，是月球上最古老的地形特征。</p>
+                <p>在月球上，除了犬牙交差的众多撞击坑外，也存在着一些与地球上相似的山脉。月球上的山脉常借用地球上的山脉名，如阿尔卑斯山脉，高加索山脉等等，其中最长的山脉为亚平宁山脉，绵延1000千米，但高度不过比月海水准面高三四千米。
+                    山脉上也有些峻岭山峰，过去对它们的高度估计偏高。如今认为大多数山峰高度与地球山峰高度相仿。1994年，美国的克莱门汀月球探测器曾得出月球最高点为8000米的结论，根据"嫦娥一号"获得的数据测算，月球上最高峰高达9840米。月面上6000米以上的山峰有6个，5000～6000米20个，3000～6000米则有80个，1000米以上的有200个。月球上的山脉有一普遍特征：两边的坡度很不对称，向海的一边坡度甚大，有时为断崖状，另一侧则相当平缓。这是由于小天体高速撞击月面，强大的撞击能量使月球表面的岩石气化、熔融、破碎并溅射，挖掘出一个巨大的撞击坑或撞击盆地，撞击体的巨大撞击能量在撞击坑底部产出一系列断层和裂缝，诱发月球内部的玄武岩浆的喷发和溢出，形成暗色的月海盆地。被抛射出撞击坑的各种溅射物质，降落在月海外围的不同距离内，形成了月海外侧平缓的坡度。</p>
+
+             </div>
+             <div class="theory-section">
+                <h3>月面辐射纹</h3>
+                <p>月面辐射纹是月球上的一种特殊的地貌特征，它们是月球表面上的放射状线条，通常沿着月球的赤道或经线延伸。这些辐射纹是由于月球表面受到太阳风和宇宙射线的影响，导致月球表面的岩石和土壤发生放射性衰变，从而形成的一种特殊的地貌特征。</p>
+                <p>形成辐射纹的原因还没有定论。实质上，它与环形山的形成理论密切联系。许多人都倾向于小天体撞击说，认为在没有大气和引力很小的月球上，小天体撞击可能使高温碎块飞得很远。而另外一些科学家认为不能排除火山的作用，火山爆发时的喷射也有可能形成四处飞散的辐射形状。</p>
+             </div>
+             <div class="theory-section">
+                <h3>月谷</h3>
+                <p>地球上有着许多著名的裂谷，如东非大裂谷。月面上也有这种构造——那些看来弯弯曲曲的黑色大裂缝即是月谷，它们有的绵延几百到上千千米，宽度从几千米到几十千米不等。那些较宽的月谷大多在月陆上较平坦的地区，而那些较窄、较小的月谷（有时又称为月溪）则到处都有。最著名的月谷是在柏拉图环形山的东南连结雨海和冷海的阿尔卑斯大月谷，它把月球上的阿尔卑斯山拦腰截断，很是壮观。从太空拍得的照片估计，它长达130千米，宽10～12千米。</p>
+                <img src="/textures/moon/25.webp" alt="月谷" class="moon-image">
+             </div>
+             <div class="theory-section">
+                <h3>火山分布</h3>
+                <p>月球的表面被巨大的玄武岩（火山熔岩）层所覆盖。早期的天文学家认为，月球表面的阴暗区是广阔的海洋，因此，他们称之为"mare"，这一词在拉丁语中的意思就是"大海"，当然这是错误的，这些阴暗区其实是由玄武岩构成的平原地带。除了玄武岩构造，月球的阴暗区，还存在其他火山特征。最突出的，例如蜿蜒的月面沟纹、黑色的沉积物、火山园顶和火山锥。不过，这些特征都不显著，只是月球表面火山痕迹的一小部</p>
+                <p>与地球火山相比，月球火山可谓老态龙钟。大部分月球火山的年龄在30亿～40亿年之间；典型的阴暗区平原，年龄为35亿年；最年轻的月球火山也有1亿年的历史。而在地质年代中，地球火山属于青年时期，一般年龄皆小于10万年。地球上最古老的岩层只有39亿年的历史，年龄最大的海底玄武岩仅有200万年。年轻的地球火山仍然十分活跃，而月球却没有任何新近的火山和地质活动迹象，因此，天文学家称月球是"熄灭了"的星球。</p>
+                
+                
+                <div class="flex-layout"> 
+                    <div class="text-content">
+                        <p>地球火山多呈链状分布。例如安底斯山脉，火山链勾勒出一个岩石圈板块的边缘。夏威夷岛上的山脉链，则显示板块活动的热区。月球上没有板块构造的迹象。典型的月球火山多在巨大古老的撞击坑底部。因此，大部分月球阴暗区都呈圆形外观。撞击盆地的边缘往往环绕着山脉，包围着阴暗区。</p>
+                        <p>月球上已知的火山有200多座，其中最大的火山是位于月球南极附近的奥林匹斯火山，直径达600千米，是地球上珠穆朗玛峰的100多倍。月球上已知的火山大多数分布在月球的正面，背面只有3座。</p>
+                    </div>
+                    
+                    <figure class="image-content">
+                        <img src="/textures/moon/26.webp" alt="月球诞生理论" class="">
+                        <figcaption>月球火山</figcaption>
+                    </figure>
+                </div>
+                
+             </div>
+        </div>
+        <div class="content-section">
+            <h2>月球的研究与探测</h2>
+            <div class="theory-section">
+                <h3>月球探测图片</h3>
+                <!-- Swiper -->
+                <div class="swiper moonSwiper-b">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-moonSlide-b"><img src="/textures/moon/31.webp" alt="" class="swiper-img"></div>
+                    <div class="swiper-slide swiper-moonSlide-b"><img src="/textures/moon/32.jpg" alt="" class="swiper-img"></div>
+                    <div class="swiper-slide swiper-moonSlide-b"><img src="/textures/moon/27.webp" alt="" class="swiper-img"></div>
+                    <div class="swiper-slide swiper-moonSlide-b"><img src="/textures/moon/35.jpg" alt="" class="swiper-img"></div>
+                    <div class="swiper-slide swiper-moonSlide-b"><img src="/textures/moon/34.jpg" alt="" class="swiper-img"></div>
+                    
+                    
+                    </div>
+                    <div class="swiper-pagination swiper-moonPagination-b"></div>
+                </div>
+            </div>
+            <div class="theory-section">
+                <h3>月球探测历程</h3>
+                <table class="mission-table">
+                    <thead>
+                        <tr>
+                            <th>发射时间</th>
+                            <th>任务完成时间</th>
+                            <th>飞行器</th>
+                            <th>航天员</th>
+                            <th>目的</th>
+                            <th>备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1959年1月2日</td>
+                            <td>/</td>
+                            <td>月球1号</td>
+                            <td>无人</td>
+                            <td>探测</td>
+                            <td>人类第一个空间探测器,距月球最近距离5995公里</td>
+                        </tr>
+                        <tr>
+                            <td>1959年9月12日</td>
+                            <td>/</td>
+                            <td>月球2号</td>
+                            <td>无人</td>
+                            <td>着陆</td>
+                            <td>到达月球的第一位使者</td>
+                        </tr>
+                        <tr>
+                            <td>1959年10月4日</td>
+                            <td>/</td>
+                            <td>月球3号</td>
+                            <td>无人</td>
+                            <td>探测</td>
+                            <td>第一个拍得月球背面照片的航天器</td>
+                        </tr>
+                        <tr>
+                            <td>1966年1月31日</td>
+                            <td>1966年2月7日</td>
+                            <td>月球9号</td>
+                            <td>无人</td>
+                            <td>着陆</td>
+                            <td>世界上第一颗在月球上成功实现软着陆的月球探测器</td>
+                        </tr>
+                        <tr>
+                            <td>1966年5月30日</td>
+                            <td>1966年6月2日</td>
+                            <td>勘测者1号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>是人类第一个真正的月球软着陆器</td>
+                        </tr>
+                        <tr>
+                            <td>1966年8月10日</td>
+                            <td>1966年10月</td>
+                            <td>月球轨道器1号</td>
+                            <td>无人</td>
+                            <td>绕月探测</td>
+                            <td>第一艘绕月飞行的美国航天器并传回了第一幅在月球轨道拍摄的地球照片</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>1966年9月20日</td>
+                            <td>1966年9月23日</td>
+                            <td>勘测者2号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>坠毁于哥白尼环形山附近</td>
+                        </tr>
+                        <tr>
+                            <td>1966年11月6日</td>
+                            <td>1967年10月11日</td>
+                            <td>月球轨道器2号</td>
+                            <td>无人</td>
+                            <td>绕月探测</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>1967年2月5日</td>
+                            <td>/</td>
+                            <td>月球轨道器3号</td>
+                            <td>无人</td>
+                            <td>绕月探测</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>1967年4月17日</td>
+                            <td>/</td>
+                            <td>勘测者3号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>首次在月面挖出一道人工沟渠</td>
+                        </tr>
+                        <tr>
+                            <td>1967年7月14日</td>
+                            <td>/</td>
+                            <td>勘测者4号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>准备软着陆时失去联系</td>
+                        </tr>
+                        <tr>
+                            <td>1967年8月1日</td>
+                            <td>1968年1月31日</td>
+                            <td>月球轨道器5号</td>
+                            <td>无人</td>
+                            <td>绕月绘图</td>
+                            <td>99%的月球表面已经被绘制成图</td>
+                        </tr>
+                        <tr>
+                            <td>1967年9月8日</td>
+                            <td>/</td>
+                            <td>勘测者5号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>人类第一次进行月球土壤化学分析</td>
+                        </tr>
+                        <tr>
+                            <td>1967年11月7日</td>
+                            <td>/</td>
+                            <td>勘测者6号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>成功地进行了”跳跃”和移动实验</td>
+                        </tr>
+                        <tr>
+                            <td>1968年1月7日</td>
+                            <td>/</td>
+                            <td>勘测者7号</td>
+                            <td>无人</td>
+                            <td>软着陆</td>
+                            <td>/</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>1969年7月16日</td>
+                            <td>1969年7月24日</td>
+                            <td>阿波罗11号</td>
+                            <td>尼尔·阿姆斯特朗、巴兹·奥尔德林、迈克尔·科林斯</td>
+                            <td>载人登月</td>
+                            <td>人类第一次登陆月</td>
+                        </tr>
+                        <tr>
+                            <td>1970年9月12日</td>
+                            <td>/</td>
+                            <td>月球16号</td>
+                            <td>无人</td>
+                            <td>探测取样返回</td>
+                            <td>人类第一次无人取样</td>
+                        </tr>
+                        <tr>
+                            <td>1970年11月10日</td>
+                            <td>1971年10月4日</td>
+                            <td>月球17号</td>
+                            <td>无人</td>
+                            <td>月球车1号</td>
+                            <td>世界上第一辆自动月球车</td>
+                        </tr>
+                        <tr>
+                            <td>1972年12月7日</td>
+                            <td>1972年12月19日</td>
+                            <td>阿波罗17号</td>
+                            <td>尤金·塞尔南、罗纳德·埃万斯、哈里森·施密特</td>
+                            <td>/</td>
+                            <td>阿波罗计划中最后一次任务</td>
+                        </tr>
+                        <tr>
+                            <td>1973年1月8日</td>
+                            <td>/</td>
+                            <td>月球21号</td>
+                            <td>无人</td>
+                            <td>月球车2号</td>
+                            <td>/</td>
+                        </tr>
+                        <tr>
+                            <td>1976年8月9日</td>
+                            <td>1976年8月22日</td>
+                            <td>月球24号</td>
+                            <td>无人</td>
+                            <td>取样返回</td>
+                            <td>获取月表下面2米的样本并返回</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2007年10月24日</td>
+                            <td>2009年3月1日</td>
+                            <td>嫦娥一号</td>
+                            <td>无人</td>
+                            <td>分析探测</td>
+                            <td>中国首颗月球探测卫星，获取月球立体图像</td>
+                        </tr>
+                        <tr>
+                            <td>2010年10月1日</td>
+                            <td>2012年12月15日</td>
+                            <td>嫦娥二号</td>
+                            <td>无人</td>
+                            <td>中国探月工程二期的技术先导星，原为嫦娥一号的备份星</td>
+                            <td>中国第一次开展拉格朗日点转移轨道的设计和控制</td>
+                        </tr>
+                        <tr>
+                            <td>2010年10月1日</td>
+                            <td>2012年12月15日</td>
+                            <td>嫦娥二号</td>
+                            <td>无人</td>
+                            <td>中国探月工程二期的技术先导星，原为嫦娥一号的备份星</td>
+                            <td>中国第一次开展拉格朗日点转移轨道的设计和控制</td>
+                        </tr>
+                        <tr>
+                            <td>2009年6月18日</td>
+                            <td>/</td>
+                            <td>月球勘测轨道器</td>
+                            <td>无人</td>
+                            <td>在月面寻找安全的着陆点，寻找潜在的资源，研究月面的辐射环境并论证一些新的技术</td>
+                            <td>标志着美国“重返月球”计划正式启动</td>
+                        </tr>
+                        <tr>
+                            <td>2013年12月2日</td>
+                            <td>2016年7月31日</td>
+                            <td>嫦娥三号</td>
+                            <td>无人</td>
+                            <td>探测</td>
+                            <td>中国第一个月球登陆器</td>
+                        </tr>
+                        <tr>
+                            <td>2018年12月8日</td>
+                            <td>2019年1月3日</td>
+                            <td>嫦娥四号</td>
+                            <td>无人</td>
+                            <td>月球背面软着陆</td>
+                            <td>人类首次月球背面软着陆，释放玉兔二号月球车</td>
+                        </tr>
+                        <tr>
+                            <td>2019年4月11日</td>
+                            <td>/</td>
+                            <td>创世纪号</td>
+                            <td>无人</td>
+                            <td>旨在成为有史以来第一个由私人资助的月球探测器</td>
+                            <td>坠毁在月球表面失败</td>
+                        </tr>
+                        <tr>
+                            <td>2020年11月24日4时30分</td>
+                            <td>2020年12月17日</td>
+                            <td>嫦娥五号</td>
+                            <td>无人</td>
+                            <td>月球采样返回</td>
+                            <td>采集1731克月球样本返回地球</td>
+                        </tr>
+                        <tr>
+                            <td>2024年5月3日</td>
+                            <td>2024年10月15日</td>
+                            <td>嫦娥六号</td>
+                            <td>无人</td>
+                            <td>采集月壤并将其送回地球</td>
+                            <td>任务采集月球背面样品为1935.3克。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+
+    </div>
+    <footer class="footer">
+        <p>© 2025 太阳系探索科普网站 | 本页面内容基于公开天文数据整理</p>
+    </footer>
+
+    <script>
+        // 距离相关数据图表
+        const moonDistanceCtx = document.getElementById('moonDistanceChart').getContext('2d');
+        new Chart(moonDistanceCtx, {
+            type: 'bar',
+            data: {
+                labels: ['平均轨道半径', '近地点距离', '远地点距离', '平均月地距离','赤道直径', '两极直径'],
+                datasets: [{
+                    label: '距离 (km)',
+                    data: [384403, 363300, 405696, 384400, 3476.2, 3472.0],
+                    backgroundColor: 'rgba(0, 255, 255, 0.6)',
+                    borderColor: 'rgba(0, 255, 255, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '距离 (km)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 周期相关数据图表
+        const moonSizeCtx = document.getElementById('moonSizeChart').getContext('2d');
+        new Chart(moonSizeCtx, {
+            type: 'bar',
+            data: {
+                labels: ['平均公转周期', '自转周期','交点退行周期','近地点周期','远地点周期'],
+                datasets: [{
+                    label: '周期（天）',
+                    data: [27.32, 27.32, 679.32, 27.55, 27.21],
+                    backgroundColor: 'rgba(255, 215, 0, 0.6)',
+                    borderColor: 'rgba(255, 215, 0, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: '周期（天）'
+                        }
+                    }
+                }
+            }
+        });
+
+        // 物理特性数据图表
+        const moonPhysicalCtx = document.getElementById('moonPhysicalChart').getContext('2d');
+        new Chart(moonPhysicalCtx, {
+            type: 'pie',
+            data: {
+                labels: ['赤道重力加速度', '逃逸速度', '自转速度'],
+                datasets: [{
+                    label: '速度（km/s）',
+                    data: [ 1.622, 2.4, 4.6267],
+                    backgroundColor: [
+                        'rgba(255, 0, 255, 0.6)',
+                        'rgba(0, 255, 255, 0.6)',
+                        'rgba(255, 215, 0, 0.6)',
+                        'rgba(0, 255, 0, 0.6)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 0, 255, 1)',
+                        'rgba(0, 255, 255, 1)',
+                        'rgba(255, 215, 0, 1)',
+                        'rgba(0, 255, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+
+        // 月相周期图表
+        const moonPhaseCtx = document.getElementById('moonPhaseChart').getContext('2d');
+        new Chart(moonPhaseCtx, {
+            type: 'line',
+            data: {
+                labels: ['新月', '上弦月', '满月', '下弦月'],
+                datasets: [{
+                    label: '月相变化',
+                    data: [0, 50, 100, 50],
+                    borderColor: 'rgba(0, 255, 255, 0.8)',
+                    tension: 0.5,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // 在 <script> 标签内添加
+        document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.video-banner video');
+        
+        // 点击视频暂停/播放
+        video.addEventListener('click', () => {
+            if (video.paused) video.play();
+            else video.pause();
+        });
+        
+        // 移动端触摸事件
+        video.addEventListener('touchend', () => {
+            if (video.paused) video.play();
+            else video.pause();
+        });
+        });
+    </script>
+    <script src="/src/swiper-bundle.min.js"></script>
+    <script>
+        var swiperA = new Swiper(".moonSwiper-a", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        var swiperB = new Swiper(".moonSwiper-b", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-moonPagination-b",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+
+        
+      </script>
+</body>
+</html> 

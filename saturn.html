@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土星 - 太阳系行星</title>
+    <link rel="stylesheet" href="../css/planet-css/saturn.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/banner.css">
+    <link rel="icon" href="/public/assets/images/saturn.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <div class="video-banner">
+        <video id="myVideo" autoplay muted loop playsinline>
+        <source src="/textures/saturn/01.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+            <h1>土星</h1>
+            <p>土星-太阳系第二大行星</p>
+        </div>
+    </div>
+    <a href="../solarSystem.html" class="back-button">
+        <button class="button">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 40">
+                        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+    <a href="../public/plantIndex.html" class="back-buttons">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>土星概述</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 400px; height: 313px; float: right;">
+                <img src="/textures/saturn/02.jpg" class="mw-file-element">
+                <img src="/textures/saturn/01.jpg" class="mw-file-element">
+                <figcaption>卡西尼号所拍摄到向日与背日的土星，皆为接近真实色彩的影像，分别拍摄于2008年7月与2017年9月</figcaption>
+            </figure>
+            <p>土星（英文：Saturn，拉丁文：Saturnus，符号：♄），是太阳系八大行星之一，到太阳的距离排在太阳系第六位。古代中国土星是中国古代人根据五行学说结合肉眼观测到的土星的颜色（黄色）来命名的，亦称之为镇星（常写作填星）。土星的英文名称Saturn来自于罗马神话中的农业之神萨图恩。</p>
+            <p>土星是气态巨行星，主要由氢组成，还有少量的氦与少量其他元素，内部的核心包括岩石和冰，外围由数层金属氢和气体包覆着。最外层的大气层在外观上通常情况下都是平淡的，虽然有时会有长时间存在的特征出现。</p>
+            <p>土星的风速高达1800千米/时，风速明显比木星快。土星的行星磁场强度介于地球和更强的木星之间。土星有一个显著的行星环系统，主要的成分是冰的微粒和较少数的岩石残骸以及尘土。2025年确认的土星的卫星有274 颗。其中，土卫六是土星系统中最大和太阳系中第二大的卫星，仅次于木卫三，比行星中的水星还要大，并且土卫六是太阳系仅有的拥有明显大气层的卫星。土星自转一周等于10小时33分38秒，大约是地球的半天。土星的赤道直径约为120000千米。</p>
+            
+        </div>
+
+        <div class="content-section">
+            <h2>基本信息</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="atmosphereChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="data-cards-container">
+                <div class="data-card orbit-card">
+                    <h3>轨道参数</h3>
+                    <div class="data-value">近日点: 1 353 572 956 公里</div>
+                    <div class="data-value">半长轴: 1 433 449 370公里</div>
+                    <div class="data-value">离心率: 0.055 723 219</div>
+                    <div class="data-value">轨道周期: 10,759 日<br>29.4571 年</div>
+                    <div class="data-value">会合周期: 378.09 日</div>
+                    <div class="data-value">平均轨道速度: 9.69 公里/秒</div>
+                    <div class="data-value">轨道倾角: 2.485 240°</div>
+                </div>
+
+                <div class="data-card physical-card">
+                    <h3>物理特征</h3>
+                    <div class="data-value">赤道半径: 60 268 ± 4 公里</div>
+                    <div class="data-value">平均半径: 58232 km</div>
+                    <div class="data-value">极半径: 54 364 ± 10 公里</div>
+                    <div class="data-value">表面积: 4.27×10<sup>10</sup>公里<sup>2</sup></div>
+                    <div class="data-value">体积: 8.2713×10<sup>14</sup>公里<sup>3</sup></div>
+                    <div class="data-value">质量: 5.6846×10<sup>26</sup>公斤</div>
+                    <div class="data-value">平均密度: 0.687公克/公分<sup>3</sup></div>
+                    <div class="data-value">表面重力: 8.96 米/秒<sup>2</sup></div>
+                </div>
+
+                <div class="data-card atmosphere-card">
+                    <h3>大气特征</h3>
+                    <div class="data-value">大气标高: 	59.5公里</div>
+                    <div class="data-value">氢: ~96%</div>
+                    <div class="data-value">氦: ~3%</div>
+                    <div class="data-value">甲烷: ~0.4%</div>
+                    <div class="data-value">氨: ~0.01%</div>
+                    <div class="data-value">重氢: ~0.01%</div>
+                    <div class="data-value">乙烷: 0.000 7%</div>
+                </div>
+            </div>
+        </div>
+        <!-- 物理特性 -->
+        <div class="content-section">
+            <h2>物理特性</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: left;">
+                <img src="/textures/saturn/03.jpg" class="mw-file-element">
+                <figcaption>土星和地球大小的概略比较</figcaption>
+            </figure>
+            <p>由于其低密度、高速自转和流体的可变性，土星的外形呈现为一个椭球体，也就是极轴相对扁平而赤道相对突出，它的赤道直径和两极直径之比相差大约10%（前者120536千米，后者108728千米）。 [1]其它气体行星虽然也是椭球体，但突出程度都较小。虽然土星核心的密度远高于水，但由于存在较厚的大气层，土星仍是太阳系中仅有的密度低于水的行星，它的比重是0.69g/cm³。土星的质量是地球的95倍， 相较之下木星质量是地球的318倍，但木星的直径大约仅为土星的1.21倍。木星和土星一起占据太阳系总行星质量的92%。</p>
+            <!-- 内部结构 -->
+            <div class="theory-section">
+                <h3>内部结构</h3>
+                
+                <p>土星被称为气态行星，但它并不完全是气态的。行星主要包括氢气，在密度为0.01 g/cm3以上时氢气变成了非理想液体。此密度被达到在包含99.9％土星质量的半径。从行星内部直到的核心的温度，压力和密度全都是稳步上升，使在行星的更深层导致氢气转变成金属。</p>
+                <p>虽然只有少量的直接资料，但标准的行星模型表明，土星的内部结构仍被认为与木星相似，即有一个被氢和氦包围着的小核心。岩石核心的构成与地球相似但密度更高。在核心之上，有更厚的液体金属氢层，然后是数层的液态氢和氦层，在最外层是厚达1,000公里的大气层，也存在着各种型态冰的踪迹。估计核心区域的质量大约是地球质量的9–22倍。</p>
+                <p>土星有非常热的内部，核心的温度高达11700°C，并且辐射至太空中的能量是它接受来自太阳的能量的2.5倍。大部分能量是由缓慢的重力压缩（克赫历程）产生，但这还不能充分解释土星的热能制造过程。额外的热能可能由另一种机制产生：在土星内部深处，液态氦的液滴如雨般穿过较轻的氢，在此过程中不断地通过摩擦而产生热。</p>
+                
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 80%; margin: 0 auto;">
+                    <img src="/textures/saturn/04.svg" class="mw-file-element">
+                    <figcaption>土星内部构造示意图</figcaption>
+                </figure>
+            </div>
+            <!-- 大气层 -->
+            <div class="theory-section">
+                <h3>大气层</h3>
+                
+                <p>土星外围的大气层包括96.3%的氢和3.25%的氦，可以侦测到的气体还有氨、乙炔、乙烷、磷化氢和甲烷。上层的云由氨的冰晶组成，较低层的云则由硫化氢铵（NH4SH）或水组成。相对于太阳所含有的丰富的氦，土星大气层中氦的丰盈度明显低得多。</p>
+                <p>对于比氦重的元素的含量，目前所知不甚精确；但如果假设与太阳系形成时的原始丰盈度是相当的，则可估算出这些元素的总质量是地球质量的19–31倍，而且大部分都存在于土星的核心区域。</p>
+                
+            </div>
+            <!-- 云层 -->
+            <div class="theory-section">
+                <h3>云层</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: left;">
+                    <img src="/textures/saturn/05.jpg" class="mw-file-element">
+                    <figcaption>土星的温度辐射图：土星南极底部是一个明显的热点</figcaption>
+                </figure>
+                <p>土星的上层大气与木星相似（在相同定义的前提下），同样都有着一些条纹；但土星的条纹比较暗淡，并且赤道附近的条纹也比较宽。从底部延展至大约10公里高处，是由水冰构成的层次，温度大约是-23 °C。在这之后是硫化氢氨冰的层次，延伸出另外的50公里，温度大约在-93 °C，在这之上是80公里的氨冰云，温度大约是-153 °C。接近顶部，在云层之上200 公里至270 是可以看见的云层顶端，由数层氢和氦构成的大气层。土星的风速是太阳系中第二高的，仅次于海王星，航海家计划的数据显示土星的东风最高可达500 m/s（1,800公里/时）。直到航海家探测器飞越土星，比较纤细的条纹才被观测到。然而从那之后，地基望远镜也被改善到在通常情况下都能够观察到土星的这些细纹。</p>
+                <p>土星的大气层通常都很平静，偶尔会出现一些持续较长时间的长圆形特征，以及其他在木星上常常出现的特征。1990年，哈伯太空望远镜在土星的赤道附近观察到一朵极大的白云，是在航海家与土星遭遇时未曾看见的，在1994年又观察到另一朵较小的白云风暴。1990年的白云是大白斑的一个例子，这是在每一个土星年（大约30个地球年），当土星北半球夏至的时候所发生的独特但短期的现象。之前的大白斑分别出现在1876、1903、1933和1960年，并且以1933年的最为著名。如果这个周期能够持续，下一场大风暴在大约2020年发生</p>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: left;">
+                    <img src="/textures/saturn/06.jpg" class="mw-file-element">
+                    <figcaption>卡西尼号看见的土星，通过环看见的土星呈现蓝色</figcaption>
+                </figure>
+                <p>来自卡西尼号太空船的最新图像显示，土星的北半球呈现与天王星相似的明亮蓝色（见下图）。这种蓝色非常可能是由瑞利散射造成的，但因为当时土星环遮蔽住了北半球，因此从地球上无法看见这种蓝色。</p>
+                <p>天文学家通过分析红外线影像发现土星有一个“温暖”的极地漩涡，这种特征在太阳系内是独一无二的。天文学家认为这个点是土星上温度最高的点，土星上其他各处的温度是-185 °C，而该漩涡处的温度则高达-122 °C。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: right;">
+                    <img src="/textures/saturn/07.jpg" class="mw-file-element">
+                    <figcaption>航海家1号发现北极区的六边形云彩特征，并在2006年被卡西尼号太空船证实[</figcaption>
+                </figure>
+                <p>在航海家1号的影像中最先被注意到的是一个长期出现在78°N附近，围绕着北极的六边形漩涡（土星六边形）[28][29]。不同于北极，哈勃太空望远镜所拍摄到的南极区影像有明显的“喷射气流”，但没有强烈的极区漩涡，也没有“六边形的驻波”。但是，NASA报告卡西尼号在2006年11月观测到一个位于南极像飓风的风暴，有着清晰的眼壁。这是很值得注意的观测报告，因为在过去除了地球之外，没有在任何的行星上观测到眼壁云（包括伽利略号太空船在木星的大红斑上都未能发现眼壁云）。</p>
+                <p>在北极的六边形中每一边的直线长度大约是13 800 公里，整个结构以10h 39 m 24s自转，与行星的无线电波辐射周期一样，这也被认为是土星内部的自转周期。这个六边形结构像大气层中可见的其他云彩一样，在经度上没有移动。</p>
+                <p>这个现象的规律性的起源仍在猜测之中，多数的天文学家认为是在大气层中某种形式的驻波，但是六边形也许是一种新型态的极光。在实验室的流体转动桶内已经模拟出了多边型结构。</p>
+            </div>
+            <!-- 磁层 -->
+            <div class="theory-section">
+                <h3>磁层</h3>
+                <p>土星有一个简单的具有对称形状的内在磁场——一个磁偶极子。磁场在赤道的强度为0.2 高斯（20 µT），大约是木星磁场的20分之一，比地球的磁场强大，为地球的20倍；由于强度远比木星的微弱，因此土星的磁层仅延伸至土卫六轨道之外。磁层产生的原因很有可能与木星相似——由金属氢层（被称为“金属氢发电机”）中的电流引起。与其他的行星一样，土星磁层会受到来自太阳的太阳风内的带电微粒影响而产生偏转。卫星土卫六的轨道位于土星磁层的外围，并且土卫六的大气层外层中的带电粒子提供了等离子体。</p>
+                
+            </div>
+        </div>
+        <!-- 轨道和自转 -->
+        <div class="content-section">
+            <h2>轨道和自转</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: right;">
+                <img src="/textures/saturn/08.gif" class="mw-file-element">
+                <figcaption>六边型风暴特征的动画</figcaption>
+            </figure>
+            <p>土星和太阳的平均距离超过了1 400 000 000 公里（9天文单位），轨道上运行的平均速度是9.69 公里/秒，所以土星上的一年（即土星绕太阳公转一周）相当于10 759个地球日（或是29.4571地球年）。土星的椭圆轨道相对于地球轨道平面的倾角为2.48°，因为离心率为0.056，因此土星与太阳在近日点和远日点（行星在轨道路径上与太阳最近和最远的两个点）之间的距离变化大约为155 000 000 公里。</p>
+            <p>土星可见的特征（如六边型风暴）的自转速率根据所在纬度的不同而有所不同，各个的区域的自转周期如下：“系统I”的周期是10 h 14 min 00 s（844.3°/d），包含的是赤道区域，从南赤道带的北缘延伸至北赤道带的南缘；其他的纬度都属于周期为10 h 39 min 24 s（810.76°/d）的“系统II”；基于航海家飞越土星时发现的无线电波，“系统III”的周期为10 h 39 min 22.4 s（810.8°/d）；因为与系统II非常接近，它可以很大程度上替代系统II。</p>
+            <p>然而，其精确的内部周期仍然未能确定。卡西尼太空船在2004年接近土星时，发现无线电的周期又有可察觉的增加，达到10 h 45 m 45 s（± 36 s）。造成变化的原因仍不清楚，但这种变化被认为是由于无线电的来源在土星内部不同的纬度上运动而改变了自转周期，而不是出自土星本身自转周期上的变化。</p>
+            <p>而后，在2007年，无线电发射被发现没有跟随着行星一起旋转，而可能是由等离子体圆盘的对流造成的，它也与除了行星的自转之外的其他因素有关。有报道指出，这种测量到的自转周期的变化也许是由土星卫星土卫二上的喷泉活动造成的。由这种活动而散布进入土星轨道的水蒸气被电离，从而影响了土星的磁场，使得磁场的旋转速度相对于土星的自转被稍稍降低。目前还没有方法可以直接测定土星核心的自转速率。</p>
+            <p>在2007年9月的报告中，根据各种测量结果（包括卡西尼、航海家和先锋号的报告）综合而得的对土星自转的最后估计值是10小时32分35秒。</p>
+            <p>在2019年，根据卡西尼号探测器收集的数据，土星的自转周期估计为10小时33分38秒。</p>
+        </div>
+        <!-- 土星环 -->
+        <div class="content-section">
+            <h2>土星环</h2>
+            <!-- 历史 -->
+            <div class="theory-section">
+                <h3>历史</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: right;">
+                    <img src="/textures/saturn/09.jpg" class="mw-file-element">
+                    <figcaption>土星环是太阳系中最引人注目的景象（这张影像是卡西尼太空船在2007年拍摄的</figcaption>
+                </figure>
+                <p>土星因为它美丽的行星环而出名，它也是最早被发现具有光环的行星。1610年7月，伽利略用他自制的望远镜观察到了土星环，但因为望远镜成像不好，他并没有意识到这是一个环。他在写给托斯卡纳大公的信上说到：“土星不是单一的个体，它由三个部分组成，这些部分几乎都互相接触著，并且彼此间没有相对的运动，它们的连线是与黄道平行的，并且中央部分（土星本体）大约是两侧（环的边缘）的三倍大”。他也把土星描述成是有“耳朵”的。在1612年，土星环以侧面朝向地球，因此看起来似乎是消失不见了，伽利略因此而感到困惑不解，“是土星吞掉了它的孩子？”（指的是希腊神话中，农神为了防止他们的子孙造反夺权，会吃掉自己的孩子）。然后，在1613年他又再次看见了环，这使伽利略更加困惑。</p>
+                <p>在1655年，克里斯蒂安·惠更斯观测到完整的土星环，他使用了一个比在伽利略时代能得到强大得多的望远镜。惠更斯观测土星并写道：“它（土星）被一个薄且平坦的环环绕着，环与土星没有接触，并且相对黄道倾斜。”</p>
+                <p>在1675年，乔瓦尼·卡西尼确定土星环由许多较小的环组成，中间并且有缝存在着，其中最明显的环缝在不久之后被命名为卡西尼缝。卡西尼缝存在于A环和B环之间，宽度有4800 公里。</p>
+                <p>在1859年，詹姆斯·克拉克·马克士威提出土星环不可能是固体的，否则将会因为不稳定而碎裂。他认为环是由为数众多的小颗粒组成的，每个颗粒都独立地环绕着土星运行。透过光谱学的研究，立克天文台的詹姆斯·基勒在1895年证实了马克士威的理论。</p>
+            </div>
+            <!-- 物理特性 -->
+            <div class="theory-section">
+                <h3>物理特性</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: right;">
+                    <img src="/textures/saturn/10.jpg" class="mw-file-element">
+                    <figcaption>土星环横跨过卫星土卫六的一个奇异的景象，一个明亮的月牙形和内部的球状阴影，右下方为小卫星土卫二造成的阴影，在土卫二的南极可以看见昏暗的冰火山。图片是卡西尼太空船在2006年拍摄的，北方朝上</figcaption>
+                </figure>
+                <p>使用简单的现代望远镜或是品质精良的双筒望远镜就可以看见土星环。它在赤道上从距离土星6630公里延伸至120700公里处，但平均的厚度大约只有20米，主要的成分93%是水冰和少量参杂在其中的复杂有机悬浮物托林，其余7%是无定型的碳[46]，它们的大小从尘土的斑点到一辆小汽车的大小都有。关于土星环的起源有两种主要的理论。一种理论是在19世纪提出的起源于洛希极限，认为环原本是土星的一颗卫星，因为轨道的衰减而落入洛希极限的范围内，因本身不够紧密而被潮汐力扯碎（参见洛希极限），这种理论又演变出卫星被小行星或彗星撞击而瓦解的学说。第二种理论认为它并非来自卫星，而是从形成土星的原星云中直接形成的。</p>
+                <p>在环中最大的空隙是卡西尼缝和恩克环缝，土星的恩克环缝是在1837年5月28日由恩克于柏林发现的，从地球上就可以看见。两艘航海家号太空船都发现环实际上是由数以万计稀薄的小环和空隙构成的复杂结构体。这些结构的产生被认为有好几种不同的成因，许多是由于土星卫星引力的拉扯造成的。其中一些明显的是由土星的微型卫星如土卫十八经过时形成，而其他更多的成因还有待发现；并且有一些小环似乎是由牧羊犬卫星在维护的，像是土卫十六和土卫十七。其他的缝隙可能是与质量较大的卫星轨道周期产生共振造成的，土卫一维系着卡西尼缝的存在，还有更多的环状结构因为受到其他卫星周期性的扰动而产生螺旋状的波浪。</p>
+                <p>来自卡西尼号太空船的资料显示土星环有自己的大气层，与行星本身无关而独立存在。大气中有氧分子（O2），这是来自太阳的紫外线作用与环中的冰而产生的。水分子之间的链接受到紫外线的刺激产生化学作用释放出并抛出了气体，尤其是O2。根据这一模型，大气层中也存在氢气（H2）。这种O2和H2组成的大气层是如此稀薄的，以至于如果均匀分散在环的各处，它的厚度只有一个原子[48]。环中也有稀薄的OH（氧化氢）气体，如同O2一样，这些气体也是水分子的崩解导致的，但这一分解是由高能量离子轰击土卫二抛射出来的水分子所造成的。这些大气层尽管是非常的稀薄，依然还是可以被在地球上空的哈伯太空望远镜检测出来</p>
+                <p>土星在它的亮度上呈现复杂的样式。光度的变化大多可以归咎于环的变化，并且在每个轨道周期有两个循环的变化。由于行星轨道的离心率，使得叠加在北半球冲的时候比在南半球冲时更为明亮。</p>
+                <p>在1980年，航海家1号飞越土星时显示F-环是由三条细环像编辫子一样的纠结在一起，而呈现出复杂的结构；现在知道是在外面的二个环有突起的瘤，造成交织和纠结成团的假象，比较暗的第三个环则在它们的内侧。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 80%; margin: 0 auto;">
+                    <img src="/textures/saturn/11.jpg" class="mw-file-element">
+                    <figcaption>2007年5月9日卡西尼号探测器拍摄的土星的D、C、B、A和F（从左到右）土星环环未被照亮的一面</figcaption>
+                </figure>
+            </div>
+            <!-- 光环暗面 -->
+            <div class="theory-section">
+                <h3>光环暗面</h3>
+                <p>土星光环是连贯成一整个环的，但人为上或会把其分为朝着太阳与背着太阳的一面。而环的背向太阳的一小部分，因为被土星遮挡，只能由太空船如美国国家航空航天局卡西尼—惠更斯号拍摄并传送回来；比较一下来自2004年3月卡西尼号的与来自先驱者11号的图象：</p>
+                <table style="text-align:center; margin-right:auto; margin-left:auto">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align:top; width:295px;">
+                                <img src="/textures/saturn/12.jpg" width="295" class="mw-file-element expandable" height="183">
+                            </td>
+                            <td style="width:345px;">
+                                <img src="/textures/saturn/13.jpg" width="345" class="mw-file-element expandable" height="176">
+                            </td>
+                        </tr>
+                        <tr style="text-align:center; vertical-align:top;">
+                            <td style="width:295px;">先驱者11号：1979年9月1日<br>光环背侧<br>一个从光环背侧看来最粗的部分</td>
+                            <td style="width:345px;">卡西尼—惠更斯号：2004年3月27日<br>光环前侧<br>注意看土星在光环上留下的阴影和光环在土星上留下的阴影</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 环上的轮辐 -->
+            <div class="theory-section">
+                <h3>环上的轮辐</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 200px; height: 137px; float: right;">
+                    <img src="/textures/saturn/14.png" class="mw-file-element">
+                    <figcaption>B环上的轮辐，这幅影像是航海家2号在1981年拍摄的</figcaption>
+                </figure>
+                <p>在1980年以前，对土星环的结构和行为完全都以万有引力的作用来解释。航海家太空船在B环上发现被称为“轮辐”的辐射线状特征，这些无法用同样的方法来解释，因为它们的存在和绕着环的转动，是与轨道力学不一致的。这些轮辐在背景散射光下呈现黑暗，而在前景散射光下显得明亮。它们被假设是悬浮在圆环平面上的微尘，受到电磁的交互作用而联系在一起，因此它们的转动是与土星的磁气层同步。但是，造成轮辐的确实机制仍然不清楚。</p>
+                <p>在25年之后，轮辐再度被卡西尼号观测到。它们看起来有季节性的变化，在土星的仲冬或盛夏时消失不见，当土星接近分点时又再度出现。在2004年初，当卡西尼太空船抵达土星时这些轮辐都未出现。基于目前对于辐条的成因的模型，一些科学家推测这些轮辐要到2007年后才会出现。然而，通过对卡西尼拍摄的环影像的持续寻找，发现轮辐在2005年9月5日重新出现。</p>
+                <table style="text-align:center; margin-right:auto; margin-left:auto">
+                    <tbody>
+                        <tr>
+                            <td style="vertical-align:top; width:295px;">
+                                <img src="/textures/saturn/12.jpg" width="295" class="mw-file-element expandable" height="183">
+                            </td>
+                            <td style="width:345px;">
+                                <img src="/textures/saturn/13.jpg" width="345" class="mw-file-element expandable" height="176">
+                            </td>
+                        </tr>
+                        <tr style="text-align:center; vertical-align:top;">
+                            <td style="width:295px;">先驱者11号：1979年9月1日<br>光环背侧<br>一个从光环背侧看来最粗的部分</td>
+                            <td style="width:345px;">卡西尼—惠更斯号：2004年3月27日<br>光环前侧<br>注意看土星在光环上留下的阴影和光环在土星上留下的阴影</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- 卫星 -->
+        <div class="content-section">
+            <h2>卫星</h2>
+            <p>土星有为数众多的卫星。精确的数量尚不能确定，所有在环上的大冰块理论上来说都是卫星，而且要区分出是环上的大颗粒还是小卫星是很困难的。到2009年已经确认的卫星有62颗，到2019年已经确认的卫星有82颗，到2023年已经确认的卫星有145颗，其中53颗已经有了正式的名称， 29颗仍然未被命名。还另外3颗卫星可能是环上尘埃的聚集体而未能确认。截至2025年，确认的卫星数达到274 颗。此外，有证据表明，土星环中有数十至数百个直径为40-500米的小卫星，不被认为是真正的卫星。从理论上来说，所有在环上的大冰块都是卫星，但要区分出是环上的大冰块还是小卫星是很困难的。许多卫星都非常的小，34颗的直径小于10千米，另外13颗的直径小于50千米，只有7颗有足够的质量能够以自身的重力达到流体静力平衡。</p>
+            <p>土星有一个显著的环系统，主要的成分是冰的微粒和较少数的岩石残骸以及尘土。土卫六是土星系统中最大和太阳系中第二大的卫星（半径2575千米）（太阳系最大的卫星是木星的木卫三半径2634千米），比行星中的水星还要大；而且土卫六是太阳系仅有的拥有明显大气层的卫星。最先发现的前九颗卫星按距离土星由近到远排列为：土卫一、土卫二、土卫三、土卫四、土卫五、土卫六、土卫七、土卫八、土卫九。但土卫十比土卫一更靠近土星，离土星的距离只有159500千米，仅为土星赤道半径的2.66倍，已接近洛希极限。这些卫星在土星赤道平面附近以近圆轨道绕土星转动。</p>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 80%; margin: 0 auto;">
+                <img src="/textures/saturn/15.webp" class="mw-file-element">
+                <figcaption>土星主要卫星大小比较</figcaption>
+            </figure>
+            <p>1980年，当旅行者号探测器飞过土星时，在原有的九颗卫星（土卫一到土卫九）基础上，又发现了八颗新的卫星。土星在太阳系中拥有的卫星最多。跟木星卫星不一样，土星卫星不能简单地以成分和密度归类划分。“旅行者号”所发现的卫星显示出复杂多样的特征。</p>
+            <p>天文学家从旅行者号探测器发回的资料发现，除土卫六外，土星的其他卫星都比较小，在寒冷的表面上都有陨击的疤痕，像破碎了的蛋壳。土卫一表面上有一个直径达128千米的赫歇尔陨石坑；土卫二有着荒凉的平原、陨石坑和断皱的山脊，它的不同区域代表着不同的历史时期；土卫三上有一个又深又宽，长约800千米的裂谷；土卫四表面有稀疏而明亮的条纹，它们都环绕着陨石坑。</p>
+            <p>2025年3月11日，经过国际天文学联合会的正式确认，土星的卫星总数达到了 274 颗。新发现的 128 颗卫星是由来自中国台湾地区、加拿大、美国和法国的天文学家团队于 2023 年利用加拿大 — 法国 — 夏威夷望远镜（CFHT）观测到的。</p>
+            <table style="text-align:center; margin-right:auto; margin-left:auto">
+                <tbody>
+                    <tr>
+                        <td style="vertical-align:top; width:295px;">
+                            <img src="/textures/saturn/16.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                        <td>
+                            <img src="/textures/saturn/17.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                        <td>
+                            <img src="/textures/saturn/18.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                        <td>
+                            <img src="/textures/saturn/19.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                        <td>
+                            <img src="/textures/saturn/20.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                        <td>
+                            <img src="/textures/saturn/21.jpg"  class="mw-file-element expandable" height="168">
+                        </td>
+                    </tr>
+                    <tr style="text-align:center; vertical-align:top;">
+                        <td style="width:295px;">土卫一</td>
+                        <td style="width:345px;">土卫二</td>
+                        <td style="width:345px;">土卫三</td>
+                        <td style="width:345px;">土卫四</td>
+                        <td style="width:345px;">土卫五</td>
+                        <td style="width:345px;">土卫六</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <section class="content-section">
+            <h2>探测历史</h2>
+            <div class="mission-table-container">
+                <table class="mission-table">
+                    <thead>
+                        <tr>
+                            <th>任务名称</th>
+                            <th>发射时间</th>
+                            <th>主要成就</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>旅行者1号</td>
+                            <td>1977年</td>
+                            <td>首次近距离拍摄土星环</td>
+                        </tr>
+                        <tr>
+                            <td>卡西尼号</td>
+                            <td>1997年</td>
+                            <td>详细研究土星系统13年</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- 放大预览容器 -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 太阳系行星探索. All rights reserved.</p>
+    </footer>
+    <script>
+        // 大气成分图表
+        const atmCtx = document.getElementById('atmosphereChart').getContext('2d');
+        new Chart(atmCtx, {
+            type: 'pie',
+            data: {
+                labels: ['氢气', '氦气', '甲烷', '氨气', '重氢', '乙烷'],
+                datasets: [{
+                    data: [96.0, 3.0, 0.4, 0.01, 0.01, 0.0007],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '土星大气成分'
+                    }
+                }
+            }
+        });
+        // 温度图表
+        const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(tempCtx, {
+            type: 'bar',
+            data: {
+                labels: ['最低温度', '平均温度', '最高温度'],
+                datasets: [{
+                    label: '土星表面温度 (k)',
+                    data: [84, 110.5, 137],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '土星表面温度分布'
+                    }
+                }
+            }
+        });
+
+        const video = document.getElementById('myVideo');
+        // 监听视频播放结束事件
+        video.addEventListener('ended', function () {
+            // 将播放时间设置回0秒
+            this.currentTime = 0;
+            this.play();
+        });
+
+        // 初始播放设置
+        video.currentTime = 0;
+        video.play();
+        // 监听视频播放时间，到达88秒时暂停并重新播放
+        video.addEventListener('timeupdate', function () {
+            if (this.currentTime >= 43) {
+                this.pause();
+                this.currentTime = 0;
+                this.play();
+            }
+        });
+
+        // 获取 放大图片的DOM 元素
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        let currentScale = 1;
+
+        // 显示放大图片 - 修改后的代码
+        document.querySelectorAll(".expandable img.mw-file-element").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.add("active");
+                modalImg.src = img.src;
+                currentScale = 1;
+                modalImg.style.transform = `scale(${currentScale})`;
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        });
+
+        modal.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            
+            const delta = Math.sign(e.deltaY);
+            const step = 0.1;
+
+            // 缩放限制
+            if (delta < 0) {
+            currentScale += step; // 放大
+            } else {
+            currentScale = Math.max(0.2, currentScale - step); 
+            }
+
+            modalImg.style.transform = `scale(${currentScale})`;
+        }, { passive: false }); // 注意要设置 passive: false 才能阻止默认滚动
+    </script>
+</body>
+</html> 

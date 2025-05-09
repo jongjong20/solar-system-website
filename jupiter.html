@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>木星 - 太阳系行星</title>
+    <link rel="stylesheet" href="../css/planet-css/jupiter.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/public/assets/images/jupiter.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/banner.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <div class="video-banner">
+        <video id="myVideo" autoplay muted loop playsinline>
+        <source src="/textures/jupiter/01.mp4" type="video/mp4">
+        <source src="/textures/jupiter/01.mp4" type="video/webm">
+        </video>
+        <div class="video-overlay">
+            <h1>木星</h1>
+            <p>太阳系中最大的行星</p>
+        </div>
+    </div>
+    <a href="../solarSystem.html" class="back-button">
+        <button class="button">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 40">
+                        <path d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"></path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+    <a href="../public/plantIndex.html" class="back-buttons">
+        <!-- From Uiverse.io by xopc333 --> 
+        <button class="button">
+            <div class="button-box">
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            <span class="button-elem">
+                <svg viewBox="0 0 46 40">
+                <path
+                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
+                ></path>
+                </svg>
+            </span>
+            </div>
+        </button>
+    </a>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>木星概述</h2>
+            <p>木星是太阳系八大行星中体积最大、自转最快的行星，从内向外的第五颗行星。木星的赤道约为14.3万公里。质量是地球质量的318倍，是太阳系内所有其他行星质量总和的2.5倍。</p>
+            <p>木星距离太阳的平均距离是5.2个天文单位(1个天文单位为太阳与地球之间的距离，约为1.496亿千米)，与太阳间的距离为地球与太阳之间距离的5倍多。从地球上看，它是夜空中亮度排第二的行星，排在“夜空中最亮行星”金星之后。</p>
+            <p>木星大气层由86%的氢气和14%的氦气组成。表面覆盖着厚厚的、棕黄色和白色相间的云层。木星是太阳系内自转最快的行星。木星的移动速度非常快。其自转速度为4.53万公里/小时(12.6公里/秒)，一次自转只需10小时，因此，木星的一天只有10个小时。木星的轨道为椭圆或橄榄型，绕太阳旋转一次所需的时间是地球绕太阳旋转一次所需时间的12倍，因此，木星上的一年等于地球上的12年，与地支相同之故，到西汉时期，《史记‧天官书》作者司马迁从实际观测发现岁星呈青色，与“五行”学说联系在一起，正式把它命名为“木星”。木星云层的温度约为零下145摄氏度。木星中央附近的温度非常高，核心温度约为2.4万摄氏度，比太阳表面还热。</p>
+            
+        </div>
+        <div class="content-section">
+            <h2>发现&命名</h2>
+            
+            <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                <img src="/textures/jupiter/01.png" class="mw-file-element">
+                <figcaption>木星，出自1550年古德·波那提编辑的木刻集Liber Astronomiae。</figcaption>
+            </figure>
+            <p>木星，因为在夜晚以肉眼很容易就看见它，当太阳位置很低时，偶尔也能在白天看见，因此自古以来就为人所知。在巴比伦，这个天体代表他们的神马尔杜克（Marduk）。他们用木星轨道大约12年绕行黄道一周来定义它们生肖的星宫。罗马人依据神话将它命名为木星（拉丁语：Iuppiter, Iūpiter，也称为Jove），是罗马神话中主要的神，它的名字来自原始印欧语系的呼格合成*Dyēu-pəter（主格：*Dyēus-pətēr，意思是“O天神之父”或“O日神之父”）。相对而言，木星对应于希腊神话是宙斯（Ζεύς），也被称为Dias（Δίας），其中的行星名称仍然保留在现代的希腊语中。在英语，周四（Thursday）是源自“雷神日”（Thor's day），是出在日耳曼神话。相较于罗马神话就是朱庇特。罗马星期四的Jovis也重新命名为“Thursday”。</p>
+        </div>
+        <div class="content-section">
+            <h2>基本信息</h2>
+            <div class="charts-container">
+                <div class="chart-container">
+                    <canvas id="temperatureChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="atmosphereChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="data-cards-container">
+                <div class="data-card orbit-card">
+                    <h3>轨道参数</h3>
+                    <div class="data-value">远日点: 816520800km</div>
+                    <div class="data-value">近日点: 740573600 km</div>
+                    <div class="data-value">半长轴: 778547200 km</div>
+                    <div class="data-value">离心率: 0.048775</div>
+                    <div class="data-value">轨道周期: 11.8618 年</div>
+                    <div class="data-value">会合周期: 398.88 日</div>
+                    <div class="data-value">平均轨道速度: 13.07 公里/秒</div>
+                    <div class="data-value">轨道倾角: 1.305° 对黄道</div>
+                </div>
+
+                <div class="data-card physical-card">
+                    <h3>物理特征</h3>
+                    <div class="data-value">赤道半径: 71492 公里</div>
+                    <div class="data-value">平均半径: 69911km</div>
+                    <div class="data-value">极半径: 66854 km</div>
+                    <div class="data-value">表面积: 6.1419×10<sup>10</sup>km<sup>2</sup></div>
+                    <div class="data-value">体积: 1.4313×10<sup>15</sup>km<sup>3</sup></div>
+                    <div class="data-value">质量: 1.8981×10<sup>27</sup>kg</div>
+                    <div class="data-value">平均密度: 1.326 g/cm<sup>3</sup></div>
+                    <div class="data-value">表面重力: 24.79 m/s<sup>2</sup></div>
+                </div>
+
+                <div class="data-card atmosphere-card">
+                    <h3>大气特征</h3>
+                    <div class="data-value">表面气压: 	20–200 kPa</div>
+                    <div class="data-value">大气标高: 	27 km</div>
+                    <div class="data-value">氢: 89.8±2.0%</div>
+                    <div class="data-value">氦: 10.2±2.0%</div>
+                    <div class="data-value">甲烷: ≈ 0.3%</div>
+                    <div class="data-value">氨: ≈ 0.026%</div>
+                    <div class="data-value">氘化氢: 0.0006%</div>
+                    <div class="data-value">水: 0.0004%</div>
+                </div>
+            </div>
+        </div>
+        <!-- 结构 -->
+        <div class="content-section">
+            <h2>结构</h2>
+            <p>木星主要由气体和液体物质构成，它是太阳系中4颗巨行星中最大的，也是太阳系最大的行星。它的赤道直径142,984 km（88,846 mi），密度1.326g/cm<sup>3</sup>，是巨行星中第二高的，但远低于其它4颗类地行星。</p>
+            <!-- 成分 -->
+            <div class="theory-section">
+                <h3>成分</h3>
+                <p>木星大气层上层的成分以气体分子的体积百分比大约88-92%是氢，8-12%是氦。但由于氦的原子量是氢的4倍，当以质量描述组成时，不同原子量的元素就会有不同的比例，由此木星的大气层大约有75%的质量是氢，24%的质量是氦，剩余的1%是其它元素。而在木星的内部包含了密度较高的元素，在质量上大致是71%的氢、24%的氦和5%的其它元素。大气中含有微量的甲烷、水蒸气、氨和硅基化合物。也有微量的碳、乙烷、硫化氢、氖、氧、磷化氢和硫，最外层的大气含有结晶的氨。经由红外线和紫外线的测量，也发现有微量的苯和其它的烃类。</p>
+                <p>大气中氢和氦的比例接近理论上的原始太阳星云组成。氖在大气层上层仅占百万分之二十，大约是太阳中丰度的十分之一。氦也几乎耗尽，大约只有太阳组成的80%左右。这种减少是这些元素沉降到行星内部的结果。较重的惰性气体在木星大气层中的丰度是太阳的2-3倍</p>
+                <p>依据光谱，土星的组成被认为类似于木星，但其它的巨行星，天王星和海王星有着相对较少的氢与氦。由于缺乏直接深入大气层的探测器，除了外层的大气层外，缺乏内部更重元素丰度的精确数值。</p>
+            </div>
+            <!-- 质量和大小 -->
+            <div class="theory-section">
+                <h3>质量和大小</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <img src="/textures/jupiter/02.jpg" class="mw-file-element">
+                    <figcaption>木星的直径比太阳小一个数量级（×0.10045），但仍比地球大一个数量级（×10.9733），大红斑大约有二到三个地球大（数量级相同）</figcaption>
+                </figure>
+                <p>木星的质量是太阳系其他行星质量总和的2.5倍，由于它的质量是如此巨大，因此太阳系的质心落在太阳的太阳表面之外，距离太阳中心1.068太阳半径。虽然木星的直径是地球的11倍，体积是地球的1,321倍，但是它的密度很低，质量只是地球的318倍。木星的半径是太阳半径的十分之一，质量是太阳质量的千分之一，所以两者的密度是相近的。"木星质量"（MJ或MJup）通常被做为描述其它天体，特别是系外行星和棕矮星的质量单位。例如系外行星HD 209458 b的质量是0.69MJup，而仙女座κb的质量是12.8MJup。</p>
+                <p>理论模型显示如果木星的质量比现在更大，而不是仅有目前的质量，它将会继续收缩。质量上的些许改变，不会让木星的半径有明显的变化，大约要在500地球质量（1.6MJup）才会有明显的改变。尽管随着质量的增加，内部会因为压力的增加而缩小体积。结果是，木星被认为已经几乎达到了行星结构和演化史所能决定的最大半径。随着质量的增加，收缩的过程会继续下去，直到达到可察觉的恒星形成质量，大约是50MJup的高质量棕矮星。</p>
+                <p>然而，需要75倍的木星质量才能使氢稳定的融合成为一颗恒星。最小的红矮星，半径大约只是木星的30%。尽管如此，木星仍然散发出大量能量。它接受来自太阳的能量，而内部产生的能量也几乎和接受自太阳的总能量相等。这些额外的热量是由开尔文-亥姆霍兹机制通过收缩产生的。这个过程造成木星每年缩小约2厘米。当木星形成的时候，它比现在热，直径大约是现在的2倍。</p>
+                
+            </div>
+            <!-- 内部结构 -->
+            <div class="theory-section">
+                <h3>内部结构</h3>
+                
+                <p>木星被认为有个由元素混合的致密核心，被一层含有少量氦，主要是氢元素的液态金属氢包覆着。除了这个基本的轮廓，不确定的成分还是相当多。核心经常被描述为岩石，但是其详细的成分是未知的，而且在这种深度下的温度、压力、和材料的性质也都不清楚（见下文）。在1997年，有人建议用重力法测量是否存在着核心[40]，显示核心大约有12至45地球质量，约占木星总质量的4%至14%[39][42]。 行星模型认为在行星形成的历史上，木星至少有一段时间有个够大的岩石或冰的核心，才可以从原始太阳星云收集到足够大量的氢和氦。假设它确实存在，它可能因为现存的热液态金属氢与地幔混合的对流而萎缩，并且熔融在行星内部的较上层。核心现在可能完全消失，但由于重力测量仍不够精确，还不能完全排除这种可能性。</p>
+                <p>模型的不确定性受限于测量参数的误差：用来描述行星引力动量的一个自转系数（J6）、木星的赤道半径、在1帕压力处的温度。预期在2011年8月发射的朱诺号探测器将能获得这些参数更好的数值，从而在核心的问题上取得进展。</p>
+                <p>核心区域被密集的金属氢包围着，向外延伸到大约行星半径78%之处[39]，通过这一层的氦和氖，像雨水滴般向下沉降，消耗掉这些元素在上层大气的丰度。</p>
+                <p>在金属氢上层是内层透明氢的大气层。在这个深度，温度是在临界温度之上，对氢而言只有33K[46]。在此状态下，没有层次分明的液体和气体位相 －氢可能是临界的超流体状态。在这层之上的，从云层向下延伸至深度大约1,000公里的氢，顺理成章的应该是气体[39]，而在更深的一层是流动的液体。在物理上，那里没有明确的边界 －气体很顺利的变得更热和更密集的下降。</p>
+                <p>由于开尔文-亥姆霍兹机制可知，木星内部的温度和压力在朝向核心地方向逐渐增加。在压力为10帕的“表面”，温度大约是340 K（67 °C；152 °F）。在氢相变的区域 －温度达到临界点－ 氢成为金属，相信温度是10,000 K（9,700 °C；17,500 °F），压力的200GPa。在核心边界的温度估计为36,000 K（35,700 °C；64,300 °F），同时内部的压力大约是3,000至4,500GPa。</p>
+                <!-- <img src="/textures/jupiter/03.svg" alt="" class="jupiter-img">
+                <figcaption></figcaption> -->
+                <figure class="mw-default-size mw-halign-center expandable" style=" width: 80%; margin: 0 auto;">
+                    <img src="/textures/jupiter/03.svg" class="mw-file-element">
+                    <figcaption>这幅模型剖面图显示木星内部的构造，液态金属氢覆盖着内部深处的岩石核心</figcaption>
+                </figure>
+            </div>
+        </div>
+        <!-- 大气层 -->
+        <div class="content-section">
+            <h2>大气层</h2>
+            <p>木星有着太阳系内最大的行星大气层，跨越的高度超过5,000 km（3,107 mi）。由于木星没有固体的表面，它的大气层基础通常被认为是大气压力等于1 MPa（10 bar），或十倍于地球表面压力之处。</p>
+            <!-- 云层 -->
+            <div class="theory-section">
+                <h3>云层</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/jupiter/04.jpg" class="mw-file-element">
+                    <figcaption>这是航海家1号太空船于1979年2月25日距离木星920万公里（570万英里）飞掠过木星时拍摄的影像。大红斑下方白色的椭圆正是直径大约与地球相同的风暴</figcaption>
+                </figure>
+                <p>木星永远被氨晶体和可能是氢硫化氨的乌云笼罩着。对流层顶的云，在不同纬度形成不同的区带，最著名的是热带区。这些区带分为亮色调的区（zones）和深色调的带（belts）。这些模式互不相容环流间的交互作用导致风暴和湍流，风速达到100m/s（360Km/h）的纬向急流是很常见的[51]。每一年，各区都有着不同的宽度、颜色和强度，但对天文学家而言，依然可以稳定的给予识别和指定。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <video class="mw-file-element" controls width="100%" height="auto" id="jupiter-video">
+                      <source src="/textures/jupiter/07.webm" type="video/webm">
+                      您的浏览器不支持视频播放。
+                    </video>
+                    <figcaption>这个模拟的循环动画显示木星逆向旋转的云带运动。在此图中，行星的表面以圆柱投影投射。动画最大宽度：720 pixels，更大宽度的动画：1799 pixels。</figcaption>
+                </figure>
+                <p>云层大约只有50 km（31 mi）深，并且至少包含两层覆盖的云：厚厚的下层和薄且清晰的区域。在氨云层下面也有薄薄一层的水云，有证据显示木星的大气层中也有闪烁的闪电。这是由水分子的极性造成的，它使得创造闪电所需要的电荷能够分离。这些放电的强度达到地球上的一千倍。水云可以形成雷暴，驱使热量从内部不断上升。</p>
+                <p>木星云层的橙色和棕色是内部涌升的化合物暴露在紫外线下，引起颜色的改变造成的。确切的构成仍然不清楚，但被认为是含有磷、硫或可能是烃类。这些丰富多彩的混合物，称为发色团，与下层较温暖的云层混合。 区是由上升的氨结晶对流胞形成的，在观测上通常是较低层云的掩蔽物。</p>
+                <p>木星的低转轴倾角意味着两极能接收到的太阳辐射远远的少于行星的赤道地区。行星内部的对流输送大量的能量到极区，使云层的温度能够平衡</p>
+                
+            </div>
+            <!-- 大红斑和其它涡旋 -->
+            <div class="theory-section">
+                <h3>大红斑和其它涡旋</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/jupiter/05.jpg" class="mw-file-element">
+                    <figcaption>木星大红斑的大小在缩减中（2014年5月15日）</figcaption>
+                </figure>
+                <p>木星最著名的特征是大红斑，这是比地球大的一个持久性反气旋风暴，位置在赤道南方22°，人们至少在1831年就知道它的存在，并且可能提早至1665年。来自哈伯太空望远镜的影像显示多达两个红斑毗邻着大红斑。这个风暴大得可以使用地基的小口径12 cm或更大的望远镜看见[62]。一些数学模型表明这个风暴是稳定的，可能是这颗行星上一个永久性的特征。</p>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                    <video class="mw-file-element" controls width="100%" height="auto" id="jupiter-video">
+                      <source src="/textures/jupiter/08.webm" type="video/webm">
+                      您的浏览器不支持视频播放。
+                    </video>
+                    <figcaption>来自航海家1号的木星缩时摄影（超过一个月），显示大气层区带的运动和大红斑的循环运行，全尺寸的影像在此处</figcaption>
+                </figure>
+                <p>鹅蛋形物体的自转是逆时针方向，周期大约是六天。大红斑的维度是24,000至40,000公里 X 12,000至14,000公里。它的直径大到可以容得下2至3颗地球。这个风暴最大的高度比周围的云层高出约8 km（5 mi）.</p>
+                <p>风暴通常都发生在巨行星大气层的湍流内，木星也有白色和棕色的鹅蛋形风暴，但较小的那些风暴通常都不会被命名。白色的鹅蛋形风暴倾向于包含大气层上层，相对较低温的云。棕色鹅蛋形风暴是较温暖和位于普通云层。这种风暴持续的时间可以只有几个小时，也可以长达数个世纪。</p>
+                <p>在航海家证实大红斑的特征是一场风暴之前，因为它相对于周围其余的气团有时快，有时慢的差异旋转，已经是强有力的证据，表明大红斑与行星表面或深处的地形特征没有关联性。</p>
+                <p>在2000年，在南半球有一个外观与大红斑类似，但较小的大气特征出现。这是由几个较小的白色鹅蛋形风暴合并成的一个特征 －三个在1938年首度被观测到的较小的鹅蛋形风暴。合并后的特征被命名为鹅蛋形BA，并且因为它的强度增加，颜色由白转红，被昵称为幼红斑。</p>
+                
+            </div>
+        </div>
+        <!-- 行星环 -->
+        <div class="content-section">
+            <h2>行星环</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                <img src="/textures/jupiter/09.jpg" class="mw-file-element">
+                <figcaption>木星的环</figcaption>
+            </figure>
+            <p>木星有个黯淡的行星环系统，约有6,500公里宽，但厚度不到10公里。由大量尘埃和黑色碎石组成，以大约7小时的周期围绕木星旋转。环由三个主要的部分组成：内侧像花托，是由颗粒组成的晕环，中间是相对明亮的主环，还有外圈的薄纱环[70]。这些环，看起来是由尘埃组成，而不像土星环是由冰组成[39]。主环可能是从卫星阿德剌斯忒亚和梅蒂斯喷发的物质组成。正常应该落回卫星的物质由于受到木星强大引力的影响，被木星吸引住。这些材料转变轨道的方向朝向木星，新的材料又因为碰撞影响而继续被加入。以相同的方式，特贝和阿马尔塞可能组成薄纱环尘土飞扬的两个部分。也有证据显示沿着阿马尔塞的轨道可能有一连串与这颗卫星碰撞构成的岩石碎片。</p>
+            
+        </div>
+        <!-- 磁层 -->
+        <div class="content-section">
+            <h2>磁层</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                <img src="/textures/jupiter/10.jpg" class="mw-file-element">
+                <figcaption>木星上的极光。 三个亮点是由连接到木星卫星埃欧（在左边）、佳里美德（在底部）和欧罗巴（在最底部）的磁流量管创造的。此外，可以看见非常明亮，几乎是圆型的区域，称为主要的鹅蛋形，可以看见和弱极区极光。</figcaption>
+            </figure>
+            <p>木星的磁场强度是地球的14倍，范围从赤道的4.2高斯（0.42mT）到极区的10至14高斯（1.0-1.4mT），是太阳系除太阳黑子以外最强的磁场源。这个场被认为是由涡流产生的，即木星内部涡旋运动的液态金属氢。埃欧卫星上的火山释放出大量的二氧化硫，形成沿着卫星轨道的气体环。这些气体在磁层内被电离，生成硫和氧的离子。它们与源自木星大气层的氢离子，在木星的赤道平面形成等离子片。这些片状的等离子与行星一起转动，造成进入磁场平面的变形偶极磁场。在等离子片内的电流产生强大的无线电讯号，造成范围在0.6至30MHz的爆发。</p>
+            <p>在距离木星大约75木星半径之处，磁层与太阳风的交互作用生成弓形震波。环绕着木星磁层的是磁层顶，位于磁层鞘的内缘 －磁层顶和弓形震波之间的区域。太阳风与这些去的交互作用拉长了木星背风面的磁层，并且向外延伸至几乎到达土星轨道的位置，而面向太阳方向也有数百万公里厚。木星的四颗大卫星的轨道全都位于磁层内，受到保护而得以免受太阳风的侵袭，因此木星的卫星全都位于它的磁层之中。 伽利略号的大气探测器在木星环与高层大气之间新发现一个强辐射带，类似地球的范艾伦辐射带，但比范爱伦辐射带强10倍左右，其中有高能的氦离子。</p>
+            <p>木星的磁层是其两极地区激烈发送的电波辐射的源头。木卫埃欧（见下文）剧烈的火山活动，喷发出的气体进入木星的磁层，产生一个托环状环绕着木星的微粒。当埃欧穿过这个托环时，相互作用生成的阿尔文波使游离的物质进入木星的极区。一个结果是，无线电波通过回旋加速器的迈射机制，和能量沿着圆锥形的表面传输出去。当地球与这个锥面交会时，地球上探测到的木星发射的无线电波会强于太阳输出的无线电波。</p>
+
+        </div>
+        <!-- 研究和探测 -->
+        <div class="content-section">
+            <h2>研究和探测</h2>
+            <!-- 古代观测 -->
+            <div class="theory-section">
+                <h3>古代观测</h3>
+                <p>对木星观测可以追溯至古代中国和古巴比伦时期。古代中国将木星称为“岁星”，并根据木星绕太阳公转所需的大约年数建立了地支的12个循环，中文语言在提及年龄时仍然使用这个名称（简化为“岁”）。到公元前4世纪，这些观测已经演变成了中国的生肖系统，并且每一年都与太岁星和控制夜空中与木星位置相对应的天区的神祇相关联。这些信仰仍然存在于一些道教宗教实践中，以及东亚生肖的十二生肖动物中。中国历史学家奚泽宗曾声称，中国天文学家甘德在公元前362年就以裸眼发现木星的一颗卫星。如果属实，这将比伽利略的发现早了近两千年。</p>
+                <p>古代巴比伦人早在公元前50年之前就使用梯形规则来表示木星沿运行黄道的速度。希腊的天文学家克劳狄奥斯·托勒密（ClaudiusPtolemaeus）在他的公元2世纪作品《天文学大成》中构建了一个以地球为中心的行星模型，以本轮和均轮来解释行星相对于地球的运动，他给出了木星绕地球的轨道周期为4332.38天，即11.86年。在公元499年，印度数学家和天文学家阿耶波多也使用地心说模型估算出木星的周期为4332.2722天，或11.86年。</p>
+
+            </div>
+            <!-- 地面观测 -->
+            <div class="theory-section">
+                <h3>地面观测</h3>
+                <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                    <img src="/textures/jupiter/11.jpg" class="mw-file-element">
+                    <figcaption>欧洲南天天文台甚大望远镜的木星红外线图像</figcaption>
+                </figure>
+                <p>1610年，伽利略·伽利雷（Galileo di Vincenzo Bonaulti de Galilei）和西门·马里乌斯（Simon Marius）各自独立的发现木星的4颗大卫星（伽利略卫星），这是首次发现不属于地球的卫星，也是当时首次发现显然不以地球为中心运动的天体。这是对尼古拉·哥白尼（Mikołaj Kopernik）日心说最主要的支撑，伽利略直言不讳的支持哥白尼学说，使他被置于教会的威胁下。1660年代，乔凡尼·多美尼科·卡西尼（Giovanni Domenico Cassini）使用一架新的望远镜发现木星的斑点和彩色的区带，并且观察到这颗行星出现扁平形；就是在两极扁平。他也估计出这颗行星的自转周期。在1690年，卡西尼发现大气经历较差自转。大红斑是在木星南半球的一个显著鹅蛋形特征，可能早在1664年就被罗伯特·胡克（Robert Hooke）和卡西尼在1665年观测过；虽然这仍有争议。已知最早的绘图来自药剂师海因利希·史瓦贝（Samuel Heinrich Schwabe），他在1831年显示大红斑详细的资讯。据说，大红斑在1878年变得很显眼前，在1665年至1708年曾经有多次从视线中消失的场合。它在1883年和20世纪初，再度被记录到衰退。乔瓦尼·阿尔方多·波雷里（Giovanni Alfonso Borelli）和卡西尼两人都细心地做出木星卫星的运动表，可以预测这些卫星经过木星前方或背后的时间。在1670年代，人们观测到当木星与地球在相对于太阳的两侧时，卫星运动事件的发生会比预测的慢达17分钟。丹麦天文学家奥勒·罗默（Ole Rømer）推论视线看到的不是即时发生的事情（卡西尼在此之前曾经拒绝这样的结论），而这个时间上的差异可以用来估计光速。1892年，爱德华·爱默生·巴纳德（Edward Emerson Barnard）在加利福尼亚州使用利克天文台 36-英寸（910-毫米）的折射望远镜观察到木星的第5颗卫星。发现了这颗相对较小的卫星，证明了他敏锐的视力，使他很快的成名。这颗卫星后来被命名为木卫五（Amalthea）。这是最后一颗以人眼视觉发现的行星卫星，之后的卫星均从照片发现。</p>
+                <p>1932年，鲁珀特·沃尔特根据木星的吸收光谱确定木星大气中含有甲烷和氨。1938年，观察到3个长寿的白色鹅蛋形反气旋特征。几十年来，它们是独立存在木星大气层的特征，有时会互相靠近，但永远不会合并。最后，两个在1998年合并，并在2000年吸收了第三个，被称为长圆形BA。在1955年，巴纳德柏克和肯尼斯·佛兰克林侦测到来自木星的22.2MHz的无线电信号爆发。这些爆发与木星的自转周期匹配，也能够用这些资讯来改进自转速率。发现来自木星的无线电爆发有两种形式：长达数秒的长爆发（L爆发）和持续时间短于百分之一秒的短爆发（S爆发）。</p>
+                <p>科学家发现来自木星的无线电讯号有三种传输的形式：第一、随着木星旋转的十米无线电爆发（波长10米的无线电波），并且受到木卫一与木星磁场交互作用的影响。第二、厘米无线电辐射（波长为厘米的无线电波）于1959年首度由弗兰克·德雷克（Fank Drake）和Hein Hvatum观测到。这个信号起源于木星赤道附近的圆环带状，是由木星磁场中被加速电子引起的回旋辐射。第三、木星大气产生的热辐射。</p>
+
+            </div>
+            <!-- 太空探索与探测 -->
+            <div class="theory-section">
+                <h3>太空探索与探测</h3>
+                
+                <p>自1973年以来，有数艘自动化的太空船拜访过木星，最引人注目的是先锋10号太空船。它是第一艘足够接近木星，并发送回有关这颗太阳系最大行星的属性和现象的太空船。飞往太阳系内其他行星的太空船完全依赖能量的价值，太空船速度的净变化或ΔV。从地球的低地球轨道进入到木星的霍曼转移轨道只需要6.3Km/s的ΔV，这媲美于要进入低地球轨道的9.7Km/s的ΔV。幸运的是，重力助推可以用来减少抵达木星所需要的能量，然而，这也很明显的需要较长的飞行时间。</p>
+                <p>NASA在2025年的欧罗巴帆船任务。中国航天局在2029年左右执行天问四号任务。</p>
+                <div class="theory-section">
+                    <h3>飞越任务</h3>
+                    <table class="wikitable" style="text-align:center; float: right;">
+                        <caption>飞越任务</caption>
+                        <tbody>
+                            <tr>
+                                <th>太空船</th>
+                                <th>最接近<br>approach</th>
+                                <th>距离</th>
+                            </tr>
+                            <tr>
+                                <td>先锋10号</td>
+                                <td>1973年12月3日</td>
+                                <td style="text-align: right;">130,000km</td>
+                            </tr>
+                            <tr>
+                                <td>先锋11号</td>
+                                <td>1974年12月4日</td>
+                                <td style="text-align: right;">34,000km</td>
+                            </tr>
+                            <tr>
+                                <td>旅行者1号</td>
+                                <td>1979年3月5日</td>
+                                <td style="text-align: right;">349,000km</td>
+                            </tr>
+                            <tr>
+                                <td>旅行者2号</td>
+                                <td>1979年7月9日</td>
+                                <td style="text-align: right;">570,000km</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">尤里西斯号</td>
+                                <td>1992年2月8日</td>
+                                <td style="text-align: right;">408,894km</td>
+                            </tr>
+                            <tr>
+                                <td>2004年2月4日</td>
+                                <td style="text-align: right;">120,000,000kmm</td>
+                            </tr>
+                            <tr>
+                                <td>卡西尼号</td>
+                                <td>2000年12月30日</td>
+                                <td style="text-align: right;">10,000,000km</td>
+                            </tr>
+                            <tr>
+                                <td>新视野号</td>
+                                <td>2007年2月28日</td>
+                                <td style="text-align: right;">2,304,535km</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>从1973年开始，数艘太空船在执行探测其他行星的任务时，有计划的从可以观测木星的范围内飞越。先锋计划最先观测到木星大气层和几颗卫星的特写影像。它们发现这颗行星的辐射场远远超出预期，但这两艘太空船在这种环境下都依然存活。这些太空船的运动轨迹被用来更精确地估计木星系统质量。行星的无线电掩星结果得到更好的木星质和和两极扁平的数值。</p>
+                    <p>六年后，航海家计划任务极大地提高了对伽利略卫星的认识，并且发现了木星环。它们还证实大红斑是反气旋，比较影像显示大红斑已经改变了形状和颜色，从先锋任务的橙色转变成暗褐色。此外，这一计划还发现电离的原子沿着埃欧的轨道构成环形，和发现这颗卫星表面的火山，其中有一些还在喷发的过程中。当太空船从木星的背后飞过时，还观察到夜晚大气中的闪电。</p>
+                    
+                    <p>随后探测木星的是尤利西斯太阳探测器，以执行绕行太阳的极轨道任务。在接近木星的阶段中，进行对木星磁层的研究。由于尤利西斯没有照相机，所以没有获取影像，第二次是在六年后以更远的距离飞越</p>
+                    <figure class="mw-default-size mw-halign-center expandable" style="float: right; width: 250px; height: 163px;">
+                        <img src="/textures/jupiter/12.jpg" class="mw-file-element">
+                        <figcaption>卡西尼号在2001年1月1日看见的木星</figcaption>
+                    </figure>
+                    <p>在2000年，卡西尼探测器在前往土星的途中飞越木星，并提供了一些有史以来最高分辨率的木星影像。在2000年12月9日，太空船拍摄到卫星希玛利亚的影像，但是解析力太低，无法显示表面的细节</p>
+                    <p>新视野号探测器在途中，于2007年2月28日达到最接近木星的位置，借由飞越木星时的重力助推前往冥王星 [108]。这艘探测器的照相机测量从埃欧的火山喷发出的等离子，并且以细的研究全部4颗的伽利略卫星，以及远距离的观测外围的希玛利亚和伊拉拉。从2006年9月4日就开始拍摄木星系统的影像</p>
+                    
+                </div>
+                <!-- 伽利略任务 -->
+                <div class="theory-section">
+                    <h3>伽利略任务</h3>
+                    <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                        <img src="/textures/jupiter/13.jpg" class="mw-file-element">
+                        <figcaption>卡西尼号拍摄的木星</figcaption>
+                    </figure>
+                    <p>伽利略号探测器于1989年升空，1995年12月抵达环木星轨道。它旅行了28亿英里，它的终结日期比原来预计的晚了六年。伽利略号绕木星飞行了34圈，获得了有关木星大气层的第一手探测资料，在1995年将一个探测器放到了木星上。它发现木星的卫星木卫二、木卫三、木卫四的表面下有咸水海洋，还发现木星卫星上有剧烈的火山爆发。</p>
+                    <p>伽利略号的首要任务是要对木星系统进行为期两年的研究，而事实上，伽利略号从1995年进入木星的轨道直到2003年坠毁，它一共在木星工作了8年之久。它环绕木星公转，约两个月公转一周。在木星的不同位置上，得到其磁层的数据。此外它的轨道也是预留作近距观测卫星的， 在1997年12月7日，它开始执行其额外任务，多次近距在木卫一和木卫二上越过，最近的一次是于2001年12月15日，距卫星表面仅180千米。</p>
+                    <p>因为为了节约燃料，所以伽利略号并未灭菌处理，为了避免其与可能存在生命的木卫二接触，伽利略号探测器在2003年年9月21日坠毁于木星，以此结束其近14年的太空探索生涯。这将是美国宇航局自1999年以来首次控制探测器在地球之外的天体上坠毁。 [11]伽利略号对研究木星的卫星作出了很大的贡献。在伽利略号到达木星之前，人们一共只发现了16颗木星的卫星。伽利略号到达后又发现了多个卫星，使这个数字已经上升到了63个。</p>
+                </div>
+                <!-- 朱诺任务 -->
+                <div class="theory-section">
+                    <h3>朱诺任务</h3>
+                    <figure class="mw-default-size mw-halign-center expandable" style="float: left; width: 250px; height: 163px;">
+                        <img src="/textures/jupiter/14.webp" class="mw-file-element">
+                        <figcaption>朱诺号探测器</figcaption>
+                    </figure>
+                    <p>朱诺号是NASA新疆界计划前往木星探测的太空船。于2011年8月5日从卡纳维拉尔角空军基地发射升空，预定于2016年7月抵达。探测器将放置在绕极轨道，研究木星的组成、重力场、磁场和磁层和磁极。朱诺号也要搜索和寻找这颗行星是如何形成的线索，包括是否有岩石的核心、存在大气层深处的水量、质量的分布、风速可以达到618千米每小时(384英里每小时)的深度。</p>
+                    <p>朱诺号探测器2011年8月5日发射，2013年10月9日利用地球引力弹弓加速飞往木星，在2016年7月5日到达木星轨道，展开对木星的深入探测。此后，朱诺号每年大约绕木星运转32圈， 探测木星内部的结构情况；测定木星大气成分；研究木星大气对流情况以及探讨木星磁场起源和磁层。通过它的探测，科学家希望了解木星这颗巨行星的形成、演化和本体内部结构以及木星卫星等。</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- 卫星 -->
+         <div class="content-section">
+            <h2>卫星</h2>
+            <p>木卫一、木卫二、木卫三、木卫四在1610年被伽利略用望远镜发现，称为伽利略卫星。1892年巴纳德发现了木卫五，其他卫星都是1904年以后用照相方法陆续发现的。旅行者号飞船于1979年发现了木卫十四，1980年又先后发现木卫十五和木卫十六。除四个伽利略卫星外，其余的卫星半径多是几千米到20千米的大石头。木卫三半径为2631千米，是卫星中最大的一颗，直径大于水星。木卫二可能存在液态的海洋。木星的四个伽利略卫星和木卫五的轨道几乎在木星的赤道面上。</p>
+            <p></p>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 80%; margin: 0 auto;">
+                <img src="/textures/jupiter/16.webp" class="mw-file-element">
+                <figcaption>伽利略卫星，由左至右，与木星的距离由近至远排列：埃欧、欧罗巴、佳利美德、卡利斯多</figcaption>
+            </figure>
+            <p>木星运动正逐渐地变缓。同样相同的引潮力也改变了卫星的轨道，使它们慢慢地逐渐远离木星。木卫一、木卫二、木卫三由引潮力影响而使轨道共振固定为1：2：4，并共同变化。木卫四也是这其中一个部分，在未来的数亿年里，木卫四也将被锁定，以木卫三的两倍公转周期，以木卫一的八倍来运行。</p>
+            <p>木星有众多卫星，2018年已发现79颗，木星的卫星由宙斯一生中所接触过的人来命名（大多是他的情人）。它们大致分为三群：第一，顺行的规则卫星，最靠近木星，木卫十六、木卫十四、木卫五、木卫十五和四颗伽利略卫星共8颗，轨道偏心率都小于0.01。第二，顺行的不规则卫星，离木星稍远的一群，包括木卫十三、木卫六、木卫十及木卫七等，偏心离为0.11～0.21。第三，逆行的不规则卫星，离木星最远的一群，包括木卫十二、木卫十一、木卫八及木卫九等，偏心率0.17～0.38。</p>
+            <p>2023年2月3日媒体报道，天文学家在木星周围发现了12颗新卫星，这令总数达到创纪录的92颗。</p>
+            <table class="wikitable" style="text-align:center; margin: 0 auto;">
+                <tbody>
+                    <tr>
+                        <th colspan="2">规则卫星</th>
+                    </tr>
+                    <tr>
+                        <td>内侧群</td>
+                        <td>内侧的4颗小卫星，直径小于200公里，轨道半径小于200,000公里，轨道倾角小于0.5度。</td>
+                    </tr>
+                    <tr>
+                        <td>伽利略卫星</td>
+                        <td>伽利略和西门·马里乌斯同时期发现的4颗卫星，轨道在400,000公里至2,000,000公里，有一些是太阳系中最大的卫星。</td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">不规则卫星</th>
+                    </tr>
+                    <tr>
+                        <td>撒米斯图群</td>
+                        <td>这是单独一颗卫星的群组，轨道介于伽利略卫星和希马利亚群半途的中间位置。</td>
+                    </tr>
+                    <tr>
+                        <td>希马利亚群</td>
+                        <td>一个紧密的族群，轨道距离在11,000,000公里至12,000,000公里。</td>
+                    </tr>
+                    <tr>
+                        <td>卡普群</td>
+                        <td>另一个单一卫星的群，在亚南克群的内缘，以顺行方向绕着木运转。A</td>
+                    </tr>
+                    <tr>
+                        <td>亚南克群</td>
+                        <td>逆行轨道的群，这群的边界相当模糊，平均距离木星21,276,000公里，平均轨道倾角为149度。</td>
+                    </tr>
+                    <tr>
+                        <td>加尔尼群</td>
+                        <td>相当明显的逆行群组，平均距离木星23,404,000公里，平均轨道倾角165度。</td>
+                    </tr>
+                    <tr>
+                        <td>帕西法尔群</td>
+                        <td>分散、特征含糊的逆行集团，涵盖所有最外层的卫星。</td>
+                    </tr>
+                </tbody>
+            </table>
+         </div>
+         <!-- 撞击事件 -->
+        <div class="content-section">
+            <h2>撞击事件</h2>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 400px; height: 313px; float: right;">
+                <img src="/textures/jupiter/17.jpg" class="mw-file-element">
+                <figcaption>1994年7月22日8:06 12～19 UT在木星轨道的伽利略号所摄W核撞击照片（图片由左至右），只发生数秒间之闪光（亮点）</figcaption>
+            </figure>
+            <p>由于其巨大的重力井和邻近内太阳系，木星被称为太阳系的真空吸尘器。它是太阳系内最频繁接受到彗星撞击的行星。它被认为是保护内太阳系的行星得以免受彗星的轰击。最近的电脑模拟显示，木星重力的摄动虽然可以改变进入内太阳系彗星的轨道，将它们吸积或弹出，但并未减少进入内太阳系的彗星数量[132]。这仍然是天文学家争议的主题，有些人相信它会将柯伊伯带的彗星拉近地球，而另一些人认为木星保护地球免于受到被宣称来自奥尔特云的彗星撞击。木星被小行星和彗星撞击的经验是地球的200倍</p>
+            <p>在1997年，对历史上的天文图绘的调查认为乔瓦尼·多梅尼科·卡西尼可能在1690年纪录了一次木星被撞击的疤痕。调查也确认其它8个候选的观测可能性太低或不是撞击事件。在1979年3月，航海家1号在与木星相遇时拍到一颗火球。在1994年7月16日至7月22日这段期间，超过20颗舒梅克－李维九号彗星（SL-9，正式的名称是D/1993 F2）的碎片撞击在木星的南半球，首次提供了直接观测太阳系内两个天体的碰撞。这种撞击对木星大气的成分提供了有用的资料。</p>
+            <figure class="mw-default-size mw-halign-center expandable" style=" width: 250px; height: 163px; float: right;">
+                <img src="/textures/jupiter/18.jpg" class="mw-file-element">
+                <figcaption>哈伯太空望远镜的影像显示2009的木星撞击留下大约8,000公里（5,000英里）长的痕迹</figcaption>
+            </figure>
+            <p>在2009年7月19日，在系统2的经度216度之处发现被撞击的位置。这个撞击在木星的大气层留下一个与椭圆形BA的大小相似的黑点。红外线的观测显示在撞击点上有一个亮点，意味着撞击造成南极地区低层区域大气层的温度升高</p>
+            
+            <p>在2010年6月3日，澳洲的业余天文学家Anthony Wesley观测到一颗火球的撞击，造成小于以前观测到的事件。稍后，另一位菲律宾的业余天文学家也录影捕捉到这次事件。2010年8月20日又有人见到一颗火球。</p>
+            <p>2012年9月19日，又检测到另一颗火球。</p>
+
+        </div>
+        
+
+        
+
+        <!-- 放大预览容器 -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-btn">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 太阳系行星探索. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // 大气成分图表
+        const atmCtx = document.getElementById('atmosphereChart').getContext('2d');
+        new Chart(atmCtx, {
+            type: 'pie',
+            data: {
+                labels: ['氢气', '氦气', '甲烷', '氨气', '氘化氢', '乙烷', '水'],
+                datasets: [{
+                    data: [89.8, 10.2, 0.3, 0.026, 0.003, 0.0006, 0.0004],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(75, 192, 192, 0.8)',
+                        'rgba(153, 102, 255, 0.8)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '木星大气成分'
+                    }
+                }
+            }
+        });
+        // 温度图表
+        const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+        new Chart(tempCtx, {
+            type: 'bar',
+            data: {
+                labels: ['最低温度', '平均温度', '最高温度'],
+                datasets: [{
+                    label: '木星表面温度 (°C/k)',
+                    data: [-108.15, -63, 122],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+                        'rgba(255, 99, 132, 0.8)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(255, 99, 132, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: '木星表面温度分布'
+                    }
+                }
+            }
+        });
+
+        const video = document.getElementById('jupiter-video');
+        
+        // 当视频元数据加载完成后
+        video.addEventListener('loadedmetadata', () => {
+          // 创建 Canvas 元素
+          const canvas = document.createElement('canvas');
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          
+          // 绘制视频的当前帧（此时为第一帧）
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+          
+          // 将 Canvas 内容转换为图片 URL
+          const posterUrl = canvas.toDataURL('image/jpeg');
+          
+          // 设置为视频的封面
+          video.poster = posterUrl;
+        });
+
+        // 获取 放大图片的DOM 元素
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImg");
+
+        let currentScale = 1;
+
+        // 显示放大图片 - 修改后的代码
+        document.querySelectorAll(".expandable img.mw-file-element").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.classList.add("active");
+                modalImg.src = img.src;
+                currentScale = 1;
+                modalImg.style.transform = `scale(${currentScale})`;
+            });
+        });
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        });
+
+        modal.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            
+            const delta = Math.sign(e.deltaY);
+            const step = 0.1;
+
+            // 缩放限制
+            if (delta < 0) {
+            currentScale += step; // 放大
+            } else {
+            currentScale = Math.max(0.2, currentScale - step); 
+            }
+
+            modalImg.style.transform = `scale(${currentScale})`;
+        }, { passive: false }); // 注意要设置 passive: false 才能阻止默认滚动
+    </script>
+</body>
+</html> 
